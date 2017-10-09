@@ -1,0 +1,20 @@
+p {
+    margin-top: 0px;
+}
+
+.test {
+    float: left;
+    width: 250px;
+    background-color:aquamarine;
+    color:firebrick ;
+    margin : 0 20px 20px 0; /*top right bottom left*/
+    padding-left: 35px;     /*padding is inside the box (it's added to the width fields), margin is outside*/
+    border: 2px dotted black;
+    border-radius: 15px;
+    border-top-left-radius: 60px;
+}
+
+.wrapper {
+    padding: 40px; 
+}
+
