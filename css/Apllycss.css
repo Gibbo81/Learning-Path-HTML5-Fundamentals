@@ -5,7 +5,8 @@ p, h1 { /*both for tah p and h1*/
 /* To have a less generic rule we can use class selector*/
 .special {
     color: darkgray;
-    font-style: oblique
+    font-style: oblique;
+    font-weight: bold
     
 }
 /*Used to access tag in a hierarchy way. this aply to all the p/h2 that are inside a "box" class*/
@@ -19,9 +20,50 @@ p, h1 { /*both for tah p and h1*/
 
 /*classes are generic, can be apply to more than one elements, instead id are unique to a single tag*/
 #uno{
-    font-size: 200%; /*2 times the size of his father tag value*/
-    color:forestgreen
+    font-size: 200%; /*Relative size: 2 times the size of his parent element*/
+    color: rgb(56,47,14); /*rgb value color*/
+    background-color: greenyellow
 }
+
+/*Apply to the <p> that are of class special*/
+p.specific {
+    font-size: 14px;
+    color: darkturquoise;
+    font-family: "Calisto MT", Georgia, serif; /*preferred font from left to right*/
+    line-height: 1.9 /*line height is 1.9 times relative font sixe*/
+}
+
+/*
+Specificity rule: The more specific style will apply to an element when there are more than one style tham may apply.
+Form more generic:
+- browser default 
+- css style sheet
+- document inline style head
+- document inline style body (specific tag)
+The style closesr to the element is the one who will win
+--------------------------------
+Cascade rule: style sheet are read top to botton, subsequential configuration override previous one
+*/
+
+
+/*Link option*/
+a:link{
+    color: rgb(91,94,109);       
+}
+
+a:visited{
+    color: yellow; 
+}
+
+a:hover{
+    color: rgb(21,154,109);
+    text-decoration: none /*Underline disappiars*/
+}
+
+.sitenav a:link{/*link inside class sitenav*/
+    color: rgb(21,154,109);       
+}
+
 
 
 
