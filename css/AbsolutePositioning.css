@@ -1,0 +1,21 @@
+body { 
+    margin: 100px 200px 40px 100px;
+}
+
+.box{
+    border: 1px solid black;
+    width: 180px;
+    
+    /*i give the box absolute position*/
+    position: absolute;
+    top: 20px;
+    left: 20px;    
+}
+/*Absolute position is not absolute: it's taken from parent element that has a position context itself
+  In this case wrapper parent has a position so we have an absolute position starting from wrapper one*/
+
+.wrapper{
+    position: relative;
+    padding-left: 220px; /*to give box space*/
+        
+}

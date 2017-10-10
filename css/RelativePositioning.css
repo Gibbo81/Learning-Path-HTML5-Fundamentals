@@ -1,0 +1,17 @@
+body { 
+    margin: 100px 200px 40px 100px;
+}
+
+.box{
+    border: 1px solid black;
+    width: 60%;
+}
+
+.box2{
+    border: 1px solid black;
+    width: 60%;
+    position: relative;
+    top: 60px;
+    left: 20px;
+}
+/*Relative position from the flow position the document should have*/
