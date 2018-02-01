@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Plotting functions in JavaScript using the function plot library</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/simple.js"></script>
+    <script>
+      function AddSomeTest() {
+        document.body.innerHTML += "<b>Button press, function executed</b>"  
+      }
+    </script>
+  </head>
+  <body>
+    <!--Directly inside html both in the body (---) and in the hreader (better)-->
+    <script>
+      var x=2;
+      document.body.innerHTML += "<p>JavaScript code executed the value of vaiable is " + x + " </p>";
+      x = x+1;
+      console.log("JavaScript code executed");
+    </script>
+    <button onclick="AddSomeTest()">
+      JavaScript
+    </button>
+    <button onclick="addSomeTextExternal()">
+      JavaScriptExternal file
+    </button>
+  </body>
+</html>
+
+
+  
+
