@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Plotting functions in JavaScript using the function plot library</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body onload="plot()">
+    <h2>Interactive function plotter</h2>
+
+    <section id="plotSetting">
+      <label for="yMax">color :</label>
+      <input type="color" id="color" onchange="plot()">
+    </section>
+    <section id="plot">
+      <div id="myfunction"/>
+    </section>
+
+  </body>
+</html>
