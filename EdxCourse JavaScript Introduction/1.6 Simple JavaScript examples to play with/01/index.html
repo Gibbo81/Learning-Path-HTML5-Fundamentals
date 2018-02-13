@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Change table context on the fly</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+  	<h2>Contact List</h2>
+  	<!--Modify ody on the fly-->
+  	<button onclick="buildTable()"> Add fields to the table</button>
+  	<table>
+  		<thead>
+  			<tr>
+  				<th>First Name</th>
+  				<<th>Last Name</th>
+  			</tr>
+  		</thead>
+  		<tbody id="tablebody"></tbody>
+  	</table>
+
+  	<button id="b" onclick="changeCSS()"> Change CSS on the fly</button>
+  	<div id="theDiv">This is to change</div>
+  	<footer>W3Cx JavaScript intro MOOC</footer>
+  </body>
+</html>
