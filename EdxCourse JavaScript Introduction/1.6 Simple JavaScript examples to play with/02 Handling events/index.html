@@ -4,6 +4,9 @@
     <title>Handlings events</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="css/style.css">
+    <!-- tHE ORDER OF INPORT IS IMPORTANT index.js use the external libraries so must go after!!!!   -->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
     <script src="js/index.js"></script>
   </head>
   <body onload="onLoad()">
@@ -18,6 +21,11 @@
       <!-- Canvas with mouse events -->
       this is a Canvas:
       <CANVAS height="200" id="myCanvas" width="579" ></CANVAS>
+
+      <!-- Plotting multiple functions -->
+      <div id="quadratic"></div>
+      <div id="sin"></div>
+      <div id="multiple"></div>
 
   </body>
 </html>
