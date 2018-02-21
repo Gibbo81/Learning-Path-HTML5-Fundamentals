@@ -56,3 +56,53 @@ Nan is equal to nothing - not even to itself!  But you do have a function to che
 */
 console.log("isNaN(0/0): " + isNaN(0/0));
 
+//switch statment
+var day = Math.round(6*Math.random());
+console.log("Picked up day: " + day);
+
+switch(day){
+    case 0:
+        console.log('Monday');
+        break;
+    case 1:
+        console.log('Tuesday');
+        break;
+    case 2:
+        console.log('Wednesday');
+        break;
+    case 3:
+        console.log('Thursdaty');
+        break;
+    case 4:
+        console.log('Friday');
+        break;
+    case 5:
+        console.log('Saturday');
+        break;
+    case 6:
+        console.log('Sunday');
+        break;
+    default:
+        console.log('New week day?');
+}
+
+switch(day){
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    console.log('Go to work');
+    break;
+    case 5:
+    case 6:
+    console.log('No work');
+    break;
+}
+
+// ternary operator is present in javascript
+var min =5;
+var max = (min<10) ? 10 : min;
+console.log(max);
+
+
