@@ -16,17 +16,17 @@ function f1(){
   if(true){
     let b=4;
   }
-  console.log(b);  //errror!!!
+  console.log(b);  //error!!!
 }
 
-//function always return a value. if a return statment is not present then it will return
+//function always return a value. if a return statement is not present then it will return
 //always undefined 
 function showandtype(par){
   console.log(par);
   console.log(typeof(par));
 }
 
-//function can have a variable numbers of anspecified arguments, an array named "argument" is 
+//function can have a variable numbers of unspecified arguments, an array named "argument" is 
 //created automatically in each function, it contains all the call parameters of the function:
 function newsum(){
 	var result=0;
