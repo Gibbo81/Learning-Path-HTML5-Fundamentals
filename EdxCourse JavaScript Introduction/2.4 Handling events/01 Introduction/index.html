@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Handling events</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+    <script>
+    	//Add a call back to the whole page
+    	addEventListener('click', processClick);
+
+    	function processClick(evt){
+    		alert("click");
+    	}
+
+    	//same with anonimous function
+    	addEventListener('click', function(evt){
+    		alert("anonimous click");
+    	});
+
+    	//Using 'on' syntax
+    	window.onclick = function(evt){
+    		alert("on click");
+    	};
+
+    </script>
+
+
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -111,3 +111,5 @@ console.log(newsum(1,2,3,4,5,6,7,8,9,10));
 
 
 f1();
+
+//There are also function data type, we will see them in chapter 2.3
