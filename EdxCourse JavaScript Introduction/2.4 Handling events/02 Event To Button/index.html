@@ -10,8 +10,6 @@
             document.body.innerHTML += "clicked<br>";
         }
     </script>
-
-
   </head>
   <body>
     <button onclick="processClick();">Click me</button>
@@ -19,7 +17,7 @@
     <br>
     <script type="text/javascript">
         //1 get a refernces on the element
-        //when we execute this code the button must already exists in the page and must has been rendered
+        //when we execute this code the button must already exists in the page and must has been rendered. For example do it inside init function!
         let b = document.querySelector("#myButton");
 
         //2  add event listener
@@ -30,5 +28,8 @@
         There can be only one onclick attribute per element. Using the .addEventListener('click', callback) syntax,  you can register more than one event listener. You'll need rarely to do this, so in my opinion it's fine to choose whichever syntax you like.
         */
     </script>
+    <br>
+
+    <button id="all">ALL</button>
   </body>
 </html>
