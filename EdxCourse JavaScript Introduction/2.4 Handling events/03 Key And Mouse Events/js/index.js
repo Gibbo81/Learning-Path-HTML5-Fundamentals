@@ -13,3 +13,12 @@ function processKeyDown(evt){
 	k.innerHTML += "keydown: " + evt.key + " code: " + evt.keyCode + "<br>"
 }
 
+function loaded(){
+	var k = document.querySelector('#img1');
+	k.addEventListener('mousemove', function(evt) {
+    	console.log("mouse over image");
+  	});
+}
+
+
+
