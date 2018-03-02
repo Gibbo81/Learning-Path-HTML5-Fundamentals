@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Input fields events</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <h1>Simple input field validation using the 'input' event</h1>
+    <p>Just type a name in the input field and see what happens!</p>
+    <label>
+      <span>Name: </span>
+      <input type="text" name="nom" maxlength="32" oninput="validate(this)">
+    </label>
+
+    <span id=result></span>
+
+
+  </body>
+</html>
