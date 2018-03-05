@@ -9,7 +9,11 @@ function validate(field){
 	}
 }
 
-
+function doRange(event){
+	var val = event.target.value;
+	var output = document.querySelector("#sliderValue");
+	output.innerHTML = "Value selected: " + val;
+}
 
 
 
