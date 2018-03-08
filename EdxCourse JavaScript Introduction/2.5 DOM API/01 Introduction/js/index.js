@@ -53,8 +53,9 @@ function allLisInUlOfClassNav(){
 Old wasy
 
 document.getElementById(identifier) returns the element which has the id “identifier”.
-This is equivalent to document.querySelector("#identifier'); (just add a # before the id
- when using a CSS selector). 
+This is equivalent to 
+document.querySelector("#identifier'); 
+(just add a # before the id when using a CSS selector). 
 
 Example: var elm = document.getElementById('myDiv'); is equivalent to 
 document.querySelector('#myDiv');
@@ -66,7 +67,8 @@ Example: var list = document.getElementByTagName('img'); is equivalent to
 document.querySelector('img');
 
 document.getElementsByClassName(className) returns a list of elements which have the 
-class “className”. This is equivalent to document.querySelectorAll('.className'); 
+class “className”. This is equivalent to 
+document.querySelectorAll('.className'); 
 
 Example: var list = document.getElementByClassName('important'); is equivalent to 
 document.querySelector('.important'); (just add a '.' before the class name when using 
