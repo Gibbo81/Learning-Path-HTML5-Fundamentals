@@ -83,3 +83,39 @@ div.classList.contains('foo'); // returns false: "foo" is gone
 div.classList.toggle('foo'); // class set to <div class="foo"/>
 div.classList.toggle('foo'); // class set to <div class=""/>
 */
+
+function add(){
+	var val = document.querySelector('#newNumber').value;
+	if ((val!==undefined)&&(val!=="")) {
+		var ul = document.querySelector('#numbers');
+		var newNumber = document.createElement("li");	//create the new element(tag) to add
+		newNumber.textContent=val;	//value inside the new tag
+		ul.append(newNumber);	//add to the and, use ul.prepend(li) to add to the start
+	}
+}
+/*
+This would be the same:
+function add() {
+  var val = document.querySelector('#newNumber').value;
+  
+  if((val !== undefined) && (val !== "")) {
+    var ul = document.querySelector("#numbers");    
+    ul.innerHTML += "<li>" + val + "</li>";
+  }
+}
+*/
+
+function reset(){
+	var ul = document.querySelector('#numbers');
+	ul.innerHTML='';
+	//innerHTML corresponds to all the sub DOM contained inside the <ul>...</ul>
+}
+
+//if we do not create the new element, but rather get it from somewhere else in 
+//the document, it is then removed from its parents and added to the new parent.
+function move(){
+	var li = document.querySelector("#li2");
+	var destination = document.querySelector("#end");
+	destination.append(li);
+}
+
