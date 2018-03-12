@@ -119,3 +119,21 @@ function move(){
 	destination.append(li);
 }
 
+
+
+function removeCheckedItems(){
+	var parent = document.querySelector("#fruitsRemove");
+	var selected = document.querySelectorAll("#fruitsRemove input:checked")
+	selected.forEach(function(e){
+		// e is an <input type="checkbox">, its parent is a li
+		parent.removeChild(e.parentNode)
+	});
+}
+
+function restore(){
+	var ul = document.querySelector("#fruitsRemove");
+	ul.innerHTML='<li> <input type="checkbox" name="fruit" value="apples">Apples</li>'+
+            '<li> <input type="checkbox" name="fruit" value="oranges">Oranges</li>' +
+            '<li> <input type="checkbox" name="fruit" value="bananas"> Bananas</li>' +
+            '<li> <input type="checkbox" name="fruit" value="grapes">Grapes </li>';
+}
