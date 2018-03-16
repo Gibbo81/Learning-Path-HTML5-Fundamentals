@@ -26,6 +26,7 @@ var xMonster = 10;
 var yMonster = 10;
 var monsterSpeed = 3;
 
+
 window.onload = function init(){
     canvas = document.querySelector("#myCanvas");
     w = canvas.width;
@@ -44,10 +45,16 @@ function mainLoop(){
 
     //3 move the monster
     xMonster += monsterSpeed;
+    
+    testCollision();
+    //The trick is to write a function, and at the end of this function, to ask the browser
+    //to call it again in 1/60th of a second if possible
+    requestAnimationFrame(mainLoop);
+}
+
+function testCollision(){
     if ((xMonster + 100> w)||(xMonster<0)) {
         monsterSpeed = -monsterSpeed;
     }
-
-    requestAnimationFrame(mainLoop);
 }
 
