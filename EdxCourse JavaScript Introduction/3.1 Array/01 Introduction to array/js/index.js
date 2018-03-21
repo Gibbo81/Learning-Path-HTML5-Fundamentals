@@ -25,7 +25,7 @@ function compareByAge(a,b){
 }
 console.log(letter.sort()); //without parameter is alfabetic order
 
-console.log(persons.sort(compareByAge)); //with order function
+console.log(persons.sort(compareByAge)); //with order function used to sort object
 
 persons.sort(compareByAge)
        .forEach(function(b){
@@ -33,7 +33,7 @@ persons.sort(compareByAge)
 });
 
 //to remove element
-persons.splice(0,1); //starting from 0 position (exclude) remove one lements
+var removedElements = persons.splice(0,1); //starting from 0 position remove one lements
 
 console.log(persons.sort(compareByAge))
 
@@ -42,4 +42,15 @@ persons.sort(compareByAge)
             console.log(b);
 });
 
-person.pop()
+persons.pop()   //remove last array's element
+
+
+var a = [1,2,3,4,5,'six',7,8];
+console.log(a);
+
+//array of array
+var ar = [];
+ar[0] = [1,2,3];
+ar[1] = ['a','b','c','d']
+console.log(ar);
+
