@@ -19,6 +19,3 @@ function loaded(){
     	console.log("mouse over image");
   	});
 }
-
-
-

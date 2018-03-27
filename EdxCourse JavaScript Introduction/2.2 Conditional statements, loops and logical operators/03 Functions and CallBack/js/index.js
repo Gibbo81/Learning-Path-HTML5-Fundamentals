@@ -22,16 +22,11 @@ var displayInPageExpression = function(message, value){
     document.body.innerHTML += message + value +"<br>";
 };
 
-displayInPageExpression("result 2 : " + sumExpression(11,15));
+displayInPageExpression("result 2 : ", sumExpression(11,15));
 console.log(typeof(sumExpression));
 
 
 //InLine functions
 window.addEventListener('click', function(event){
-    document.body.innerHTML += "button clicket on window <br>";
+    document.body.innerHTML += "button clicked<br>";
 })
-
-
-
-
-

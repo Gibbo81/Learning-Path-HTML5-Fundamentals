@@ -1,21 +1,21 @@
 function search() {
     var queryURL = "https://jsonplaceholder.typicode.com/users";
 
-    fetch(queryURL)
-            .then(function (response) {
-                // response.json() returns a json string,
-                // returning it will convert it 
-                // to a pure JavaScript 
-                // object for the next then's callback
-                return response.json();
-            })
-            .then(function (users) {
-                // users is a JavaScript object here
-                displayUsersAsATable(users);
-            })
-            .catch(function (error) {
-                console.log('Error during fetch: ' + error.message);
-            });
+fetch(queryURL)
+        .then(function (response) {
+            // response.json() returns a json string,
+            // returning it will convert it 
+            // to a pure JavaScript 
+            // object for the next then's callback
+            return response.json();
+        })
+        .then(function (users) {
+            // users is a JavaScript object here
+            displayUsersAsATable(users);
+        })
+        .catch(function (error) {
+            console.log('Error during fetch: ' + error.message);
+        });
 }
 
 function displayUsersAsATable(users) {

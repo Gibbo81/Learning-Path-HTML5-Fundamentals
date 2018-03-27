@@ -11,7 +11,7 @@ console.log(myName)
 
 //Inside a function:
 //var always defines a function variable local to the whole function 
-//let instead have as scope only the bloc of instruction where it's created
+//let instead have as scope only the block of instruction where it's created
 function f1(){
   if(true){
     let b=4;
@@ -19,14 +19,14 @@ function f1(){
   console.log(b);  //error!!!
 }
 
-//function always return a value. if a return statement is not present then it will return
+//function always returns a value. if a return statement is not present then it will return
 //always undefined 
 function showandtype(par){
   console.log(par);
   console.log(typeof(par));
 }
 
-//function can have a variable numbers of unspecified arguments, an array named "argument" is 
+//function can have a variable numbers of unspecified arguments, an array named "arguments" is 
 //created automatically in each function, it contains all the call parameters of the function:
 function newsum(){
 	var result=0;
@@ -88,10 +88,10 @@ array.push(6)
 console.log(array[array.length-1]);
 
 /*
-Numbers variable have 3 specials value : +Infinity | -Infinity | NaN
+Numbers variable have 3 specials values : +Infinity | -Infinity | NaN
 Infinity (or +Infinity) represents all number values greater than 1.79769313486231570e+308 
 and -Infinity represents values smaller than -1.79769313486231570e+308. Nan represents 
-not-a-number values,
+not-a-number value,
 */
 var n = 0/0 //NaN
 showandtype(n); //number

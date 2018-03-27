@@ -98,11 +98,11 @@ switch(day){
     case 6:
     console.log('No work');
     break;
+    default:
+    console.log('What day?');
 }
 
 // ternary operator is present in javascript
 var min =5;
 var max = (min<10) ? 10 : min;
 console.log(max);
-
-

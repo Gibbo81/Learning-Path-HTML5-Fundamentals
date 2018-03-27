@@ -14,10 +14,3 @@ function doRange(event){
 	var output = document.querySelector("#sliderValue");
 	output.innerHTML = "Value selected: " + val;
 }
-
-
-
-
-
-
-
