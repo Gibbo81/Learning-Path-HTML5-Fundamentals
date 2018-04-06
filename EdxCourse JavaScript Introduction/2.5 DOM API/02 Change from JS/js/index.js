@@ -37,7 +37,7 @@ function changeCSSType(evt){
 	p.innerHTML = 'style.textAlign, style.border, style.bowShadow used';
 }
 
-//We have changed directly css property from JS. But we can work in a more fienway
+//We have changed directly css property from JS. But we can work in a more fine way
 //changing the class off the attribute in this way it will it different css configuration
 
 //remove and add class from HTML element (for css porpose)
@@ -80,7 +80,7 @@ div.classList.contains('foo'); // returns false: "foo" is gone
 
 // Check if class contains the class "foo",
 // If it does, "foo" is removed, if it doesn't, it's added
-div.classList.toggle('foo'); // class set to <div class="foo"/>
+div.classList.contains('foo') // class set to <div class="foo"/>
 div.classList.toggle('foo'); // class set to <div class=""/>
 */
 
@@ -89,7 +89,7 @@ function add(){
 	if ((val!==undefined)&&(val!=="")) {
 		var ul = document.querySelector('#numbers');
 		var newNumber = document.createElement("li");	//create the new element(tag) to add
-		newNumber.textContent=val;	//value inside the new tag
+		newNumber.textContent=val;		//value inside the new tag
 		ul.append(newNumber);	//add to the and, use ul.prepend(li) to add to the start
 	}
 }
@@ -112,7 +112,7 @@ function reset(){
 }
 
 //if we do not create the new element, but rather get it from somewhere else in 
-//the document, it is then removed from its parents and added to the new parent.
+//the document, it is then removed from its parent and added to the new parent.
 function move(){
 	var li = document.querySelector("#li2");
 	var destination = document.querySelector("#end");

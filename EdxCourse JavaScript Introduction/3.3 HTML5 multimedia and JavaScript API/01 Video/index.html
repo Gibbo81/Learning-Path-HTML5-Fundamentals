@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Strings</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+  </head>
+  <body onload="start()">
+  	<video width="320" height="240" controls="controls">
+  		<source src="video/video.mp4" type="video/mp4"/>
+  		<source src="video/video.webm" type="video/webm"/>
+		<source src="video/video.ogg" type="video/ogg"/>
+		Your browser does not support the video element. 
+  	</video>  	
+  	<!--The controls attribute indicates that a control panel with play/stop/volume/progress widgets should be displayed;
+	Browser  will use the first format it recognizes
+	BEWARE: you cannot directly embed videos from most of the popular social Web sites such as YouTube, Dailymotion, Vimeo, etc. For commercial reasons, and because advertising is automatically  added to the videos, these Web sites do not allow "regular" embedding of their videos. You need an iframe-->
+	<p>youtube</p>
+	<iframe width="560" height="315" 
+		src="https://www.youtube.com/embed/ZH1XOsv8Oyo" 
+		frameborder="0" allowfullscreen></iframe>
+	<p>audio</p>
+	<audio controls="controls">
+		<source src="audio/horse.ogg" type="audio/ogg"/> 
+         Your browser does not support the audio element.
+         Download the audio/video in
+         <a href=”https://mainline.i3s.unice.fr/mooc/week2p1/horse.ogg”>OGG</a>
+	</audio>
+	<<!--Similar to the video the browser will use the first format it recognizes.-->
+  </body>
+</html>

@@ -15,7 +15,7 @@ console.log(s);
 
 function start(){
     let a = ['a','b','c'];
-    a.forEach(function(value, index, array){ //1:current element, 2:elemnt's index, 3:array itself
+    a.forEach(function(value, index, array){ //1:current element, 2:element's index, 3:array itself
      document.body.innerHTML += value + ' is at index: ' + index + ' from an array of '+ array.length +'<br>';
     });  
 
@@ -89,5 +89,3 @@ function addImages(){
     });    
 
 }
-
-
