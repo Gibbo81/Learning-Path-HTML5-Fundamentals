@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Video with Custom API</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+  	<video id='myPlayer'>
+      <source src=http://html5doctor.com/demos/video-canvas-magic/video.webm type=video/webm>
+      <source src=http://html5doctor.com/demos/video-canvas-magic/video.ogg type=video/ogg>
+      <source src=http://html5doctor.com/demos/video-canvas-magic/video.mp4 type=video/mp4> 
+  	</video>  	
+    <!--We can manage the video player with ad hoc command, without using default one-->
+    <br>
+    <button onclick="playVideo();">Play</button>
+    <button onclick="pauseVideo();">Pause</button>
+    <button onclick="restartVideo();">Restart</button>
+  </body>
+</html>
