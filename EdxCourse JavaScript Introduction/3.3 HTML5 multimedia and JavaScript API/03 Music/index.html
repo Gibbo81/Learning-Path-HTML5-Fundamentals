@@ -4,6 +4,7 @@
     <title>Music</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="css/style.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.min.js"></script>   
     <script src="js/index.js"></script>
   </head>
   <body>
@@ -17,5 +18,8 @@
     <br>
     <button onclick="play();">Play</button>
     <button onclick="pause();"">Pause</button>
+    <br>
+    <p>If you want to play short sounds that can occur very rapidly, streamed sound/music is not a good solution. Howler API allows you to download and decode sound samples in memory, and play them on demand. Whene the button becomes enabled the sound sample has been downloaded and decoded in memory. It can now be played. Click on the button to play this sound. Click it rapidly: you see, it's ok for a game!</p>
+    <button onclick="playSound();" id="button1" disabled= "true">Play sound sample 1</button>
   </body>
 </html>
