@@ -63,17 +63,36 @@ let job='professor';
 let darkVAdor={
     race:'human',
     job:'bad guy',
+    talk : function(){
+        this.describeYourself();//this i necessary!
+        return "Come to the dark side";
+    },
     describeYourself: function(){
+        console.log('hello');
         return "i'm a " + this.race + "and I'm a " + this.job + " in a serie of movies";
     },
     describeYourselfWRONG: function(){
+        console.log('hello');
         return "i'm a " + this.race + "and I'm a " + job + " in a serie of movies";
     }
 }
 console.log(darkVAdor.describeYourself());
 //this.* is necessary to access the properties of the object, without it we would have
 //access the global variables
-console.log(darkVAdor.describeYourselfWRONG());
+console.log(darkVAdor.describeYourselfWRONG());  //job is the global one
+//it's used also to call other functions inside the same object talk-->describeYourself
+console.log(darkVAdor.talk());
+
+//We can create an empty object and add things after its creation
+var lin ={};
+lin.color ='red';
+lin.age = 67;
+lin.print = function(){
+    return "I'm lin, age " + this.age + " of color: " + this.color;
+}
+console.log(lin.print());
+
+
 
 
 
