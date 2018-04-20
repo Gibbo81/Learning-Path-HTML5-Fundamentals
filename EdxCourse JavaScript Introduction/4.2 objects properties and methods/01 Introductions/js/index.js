@@ -59,6 +59,9 @@ var medor ={
 
 medor.bark();
 
+//When one wants to access an object property or wants to call another method 
+//from an object method, we must use the this keyword.
+
 let job='professor';
 let darkVAdor={
     race:'human',
@@ -83,6 +86,12 @@ console.log(darkVAdor.describeYourselfWRONG());  //job is the global one
 //it's used also to call other functions inside the same object talk-->describeYourself
 console.log(darkVAdor.talk());
 
+/*The key thing to remember is that it is bound to the calling object when the function 
+is called, not when the function is created.
+<input type="color" onchange = "changePageBackgroundColor(this.value);">
+
+*/
+
 //We can create an empty object and add things after its creation
 var lin ={};
 lin.color ='red';
@@ -92,7 +101,14 @@ lin.print = function(){
 }
 console.log(lin.print());
 
-
-
+//delete some properties ( in js it's possible)
+console.log(lin.cry);   //still not defined so its undefine
+lin.cry = function (){
+    return "...sob sob sob......";
+}
+console.log(lin.cry());
+console.log(lin);
+delete lin.cry;
+console.log(lin.cry);   //it's back to be undefined undefined 
 
 
