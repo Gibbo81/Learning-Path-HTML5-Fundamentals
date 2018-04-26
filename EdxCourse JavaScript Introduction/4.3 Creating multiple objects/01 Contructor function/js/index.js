@@ -1,6 +1,5 @@
 //constructor function from JS5 (old way)
 
-
 //by convantion capital letter 'Hero'
 function Hero(name, side){
 	this.name = name;
