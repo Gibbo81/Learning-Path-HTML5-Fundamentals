@@ -25,7 +25,22 @@ That means you can modify the referenced object. But if you change the reference
 (for example by assigning a new object), the original variable (which now points 
 to another object) will not be modifie */
 
+//Comparing two objects will only return true if they point to the same object
+var originalObject = {name:'Michel'};
+var newObject = {name:'Michel'};
+console.log(originalObject==newObject)	//false
 
+
+/*
+Js environment defines a “global object”. When this environment is a Web server this 
+global object is named window.
+The “global variables” defined with the keyword var are properties of this window object, 
+and we can say the same of predefined functions like prompt, alert, etc.
+Let instead does not create a property on the global window object.
+*/
+var a=10
+console.log(window.a)
+console.log('window.a===a: ' + (window.a===a))
 
 
 
