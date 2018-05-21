@@ -8,7 +8,33 @@
   </head>
   <body>
 
-
-
+  	<!--
+	Each table row is defined with the <tr> tag (Table Row). A table header is defined with the <th> tag (Table Header). By default, table headings are bold and centered. A table data/cell is defined with the <td> tag (Table Data). In each cell, you can have other HTML elements/tags. You can have only "column table headers" (the first row of the table will be in bold), or you can also have "row headers" (first cell of each row).
+	Best practice for making the table accessible: always add a <caption> tag inside the <table> tag. Data tables very often have brief descriptive text before or after the table that indicates the content of that table. This text should be associated to its respective table using the <caption> element. The <caption> element must be the first thing after the opening <table> tag.
+	Second best practice for accessibility: use a scope attribute with all <th scope = "row or column"> for identifying whether a table header is a column header or a row header. 	-->
+		<table>
+			<caption>A typical HTML table</caption>
+			<tr>
+				<th scope="col">Given name</th>
+				<th scope="col">Family name</th>
+				<th scope="col">Age</th>
+			</tr>
+			<tr>
+				<td>Michael</td>
+				<td>Buffa</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td>Dark</td>
+				<td>Vador</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td>Luke</td>
+				<td>Skywalker</td>
+				<td>28</td>
+			</tr>
+		</table>
+		<button onclick="borderCollapse()">Border Collapse</button>
   </body>
 </html>
