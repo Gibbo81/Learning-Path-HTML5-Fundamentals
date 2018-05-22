@@ -1,16 +1,29 @@
-table {
-  width:100%;
-  border:1px solid;
-}
+#myTable {
+  display: block;
+  font-family: sans-serif;
+  font-size: 115%;
+  overflow: auto;
+  width: auto;
+  }
+
+ #myTable  th {
+    background-color: rgb(112, 196, 105);
+    color: white;
+    font-weight: normal;
+    padding: 20px 30px;
+    text-align: center;
+  }
 
 
-tr, th, td {
-  border:1px solid;
-  font-family:courier;
-}
+ #myTable td {
+    background-color: rgb(238, 238, 238);
+    color: rgb(111, 111, 111);
+    padding: 20px 30px;
+    text-align:center;
+  }
 
-td {
-  text-align:center;
-  padding:10px;
-  
+#myTable caption {
+  background-color:lightGreen;
+  padding:20px;
+  font-size: 130%;
 }
