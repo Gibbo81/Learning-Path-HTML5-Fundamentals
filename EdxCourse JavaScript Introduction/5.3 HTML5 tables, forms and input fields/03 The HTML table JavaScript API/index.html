@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The HTML table whit javascript</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+		<table id="myTable">
+			<caption>A typical HTML table</caption>
+			<tr>
+				<th scope="col">Given name</th>
+				<th scope="col">Family name</th>
+				<th scope="col">Age</th>
+			</tr>
+			<tr>
+				<td>Michael</td>
+				<td>Buffa</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td>Dark</td>
+				<td>Vador</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td>Luke</td>
+				<td>Skywalker</td>
+				<td>28</td>
+			</tr>
+		</table>
+		<button onclick="insertRow()">Add new role</button>
+		<button onclick="deleteFirstRow()"> Delete fisrt row</button>
+  </body>
+</html>
