@@ -16,6 +16,9 @@ function insertRow(){
 	  cell2.innerHTML = "New cell2";
 	  var cell3 = row.insertCell();
 	  cell3.innerHTML = "New cell3";
+	  use insertCell() or just row.innerHTML="<td>...</td>" ? It's up to you: 
+	  depending on the HTML that you plan to insert into each cell, one version 
+	  may be more readable than the other.
 	*/
 }
 
@@ -23,3 +26,13 @@ function deleteFirstRow(){
 	var table = document.querySelector("#myTable");
 	table.deleteRow(1);  //0 is the index!
 }
+
+function loaded(){
+	//You can also access a row from the rows property of a table
+	var t = document.querySelector("#myTable");
+	var r0 = t.rows[0];
+	console.log(r0);
+	console.log(r0.cells);
+}
+
+
