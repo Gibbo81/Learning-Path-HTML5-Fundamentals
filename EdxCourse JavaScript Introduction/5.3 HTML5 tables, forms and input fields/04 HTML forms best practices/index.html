@@ -7,6 +7,55 @@
     <script src="js/index.js"></script>
   </head>
   <body>
+  	<!--For every form field, ensure that a descriptive label is provided and use the <label> element to identify each form control. property for to associate the labelto its form	-->
+	<label for="first_name">Your First Name</label>
+	<input id="first_name" type="text" name="fname"/><br>
+  	<label for="subscribe">Subscribe to newsletter</label>
+	<input type="checkbox" name="subscribe" id="subscribe">
 
+	<br>----------------------------------------------------------------------------<br>
+
+	<br>
+	<button type="submit">Submit</button>
+	<button type="button">Cancel</button>
+ 	<br>
+	<input type="submit" value="Submit">
+	<input type="button" value="Cancel"> <!--two ways to do the same thing-->
+	<!--
+<input type="button" /> buttons will not submit a form - they don't do anything by default. They're generally used in conjunction with JavaScript as part of an AJAX application.
+
+<input type="submit"> buttons will submit the form they are in when the user clicks on them, unless you specify otherwise with JavaScript.
+	-->
+<br>----------------------------------------------------------------------------<br>
+
+	<fieldset>
+	   <legend>Output format</legend>
+	      <div>
+	         <input type="radio" name="format" id="txt" value="txt" checked>
+	         <label for="txt">Text file</label>
+	      </div>
+	   	  <div>
+	  		<input type="radio" name="format" id="csv" value="csv">
+	  		<label for="csv">CSV file</label>
+		  </div>
+	</fieldset>
+	<!--Groupings of form controls sometimes require a higher level description. 
+	<fieldset> identifies the entire grouping and <legend> identifies the grouping's descriptive text.
+	-->
+	<fieldset>
+   <legend>I want to receive</legend>
+	   <div>
+	      <input type="checkbox" name="newsletter" id="check_1">
+	      <label for="check_1">The weekly newsletter</label>
+	   </div>
+	   <div>
+	      <input type="checkbox" name="offertcompany" id="check_2">
+	      <label for="check_2">Offert from the company</label>
+	   </div>
+	   <div>
+	      <input type="checkbox" name="offertassociated" id="check_3">
+	      <label for="check_3">Offers from associated companies</label>
+	   </div>
+   </fieldset>
   </body>
 </html>
