@@ -25,20 +25,36 @@
 				<br>
 				<label for="Bith">Bith date</label>
 				<input type="date" id="Bith" name="Bith">
+				<br/>
+                <label for="passwordA">Password</label>
+				<input required type="password" name="passwordA" id="passwordA" oninput="checkpasswords()" />
+                <meter id="passwordStrength" min="0" max="10" value="0" low="5"></meter>
+                <br/>
+                <label for="passwordB">Make sure it's right</label>
+                <input required type="password" name="passwordB" id="passwordB" oninput="checkpasswords()" />
 			</fieldset>
 		</form>
-		<!--
-		Action is the value of the server side component that will process the request of the form
-		method is the way the browser will send the data to the server.
-		required make the field invalid if empty
-		Some fields have default implicit validation criteria
-		-->
+<!--Forms are a way to get user input which is either sent to a remote server, or processed locally, or both. 
+
+If a form's content is sent to a remote server, on the server side, you may have PHP, Java, C#, Ruby, Python, etc. components. Action is the value of the server side component that will process the request of the form. Method is the way the browser will send the data to the server.
+Notice that in this case the JavaScript 'checkpasswords' is only used for a more global validation before sending a form to a remote server
 
 
+Required make the field invalid if empty Some fields have default implicit validation criteria
+-->
+	<br><br><br>
 
-
-
-
+	<form class="myForm" onsubmit="return submitForm();">
+	  <fieldset>
+	    <legend>Example use of the validation API: try to submit with different passwords, and with same passwords</legend>
+	 	<label for="password1" >Password:</label> <input type="password" id="password1" oninput="checkPasswords2()" required>
+	 	<p>
+	 	<label for="password2">Repeat password:</label> <input type="password" id="password2" oninput="checkPasswords2()" required>
+	 	<p>
+	   	<button>Submit</button>
+	  </fieldset>
+	</form>
+<!--Custom validation on form submit submitForm()-->
 
 	</body>
 </html>
