@@ -17,12 +17,14 @@ console.log(backToObject);
 
 function search(){
 	var queryURL = "https://jsonplaceholder.typicode.com/users";
+
+    //prepere the Ajax request using XhR2
     var xhr = new XMLHttpRequest();
     xhr.open('GET', queryURL, true);
 
     // called when the response is arrived
     xhr.onload = function(e) {
-      var jsonResponse = xhr.response;
+      var jsonResponse = xhr.response; //var jsonResponse = this.response; would be the same
 
       // turn the response into a JavaScript object
       var users = JSON.parse(jsonResponse);
@@ -34,12 +36,8 @@ function search(){
       console.log("Error: " + err);
     }
     
-    // sends the request
+    //request is sent in the asynchronously in the background 
     xhr.send();
-
-
-
-
 }
 
 function displayUsersAsTable(users){
