@@ -40,6 +40,7 @@ for (var x in ar){
     }
     console.log("for each element is :" + x);  //pay attention x is 0 - 1 -2 -3 .....
     console.log("ar[x] :" + ar[x]);  
+    console.log('property: ' +property);
 }
 
 
