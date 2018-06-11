@@ -17,10 +17,50 @@ async function fetchContent(){ //async declaration allows await to be used withi
     return text;
     //Essentially you get to keep your code "inline" without the need for callbacks
   }
-  catch(e){
+  catch(e){ //for error handling use catch
     console.log('Error!', e);
   }
 }
+
+//you can use async-await with every type of method
+//anonymous
+var a = async function (){
+  return await fetch(queryURL);
+};
+//lambda
+var b = async () => {
+  return await fetch(queryURL);
+};
+//argument
+document.body.addEventListener('click', async function(){
+  return await fetch(queryURL);
+});
+//class method
+class Pippo{
+  async myMethodPippo(){
+    return await fetch(queryURL);
+  }
+}
+
+
+//A good idea is to avoid stacking awaits, when possible, and instead trigger tasks 
+//immediately and use await after said tasks are triggered:
+// Will take 1000ms total!
+async function series() {
+  await wait(500);
+  await wait(500);
+  return "done!";
+}
+
+// Would take only 500ms total!
+async function parallel() {
+  const wait1 = wait(500); //both task start before the await 
+  const wait2 = wait(500);
+  await wait1;
+  await wait2;
+  return "done!";
+}
+
 
 
 
