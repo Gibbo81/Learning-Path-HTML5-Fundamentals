@@ -5,7 +5,11 @@
 var anon = (a, b) => a + b;
 anon = (a, b) => { return a + b};   //equivalent
 
-//it does not have it's own this value. Its this is lexically bound to the enclosing scope. 
+/*Until arrow functions, every new function defined its own this value 
+(a new object in the case of a constructor, undefined in strict mode function calls, 
+the base object if the function is called as an "object method", etc.). This proved to be 
+less than ideal with an object-oriented style of programming. lambda does not have it's 
+own this value. Its this is lexically bound to the enclosing scope. */
 class Logger {
   dumpData(data) {
     dump(data, outputFile => this.latestLog = outputFile);
@@ -22,3 +26,6 @@ var x = () => {a+b}
 //to return a body literal expression it's necessary to use extra parentheis
 var lit = () => ({foo: a+b});
 console.log(lit());
+
+
+
