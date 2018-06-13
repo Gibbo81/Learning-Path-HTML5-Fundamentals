@@ -1,4 +1,3 @@
-
 /*In most cases, the value of this is determined by how a function is called. It can't 
 be set by assignment during execution, and it may be different each time the function is 
 called. ES5 introduced the bind method to set the value of a function's this regardless 
@@ -60,6 +59,65 @@ var o = {
 };
 console.log(o.f());
 //this behavior is not at all affected by how or where the function was defined
+
+/*As a constructor
+When a function is used as a constructor (with the new keyword), its this is 
+bound to the new object being constructed.*/
+class Hero{
+	constructor(name, side){
+		this.name=name;
+		this.side=side;
+	}
+}
+
+/*If the function has a return statement that returns an object, that object will be the
+result of the |new| expression.  Otherwise, the result of the expression is the object
+currently bound to |this| (i.e., the common case most usually seen).*/
+class HeroWithReturn{
+	constructor(name, side){	//obviously is no senso code, only for example 
+		this.name=name;
+		this.side=side;
+		return { name : 'pippus', age : 200};
+	}
+}
+
+var h1 = new Hero("Hercules", 25);
+var h2 = new HeroWithReturn("Hercules", 25);
+console.log(h1);
+console.log(h2);
+/*In the last example (C2), because an object was returned during construction, the new 
+object that this was bound to simply gets discarded. 
+(This essentially makes the statement "this.a = 37;" dead code. */
+
+//*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+//*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+//*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+
+/*As a DOM event handler
+When a function is used as an event handler, its this is set to the element the event 
+fired from */
+// When called as a listener, turns the related element blue
+function bluify(e) {
+  // Always true
+  console.log(this === e.currentTarget); 
+  // true when currentTarget and target are the same object
+  console.log(this === e.target);
+  this.style.backgroundColor = '#A5D9F3';
+  /*events bubble by default so the difference between the two is:
+	target is the element that triggered the event (e.g., the user clicked on)
+	currentTarget is the element that the event listener is attached to.*/
+}
+
+function load(){
+	// Get a list of every element in the document
+	var elements = document.getElementsByTagName('p');
+
+	// Add bluify as a click listener so when the
+	// element is clicked on, it turns blue
+	for (var i = 0; i < elements.length; i++) {
+  	elements[i].addEventListener('click', bluify, false);
+	}	
+}
 
 
 

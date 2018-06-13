@@ -1,4 +1,4 @@
-//classes Js6 - smae result better sintax!!!
+//classes Js6 - same result better sintax!!!
 //classes must start with capitalized letter
 class Hero{
 	//THERE CAN BE ONLY ONE CONSTRUCTOR in the class
