@@ -5,7 +5,6 @@ of how it's called, and ES2015 introduced arrow functions which don't provide th
 this binding (it retains the this value of the enclosing lexical context).
 */
 
-
 //In the global execution context (outside of any function), this refers to the global object
 this.b=77
 console.log("this.b: " + this.b);
@@ -118,12 +117,3 @@ function load(){
   	elements[i].addEventListener('click', bluify, false);
 	}	
 }
-
-
-
-
-
-
-
-
-
