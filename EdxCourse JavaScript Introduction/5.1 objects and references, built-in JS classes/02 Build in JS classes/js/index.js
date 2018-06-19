@@ -8,9 +8,11 @@ console.log(x.length);
 
 
 //array
-let a1 = new Array(); //empty array
-let a2 = new Array(1,2,5,'d'); //equivalent to let a2 = [1,2,5,'d']
-let a3 = new Array(10) //if only one parameter it's the size of the array. NOT USED
+let a1 = new Array(); 	//empty array
+let a2 = {};			//empty array
+let a3 = new Array(1,2,5,'d'); //equivalent to let a2 = [1,2,5,'d']
+let a4 = [1,2,5,'d']
+let a5 = new Array(10) //if only one parameter it's the size of the array. NOT USED
 for (var y in a3){
 	console.log("position "+y+" "+ a3[y]);
 }

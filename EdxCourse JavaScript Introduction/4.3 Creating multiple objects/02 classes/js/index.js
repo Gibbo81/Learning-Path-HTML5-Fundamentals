@@ -31,7 +31,7 @@ Unlike functions, classes must be declared BEFORE using them
 function declarations are "hoisted" and class declarations are not. This means that 
 you can call a function BEFORE it has been declared in your source code. This is not 
 the case with ES6 classes!
-Hoisting is JavaScript's default behavior of moving declarations to the top.
+Hoisting is JavaScript's default behaviour of moving declarations to the top.
 */
 
 

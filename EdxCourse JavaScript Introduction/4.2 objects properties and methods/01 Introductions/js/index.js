@@ -67,7 +67,7 @@ let darkVAdor={
     race:'human',
     job:'bad guy',
     talk : function(){
-        this.describeYourself();//this i necessary!
+        this.describeYourself();//this is necessary!
         return "Come to the dark side";
     },
     describeYourself: function(){
@@ -88,9 +88,7 @@ console.log(darkVAdor.talk());
 
 /*The key thing to remember is that it is bound to the calling object when the function 
 is called, not when the function is created.
-<input type="color" onchange = "changePageBackgroundColor(this.value);">
-
-*/
+<input type="color" onchange = "changePageBackgroundColor(this.value);">*/
 
 //We can create an empty object and add things after its creation
 var lin ={};
@@ -110,5 +108,3 @@ console.log(lin.cry());
 console.log(lin);
 delete lin.cry;
 console.log(lin.cry);   //it's back to be undefined undefined 
-
-

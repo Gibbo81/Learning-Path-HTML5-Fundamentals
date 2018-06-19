@@ -11,10 +11,10 @@ characters of the string s, we just give to s another address in memory to point
 */
 
 //Ovviously no one of the following command change the original string
-r= r.toUpperCase(r)
+r = r.toUpperCase(r)
 console.log(r);
 
-r= r.toLowerCase(r)
+r = r.toLowerCase(r)
 console.log(r);
 
 console.log('r.substring(0,4):' + r.substring(0,4));
@@ -33,12 +33,10 @@ console.log("s.substring(9,16): " + s.substring(9,16));
 They take two parameters: the start and end index of the slice (element at 
 end index will NOT be included in the slice): “please cut from this index, to 
 this one, not included!”. 
- There is a difference between slice and substring, IF the second parameter is negative
+ There is a difference between slice and substring, when the second parameter is negative.
 If you are a beginner, we recommend that you use substring for most common cases 
 (as it will behave the same as slice) and that you stay away from negative parameters,
- where slice and substring show small differences.
-*/
-
+ where slice and substring show small differences.*/
 
 //Data object
 var d = new Date(); 				//current date
