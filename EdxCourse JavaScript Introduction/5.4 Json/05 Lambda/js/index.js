@@ -1,7 +1,7 @@
 /*An arrow function expression has a shorter syntax than a function expression and
  does not have its own this, arguments, super*/
 
-//lambda are an improvment over anonymous function
+//lambda are an improvement over anonymous function
 var anon = (a, b) => a + b;
 anon = (a, b) => { return a + b};   //equivalent
 
@@ -23,7 +23,7 @@ var b = 14;
 //lambda with no parameters should be written with a pair of empty parentheses.
 var x = () => {a+b}
 
-//to return a body literal expression it's necessary to use extra parentheis
+//to return a literal object it's necessary to use extra parenthesis
 var lit = () => ({foo: a+b});
 console.log(lit());
 

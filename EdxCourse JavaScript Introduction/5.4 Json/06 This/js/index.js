@@ -15,14 +15,14 @@ console.log("b: " + b);
 
 //Inside a function, the value of this depends on how the function is called.
 function f1(x){
-	console.log(this.b) //same as before
+	console.log(this.b) 
 	console.log(x)
 	return this;
 }
 
 /*Simple call
-because the value of this is not set by the call, this will default to the global object.*/
-console.log(f1(10));//this is window in a browser.
+whene the value of this is not set by the call, this will default to the global object.*/
+console.log(f1(10));//this is window in a browser, same as previous example
 
 //To pass a different value for this from one context to another, use call, or apply:
 var obj = { b : "custom b"}
@@ -60,8 +60,7 @@ console.log(o.f());
 //this behavior is not at all affected by how or where the function was defined
 
 /*As a constructor
-When a function is used as a constructor (with the new keyword), its this is 
-bound to the new object being constructed.*/
+Inside a constructor this is bound to the new object being created.*/
 class Hero{
 	constructor(name, side){
 		this.name=name;
@@ -84,9 +83,10 @@ var h1 = new Hero("Hercules", 25);
 var h2 = new HeroWithReturn("Hercules", 25);
 console.log(h1);
 console.log(h2);
-/*In the last example (C2), because an object was returned during construction, the new 
+/*In the last example (h2), because an object was returned during construction, the new 
 object that this was bound to simply gets discarded. 
-(This essentially makes the statement "this.a = 37;" dead code. */
+(This essentially makes the statement "this.a = 37;" dead code. 
+This is really bad code never use it :-)*/
 
 //*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
 //*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/

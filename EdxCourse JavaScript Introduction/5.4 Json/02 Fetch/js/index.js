@@ -12,8 +12,8 @@ function search(){
 
   fetch(request)
     .then(function(response){
-      //the resulting callback data has a json method for converting the raw data 
-      //to a JavaScript object
+      //the resulting callback data has a json method for 
+      //converting the raw data to a JavaScript object
       return response.json();  
     })
     .then(function(users){

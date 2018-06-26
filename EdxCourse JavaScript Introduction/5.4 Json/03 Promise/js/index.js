@@ -36,14 +36,14 @@ function promising(){
             console.log(response);
             return JSON.parse(response);
           })
-        .then(function(users){
+       .then(function(users){
             console.log("ok 2° then");
             console.log(users);
           })
         //The catch callback is executed when the promise is rejected
-        .catch(function(error){
+       .catch(function(error){
             console.log('Error during fetch: ' + error.message);
-          })
+          });
 
   promiseWithoutSureSync(false).then(function(response){
        console.log("continuation withoout API call");
@@ -58,7 +58,7 @@ function promising(){
 
 }
 
-/*Sometimes you don't need to complete an async tasks within the promise  if it's 
+/*Sometimes you don't need to complete an async tasks within the promise. If it's 
 possible (NOT SURE!) that an async action will be taken returning a promise will be 
 best so that you can always count on a promise coming out of a given function*/
 function promiseWithoutSureSync(isApiToCall){

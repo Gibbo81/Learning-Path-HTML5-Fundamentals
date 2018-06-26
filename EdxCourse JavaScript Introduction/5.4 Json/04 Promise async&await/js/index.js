@@ -28,7 +28,7 @@ var a = async function (){
   return await fetch(queryURL);
 };
 //lambda
-var b = async () => {
+var b = async () => { 
   return await fetch(queryURL);
 };
 //argument
@@ -43,8 +43,8 @@ class Pippo{
 }
 
 
-//A good idea is to avoid stacking awaits, when possible, and instead trigger tasks 
-//immediately and use await after said tasks are triggered:
+//A good idea is to avoid stacking awaits, when possible ( if operation can run in parallel)
+//trigger multiple tasks immediately and use await after said tasks are triggered:
 // Will take 1000ms total!
 async function series() {
   await wait(500);
