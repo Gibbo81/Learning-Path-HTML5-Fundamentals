@@ -1,6 +1,6 @@
 /*
 JS onjects are dynamic and do not provide a class implementation per se (the class keyword is 
-introduced in ES2015, but is syntactical sugar, JavaScript remains prototype-based
+introduced in ES2015, but is syntactical sugar, JavaScript remains prototype-based)
 When it comes to inheritance each object has a private property which holds a link to another object 
 called its prototype. That prototype object has a prototype of its own, and so on until an object is 
 reached with null as its prototype. Null has no prototype.
@@ -65,8 +65,8 @@ class Polygon {
 
 class Square extends Polygon {	//The extends keyword sets up the prototype inheritance relationship between the parent and child classes.
   constructor(sideLength, color) {
-    super(sideLength, sideLength);//super must be the first function called in the constructor
-    this.color= color;
+    super(sideLength, sideLength);	//super must be the first function called in the constructor
+    this.color= color;				// the value of this's not defined until 'super' is called
   }
   get area() {
     return this.height * this.width;
@@ -89,4 +89,10 @@ console.log('s.area: '+ s.area);
 class is only code sintactic sugar, produce exactly the same object structure. Therefore, while the new 
 syntax simply improves the inheritance code, it does not change the result.
 */
+//the object is the same for both the instances of 
+var first = new Square(2, 'red');
+var second = new Square(4, 'yellow');
+first.__proto__.added=5;
+console.log('first.added: ' + first.added);
+console.log('second.added: ' + second.added);
 
