@@ -1,21 +1,22 @@
+var cm
 
 //show on page
 function work(){
-	var cm = new ContactManager();
+	cm = new ContactManager();
 	initData(cm);
 
 	console.log("Sort by name");
 	cm.sortByName();
 	cm.print();
+	cm.showOnTable('contacts');
+}
 
+function duplicateContacts(){
 	var cm2 = new ContactManager();
 	console.log("Save and reload contacts");
 	cm.saveContacts();
 	cm2.loadContacts();
 	cm2.print();
-
-
-	cm2.showOnTable('contacts');
 }
 
 
@@ -36,3 +37,19 @@ function initData(contactManager){
 	contactManager.remove(c1);
 	contactManager.print();
 }
+
+function formSubmitted(){
+	var name = document.getElementById('name');
+	var email = document.getElementById('email');
+
+	cm.add(new Contact(name.value, email.value));
+	name.value='';
+	email.value='';
+
+	cm.showOnTable('contacts');
+
+	return false;
+}
+
+
+

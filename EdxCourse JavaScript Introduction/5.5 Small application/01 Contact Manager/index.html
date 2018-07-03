@@ -8,7 +8,30 @@
     <script src="js/tryout.js"></script>
   </head>
   <body onload="work()">
+  	<form onsubmit="return formSubmitted();">
+  		<fieldset>
+  			<legend>Personal Information</legend>
+  			<label>
+  				Name:
+  				<input type="text" id='name' required="">
+  			</label>
+			<label>
+  				Email:
+  				<input type="text" id='email' required="">
+  			</label>
+  			<button>Add new contact</button> <!--Same as : <input type="submit">  -->
+  		</fieldset>
+  	</form>
+  	<!--
+It is interesting that we use onclick="return formSubmitted();":
+If the returned value is true, the form will be submitted by your browser (this would reload the HTML page action is missing). If the returned value is false, the form will not be submitted (this is what we want, so we will return false in the formSubmitted function).
+  	-->
   	<p>List of contacts</p>
 	<div id="contacts"></div>
+	<p>
+		<button onclick="cm.empty()">Empty</button>
+		<button onclick="cm.saveContacts()">Save</button>
+		<button onclick="cm.loadContacts()">Load</button>
+	</p>
   </body>
 </html>

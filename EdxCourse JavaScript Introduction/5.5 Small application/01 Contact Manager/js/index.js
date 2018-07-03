@@ -26,8 +26,15 @@ class ContactManager{
     localStorage.contact = JSON.stringify(this.listOfContacts);
   }
   loadContacts(){
-    if (localStorage.contact !== undefined) //not null pay attention!
+    if (localStorage.contact !== undefined){ //not null pay attention!
         this.listOfContacts = JSON.parse(localStorage.contact);
+        this.showOnTable('contacts');
+    }
+  }
+
+  empty(){
+    this.listOfContacts = [];
+    this.showOnTable('contacts');
   }
 
   showOnTable(positionId){
