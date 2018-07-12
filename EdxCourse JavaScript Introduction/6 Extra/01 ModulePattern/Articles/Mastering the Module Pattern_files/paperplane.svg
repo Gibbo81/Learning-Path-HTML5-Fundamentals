@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="73px" height="113px" viewBox="0 0 73 113" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>paperplane</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="MASTER-Copy-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1073.000000, -2694.000000)">
+        <g id="footer" transform="translate(0.000000, 2327.000000)">
+            <g id="paperplane" transform="translate(1073.000000, 367.000000)">
+                <g id="Group-4">
+                    <polygon id="Path-3" fill="#EDEDED" points="0 0 26.1762506 72.890865 43.234753 48.2267896"></polygon>
+                    <polygon id="Path-4" fill="#EDEDED" points="49.9817537 45.0147344 72.7996133 35.2032563 -9.09494702e-13 0"></polygon>
+                    <polygon id="Path-5" fill="#D9DEDE" points="50.1505878 44.8603377 50.1505878 56.0089139 43.0245658 48.5769615 0.0560521836 0.060005479"></polygon>
+                </g>
+                <ellipse id="Oval-2" fill="#813DB9" cx="36.5" cy="104" rx="36.5" ry="9"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>
