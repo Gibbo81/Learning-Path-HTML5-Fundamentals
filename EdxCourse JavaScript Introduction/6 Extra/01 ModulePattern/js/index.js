@@ -1,4 +1,4 @@
-//Private method in JS
+//Private method with module pattern in JS
 
 
 var module = (function (){
@@ -61,3 +61,29 @@ var module4 = (function (Module) {
 
 module4.extension();
 console.log(module4);
+
+//In simple case we can return a function instead of an object (fibonacci)
+var module5 = (function(){
+  var memo =[0,1];
+  var fib = function (n){
+    if (typeof memo[n] === 'undefined') //how to check for undefined
+      memo[n] = fib(n-1) + fib(n-2)
+    return memo[n];
+  };
+
+  return fib;
+})();
+console.log('fibonacci 8: ' + module5(8));
+
+//we can generalize it
+var memoizer = (function(memo, fun){
+  var rec = function(n){
+    if (typeof memo[n] === 'undefined')
+      memo[n] = fun(rec,n);
+    return memo [n];
+  }
+  return rec;
+})
+
+var fibonacci_2 = memoizer([0,1], (recur, n) => recur(n-1) + recur(n-2));
+console.log('fibonacci 9: ' + fibonacci_2(9));
