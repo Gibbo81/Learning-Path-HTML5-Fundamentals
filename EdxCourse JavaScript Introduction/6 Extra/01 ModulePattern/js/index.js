@@ -12,7 +12,7 @@ to return only the parts we need, leaving the other code out of the global
  scope*/
 
 //Second examples
-//privateMethod isa  privateMethod, locally declared inside the new scope
+//_privateMethod is a private method, locally declared inside the new scope
 //but if needed we can call it using publicMethodOne()
 var module2 = (function () {
 
@@ -43,11 +43,15 @@ var module3 = (function () {
       console.log(_privateArray[i]);
     }
   }
+  myObject.getArray = function(){
+    return _privateArray;
+  }
   return myObject;
 })();
 
 module3.someMethod();
 module3.writeArray();//It also work for 'private' field as this array
+console.log(module3.getArray());
 
 //It's possible to extend the module to add a new properties:
 var module4 = (function (Module) {
