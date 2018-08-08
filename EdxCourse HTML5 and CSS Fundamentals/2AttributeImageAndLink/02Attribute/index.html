@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+The lang global attribute indicates the language of the text in the element to which it is attached.
+You should always declare the language of your page in the <html> tag.  You can also declare the language of content
+within the page by attaching a lang attribute to an element that surrounds it.
+-->
   <head>
     <title>Attribute</title>
     <meta charset="utf-8"/>
@@ -9,7 +14,7 @@
   <body>
     <!--
       Attributes are used in tags to further define the tag:
-      Attributes are a name-value pair used inside a tag and should be added after a space from the tag name: <ol start="5">. The start attribute is used inside the <ol> tag. 
+      Attributes are a name-value pair used inside a tag and should be added after a space from the tag name: <ol start="5">. The start attribute is used inside the <ol> tag.
       The only exception to the name-value pair is if the attribute is a 'boolean attribute'. These attributes have only two types of values - true or false. But instead of writing "true" or "false" for its value, you add the attribute name to indicate true and omit it to indicate false
     -->
     <ol start="7" id="cinema" class="attribute-list">
@@ -21,15 +26,209 @@
     <!--
     id attribute is really useful to identify a single element it's very similar to your school or corporate ID that is unique to you. No one else in your company will have the same ID as you because we know that two people having the same ID will just cause a lot of confusion.
     Class is similar to id but is not unique in a page. it should be used for all the settings that are common to different elements
+    An element can have more than a class name
     -->
     <p id="para1" class="poetry">I am paragraph 1 and I want to be in red</p>
-    <p id="para2" class="poetry">I am paragraph 2 and I want to be in blue</p>
+    <p id="para2" class="poetry pippo pluto">I am paragraph 2 and I want to be in blue</p>
+    <!-- id attribute is useful for 2 reasons:
+    -Styling your element.
+    -Specifying a link target. You can link to a section of your HTML page using the 'id' of the section. You should
+    reference the 'id' value with a number sign preceding it: <a href="#introduction">1.1 Introduction</a>
+    -In JavaScript, 'id' can be used to manipulate an html elemen
+    -->
+    <P id="plutus">
+      Characters earn XP for every encounter they overcome.
+      The XP reward for completing an encounter is
+      the sum of the XP values for each monster, NPC, trap,
+      or hazard that makes up the encounter. You noted or
+      assigned this number when you built the encounter,
+      to judge its difficulty against your players. (Published
+      adventures note the XP value of each encounter they
+      contain.) Divide the XP total for the encounter by the
+      number of players present to help overcome it, and
+      that’s how many XP each character gets.
+      Overcoming an Encounter: What counts as overcoming
+      an encounter? Killing, routing, or capturing
+      the opponents in a combat encounter certainly counts.
+      Meeting the success conditions of a skill challenge is
+      overcoming it. Remember that an encounter, by definition,
+      has a risk of failure. If that risk isn’t present, it’s
+      not an encounter, and the characters don’t earn XP. If
+      the characters accidentally trigger a trap as they make
+      their way down a hallway, they don’t get XP because it
+      wasn’t an encounter. If the trap constitutes an encounter
+      or is part of an encounter, though, they do earn XP
+      if they manage to disarm or destroy it.
+      Say the characters avoid a hydra to get into the treasure
+      vault it guards. Do they get XP for overcoming
+      the challenge of the hydra? No. If the treasure was the
+      object of a quest, they get the reward for completing
+      the quest (see Quest Rewards on page 122), which
+      should include XP as well as treasure. But because
+      they didn’t have an encounter with the hydra, they
+      didn’t overcome the challenge. (If they sneak past,
+      trick, or defeat the hydra in an encounter, they do
+      earn XP.)
+      XP for Combat Encounters: The Monster Manual
+      indicates the XP reward each monster is worth. That
+      number comes from the Experience Rewards table
+      on this page, and it depends on the monster’s level. A
+      minion is worth one-quarter of the XP of a standard
+      monster of its level. An elite monster is worth twice
+      as much XP, and a solo monster is worth five times as
+      much XP.
+      If you apply a template to a monster (see page 175),
+      you turn it into an elite or solo monster (see “Creating
+      New Solos,” page 185) and therefore adjust its XP
+      value. Likewise, if you alter a monster’s level, its XP
+      value changes.
+      A nonplayer character counts as a monster of his
+      or her level for calculating XP. Traps and hazards that
+      serve as combat complications also have levels. If the
+      characters overcome a combat encounter where a trap
+      or hazard presented a threat during the encounter,
+      give them XP for the trap or hazard even if they didn’t
+      disable or neutralize it. They overcame the challenge it
+    </p>
+    <p>
+      Near future campaigns are usually set on Earth, before interstellar travel is
+      developed. The classic near-future setting has a brilliant scientist or evil organization (or
+      both) who develop mecha or robots, and then try to take over the world. The future may
+      be "today with flying cars," or it may be a grimmer "cyberpunk" future with cyborgs and
+      genetic engineering running rampant. Alien invasions are also popular, since a near-future
+      setting gives the humans an excuse to develop a few super-mecha of their own to defend
+      Earth. However, a "war in our solar system" in which Earth, the moon and rival space
+      colonies are the battleground can provide a more visceral struggle than one between
+      distant empires. The campaign may also be set on a post-apocalyptic Earth, after the
+      war's desolation: the Wild West with dirt bikes, souped up cars, cyborgs and mutants.
+      Player character bounty hunters with their bazooka and trusty hoverbikes may set out to
+      stop the human scum and their transforming mecha bikes.
+      Anime/Manga Examples — Bubblegum Crisis, Dominion Tank Police, Genesis
+      Survivor Gaiarth, Ghost in the Shell, Mobile Suit Gundam, Neon Genesis Evangelion.
+    </p>
+    <p>
+      Near future campaigns are usually set on Earth, before interstellar travel is
+      developed. The classic near-future setting has a brilliant scientist or evil organization (or
+      both) who develop mecha or robots, and then try to take over the world. The future may
+      be "today with flying cars," or it may be a grimmer "cyberpunk" future with cyborgs and
+      genetic engineering running rampant. Alien invasions are also popular, since a near-future
+      setting gives the humans an excuse to develop a few super-mecha of their own to defend
+      Earth. However, a "war in our solar system" in which Earth, the moon and rival space
+      colonies are the battleground can provide a more visceral struggle than one between
+      distant empires. The campaign may also be set on a post-apocalyptic Earth, after the
+      war's desolation: the Wild West with dirt bikes, souped up cars, cyborgs and mutants.
+      Player character bounty hunters with their bazooka and trusty hoverbikes may set out to
+      stop the human scum and their transforming mecha bikes.
+      Anime/Manga Examples — Bubblegum Crisis, Dominion Tank Police, Genesis
+      Survivor Gaiarth, Ghost in the Shell, Mobile Suit Gundam, Neon Genesis Evangelion.
+    </p>
+    <p>
+      Near future campaigns are usually set on Earth, before interstellar travel is
+      developed. The classic near-future setting has a brilliant scientist or evil organization (or
+      both) who develop mecha or robots, and then try to take over the world. The future may
+      be "today with flying cars," or it may be a grimmer "cyberpunk" future with cyborgs and
+      genetic engineering running rampant. Alien invasions are also popular, since a near-future
+      setting gives the humans an excuse to develop a few super-mecha of their own to defend
+      Earth. However, a "war in our solar system" in which Earth, the moon and rival space
+      colonies are the battleground can provide a more visceral struggle than one between
+      distant empires. The campaign may also be set on a post-apocalyptic Earth, after the
+      war's desolation: the Wild West with dirt bikes, souped up cars, cyborgs and mutants.
+      Player character bounty hunters with their bazooka and trusty hoverbikes may set out to
+      stop the human scum and their transforming mecha bikes.
+      Anime/Manga Examples — Bubblegum Crisis, Dominion Tank Police, Genesis
+      Survivor Gaiarth, Ghost in the Shell, Mobile Suit Gundam, Neon Genesis Evangelion.
+    </p>
+    <p>
+      Near future campaigns are usually set on Earth, before interstellar travel is
+      developed. The classic near-future setting has a brilliant scientist or evil organization (or
+      both) who develop mecha or robots, and then try to take over the world. The future may
+      be "today with flying cars," or it may be a grimmer "cyberpunk" future with cyborgs and
+      genetic engineering running rampant. Alien invasions are also popular, since a near-future
+      setting gives the humans an excuse to develop a few super-mecha of their own to defend
+      Earth. However, a "war in our solar system" in which Earth, the moon and rival space
+      colonies are the battleground can provide a more visceral struggle than one between
+      distant empires. The campaign may also be set on a post-apocalyptic Earth, after the
+      war's desolation: the Wild West with dirt bikes, souped up cars, cyborgs and mutants.
+      Player character bounty hunters with their bazooka and trusty hoverbikes may set out to
+      stop the human scum and their transforming mecha bikes.
+      Anime/Manga Examples — Bubblegum Crisis, Dominion Tank Police, Genesis
+      Survivor Gaiarth, Ghost in the Shell, Mobile Suit Gundam, Neon Genesis Evangelion.
+    </p>
+    <p>
+      Near future campaigns are usually set on Earth, before interstellar travel is
+      developed. The classic near-future setting has a brilliant scientist or evil organization (or
+      both) who develop mecha or robots, and then try to take over the world. The future may
+      be "today with flying cars," or it may be a grimmer "cyberpunk" future with cyborgs and
+      genetic engineering running rampant. Alien invasions are also popular, since a near-future
+      setting gives the humans an excuse to develop a few super-mecha of their own to defend
+      Earth. However, a "war in our solar system" in which Earth, the moon and rival space
+      colonies are the battleground can provide a more visceral struggle than one between
+      distant empires. The campaign may also be set on a post-apocalyptic Earth, after the
+      war's desolation: the Wild West with dirt bikes, souped up cars, cyborgs and mutants.
+      Player character bounty hunters with their bazooka and trusty hoverbikes may set out to
+      stop the human scum and their transforming mecha bikes.
+      Anime/Manga Examples — Bubblegum Crisis, Dominion Tank Police, Genesis
+      Survivor Gaiarth, Ghost in the Shell, Mobile Suit Gundam, Neon Genesis Evangelion.
+    </p>
+    <p>
+      Near future campaigns are usually set on Earth, before interstellar travel is
+      developed. The classic near-future setting has a brilliant scientist or evil organization (or
+      both) who develop mecha or robots, and then try to take over the world. The future may
+      be "today with flying cars," or it may be a grimmer "cyberpunk" future with cyborgs and
+      genetic engineering running rampant. Alien invasions are also popular, since a near-future
+      setting gives the humans an excuse to develop a few super-mecha of their own to defend
+      Earth. However, a "war in our solar system" in which Earth, the moon and rival space
+      colonies are the battleground can provide a more visceral struggle than one between
+      distant empires. The campaign may also be set on a post-apocalyptic Earth, after the
+      war's desolation: the Wild West with dirt bikes, souped up cars, cyborgs and mutants.
+      Player character bounty hunters with their bazooka and trusty hoverbikes may set out to
+      stop the human scum and their transforming mecha bikes.
+      Anime/Manga Examples — Bubblegum Crisis, Dominion Tank Police, Genesis
+      Survivor Gaiarth, Ghost in the Shell, Mobile Suit Gundam, Neon Genesis Evangelion.
+    </p>
+    <p>
+      Near future campaigns are usually set on Earth, before interstellar travel is
+      developed. The classic near-future setting has a brilliant scientist or evil organization (or
+      both) who develop mecha or robots, and then try to take over the world. The future may
+      be "today with flying cars," or it may be a grimmer "cyberpunk" future with cyborgs and
+      genetic engineering running rampant. Alien invasions are also popular, since a near-future
+      setting gives the humans an excuse to develop a few super-mecha of their own to defend
+      Earth. However, a "war in our solar system" in which Earth, the moon and rival space
+      colonies are the battleground can provide a more visceral struggle than one between
+      distant empires. The campaign may also be set on a post-apocalyptic Earth, after the
+      war's desolation: the Wild West with dirt bikes, souped up cars, cyborgs and mutants.
+      Player character bounty hunters with their bazooka and trusty hoverbikes may set out to
+      stop the human scum and their transforming mecha bikes.
+      Anime/Manga Examples — Bubblegum Crisis, Dominion Tank Police, Genesis
+      Survivor Gaiarth, Ghost in the Shell, Mobile Suit Gundam, Neon Genesis Evangelion.
+    </p>
+    <p>
+      Near future campaigns are usually set on Earth, before interstellar travel is
+      developed. The classic near-future setting has a brilliant scientist or evil organization (or
+      both) who develop mecha or robots, and then try to take over the world. The future may
+      be "today with flying cars," or it may be a grimmer "cyberpunk" future with cyborgs and
+      genetic engineering running rampant. Alien invasions are also popular, since a near-future
+      setting gives the humans an excuse to develop a few super-mecha of their own to defend
+      Earth. However, a "war in our solar system" in which Earth, the moon and rival space
+      colonies are the battleground can provide a more visceral struggle than one between
+      distant empires. The campaign may also be set on a post-apocalyptic Earth, after the
+      war's desolation: the Wild West with dirt bikes, souped up cars, cyborgs and mutants.
+      Player character bounty hunters with their bazooka and trusty hoverbikes may set out to
+      stop the human scum and their transforming mecha bikes.
+      Anime/Manga Examples — Bubblegum Crisis, Dominion Tank Police, Genesis
+      Survivor Gaiarth, Ghost in the Shell, Mobile Suit Gundam, Neon Genesis Evangelion.
+    </p>
+    <a href="#plutus">1.1 plutus</a>
+
 
     <!--
     There are two kind of attributes: Global and Non-global.
     Global attributes can be applied to all tags. Examples of global attributes are id and class.
     Non-global attributes are attributes applied to a specific instance of a tag. Start is an attribute for the <ol> tag and it cannot be applied on the <p> or <h1> tags.
     -->
-
+    <br>
+    <img src="https://prod-edxapp.edx-cdn.org/assets/courseware/v1/7d80ea79de1c7f012107c55c2ea86bde/asset-v1:W3Cx+HTML5.0x+2T2018+type@asset+block/laughing.jpg"
+         title="A beautiful smile">
+    <p>title attribute give a message that appears when you point your cursor at something</p>
   </body>
 </html>
