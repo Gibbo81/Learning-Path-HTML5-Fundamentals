@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Images</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    The image tag has several attributes out of which only src and alt are required
+    <br>
+    <img src="images/Clock.jpg" alt="A simple image">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/61CSXuScnaL._SL1000_.jpg" alt="A simple image"
+         width="29%">
+    <br>  
+    <p>
+      src attribute told you where to fetch the image from:
+      <ul>
+        <li>From a local patch in your web site </li>
+        <li>From the web</li>
+      </ul>
+      Use Unix (/) path name separator instead of Windows (\) style. This might work on Windows but will fail elsewhere. The path should be 'images/example.png' and not 'images\example.png'.
+    </p>
+    <p>
+      alt attribute stands for alternate text for an image.
+      alt is an important attribute because it is the text alternative to the image for users who are unable to see the image, instead using assistive technology like screen readers that rely on the alt text. It is also useful to provide relevant information for search engines: they do not 'see' images but rely on the alt attribute to find out what the image is about. If you use your target keyword in alt, it will optimize the search.
+    </p>
+
+    <p>
+      <h2>title</h2>
+      <img src="https://www.expartibus.it/wp-content/uploads/2018/04/tulipani.jpg" alt="Tulips"
+           title="Tulips from google">
+      <br>
+      The alt attribute is meant to be an alternate source of information while the title attribute should provide additional information about the image. The title attribute should not be relied upon for important information, and it should not be used in place of the alt attribute.
+    </p>
+
+    <p>
+      <h2>height - width</h2>
+      <img src="https://prod-edxapp.edx-cdn.org/assets/courseware/v1/c92337ae06a2117b39c05568d1885b00/asset-v1:W3Cx+HTML5.0x+2T2018+type@asset+block/badgehtml5.png" 
+           alt="HTML resized image" title="Resized image seems to fit the page better" 
+           width="173" height="262">
+      <br>
+      The use of these attributes really depends on how you are using the image. If it is part of an image grid or a list with multiple images of the same size, it is best achieved by CSS. So you don't have to bother adding the same dimensions to every image and it will be repetitive. Plus it is generally bad practice to encode dimensions directly into the HTML. However, if you are adding the image into some content and it needs to be a certain size for the visual flow of the reader, then it is best to add it to HTML using the height and width attributes. This is to avoid cluttering your CSS with a style for every image in your page. This is also useful if you are changing or removing the image: you can just remove it from your HTML and not deal with remembering to remove it from your CSS too.
+    </p>
+  </body>
+</html>

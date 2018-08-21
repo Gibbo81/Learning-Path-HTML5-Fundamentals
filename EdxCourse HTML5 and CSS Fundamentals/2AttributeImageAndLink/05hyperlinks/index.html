@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hyperlinks</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <h1>hyperlink</h1>
+    Hyperlink is any text or image you can click and it will take you to another page. This page can be:
+    <ol>
+      <li>
+          Another Web page: <a href="https://www.gazzetta.it/">Gazzetta dello sport</a>
+      </li>
+      <li>
+        A bookmark (a specific part of a Web page): e.g. the History section of the Hyperlinks wiki page at    https://en.wikipedia.org/wiki/Hyperlink#History. We learned about using the id attribute as a link target in the unit about attributes earlier. href="#details" if we are moving on another part of the same page
+      </li>
+      <li>
+        A local link (link to another part of the same Web page) <a href="RelativePage.html">relative URL</a>
+      </li>
+      <li>
+        An email: e.g. mailto:helloauthor@w3c.com  Nevertheless, you should probably avoid using hyperlinks for email addresses: The email address usually opens up on the default email client on the user's computer which they might not use. This defeats the whole purpose. Providing your email address in your Web page directly as text or a hyperlink will expose your email address. Bots or spam crawlers can be used to search the Web to pick up email addresses for spam. You should avoid this if possible and use contact forms instead.
+      </li>
+    </ol>
+    Appearance - links have a default appearance in most browsers, blue and underlined. Ensure no other text in your page is underlined so as to avoid confusing the user. They might get frustrated trying to click text that they think is a link.
+    <br>
+    lin can use text or image:
+    <lo>
+      <li><a href="https://www.qwant.com/">If you click on me, I will take you to qwant.com</a></li>
+      <li>
+        <a href="https://www.gazzetta.it/">
+          <img alt="Gazzetta link" src="images/Clock.jpg" width="431" height="440">
+        </a>
+      </li>
+    </lo>
+    <br>
+    Anchor element (a) isn't the same of link tag: The anchor element is used for hyperlinks while the link tag is used to define a link between a document and an external resource like an external style sheet.
+    
+    <p>
+      <h2>Target attribute</h2>
+      target attribute specifies the destination where the linked URL in href should be opened
+      <lo>
+        <li><a href="http://www.tuttosport.com/" target="_self">_self : same page</a></li>  
+        <li><a href="http://www.tuttosport.com/" target="_blank">_blank : new window</a></li>
+      </lo>
+    </p>
+    <br>
+
+    <p>
+      <h2>download attributes</h2>
+      The download attribute makes a link download a file instead of navigate to another location.
+      <a href="images/Clock.jpg" download="">download clock</a>        
+    </p>
+  </body>
+</html>
