@@ -10,10 +10,8 @@
     <p>
       Semantic HTML is HTML that concentrates on the meaning of information in Web pages instead of its presentation or look.
       Semantic tags, like p, suggest the purpose of the content within the tags
-      From a semantic HTML perspective, using the right tags is important. You should use blockquote to wrap a quote and
-      not use a paragraph tag and then style it to look like a quote.
-      For presentation purposes, you can achieve the same using CSS, but how something looks has very little to do with what
-      it means. This is why in HTML, we separate content and style.
+      From a semantic HTML perspective, using the right tags is important. You should use blockquote to wrap a quote and not use a paragraph tag and then style it to look like a quote.
+      For presentation purposes, you can achieve the same using CSS, but how something looks has very little to do with what it means. This is why in HTML, we separate content and style.
     </p>
     <p>
       Tags such as article, section, header, nav and footer were specifically introduced in HTML5 to define the Web page
@@ -53,5 +51,47 @@
         <li><a href="https://developer.mozilla.org/en-US/search?q=nav">mdn</a></li>
       </ul>
     </nav>
+    <br>
+
+    <h2>article and secion</h2>
+    An article element rapresents stand-alone content. If you pick an article out of a Web page, it should
+    make sense all by itself.
+    Section elements are used to section  the content of a page, but a single section doesn't make sense by
+    itself
+    <article id="ces">
+      <header>
+        <h2>CES 2018</h2>
+        <h3>Consumer electronics and consumer technology tradeshow</h3>
+      </header>
+      <section>
+        <h4>Getting There</h4>
+        <p>Arriving at the show location proved much harder for me. I couldn't get a hotel closer to where the show was taking place and so had to rent a car....</p>
+      </section>
+      <section>
+        <h4>Conference Sessions</h4>
+        <p>I managed to squeeze in 3 conference sessions on the first day...</p>
+      </section>
+      <footer>
+        <p>Written by guest author Nicholas Abc. Read Nicholas's blog here.</p>
+      </footer>
+    </article>
+    <br>
+
+    <h2>div</h2>
+    The div tag is one you will likely see sprinkled all over an HTML document. It is used to define a division or a section of the document. Div is not a semantic element, however, it is commonly used when there isn't a better semantic assignment for it.
+    It is like a generic container that can hold a variety of elements such as paragraphs, images, links, tables, etc. It can be used to group elements for styling purposes. You can do this by assigning an id or class attribute to the div element and then apply styles which will affect all elements in the div container.
+    It should only be used if you cannot use any other semantic element in its place
+    <br>
+
+    <h2>span</h2>
+    When can span be used?     
+    <ol>
+      <li>To add styling to part of a sentence (inline)</li>
+      <li>Manipulate part of a sentence using JavaScript</li>
+      <li>When no other HTML element is applicable, you can use span (and div) to add attributes such as class and id</li>
+    </ol>
+    Like div, span is not a semantic element. You should only use span if no other semantic element is appropriate. div and span serve the same purpose but should be applied at different levels. div is a   block level element (for a block of space) while span is an inline element (for within a line or phrase).
+
+    <p>Hi everyone! My name is Alexa and I work for <span class="company">ABC Company</span></p>
   </body>
 </html>
