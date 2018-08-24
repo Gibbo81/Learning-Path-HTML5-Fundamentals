@@ -1,0 +1,39 @@
+/*
+css is just a list of rules, each rule consist of a selector and a declaration
+*/
+li { 
+	font-size: 52px; 
+    color: #213344;
+}
+/*
+In the above, the selector is li. When a selector appears unprefixed by any punctuation, then it is 
+assumed to match to an HTML tag. Thus, the p selector will apply the CSS rule to all <p> tags in the document. 
+*/
+
+div { 
+	font-size: 23px; 
+	color: red;
+}
+
+/*default rule always valid. Use bith body and html to wark with all browser*/
+body, html{
+	font-size: 25px;
+	font-family: sans-serif;
+}
+
+address{
+	font-size: .7rem;  /*For font-relative units that are root-based (such as rem), the font size is relative to the size of the font used by the <html> (root) element.*/
+	font-family: serif;
+	/*We can use relative Size, it's relative to the previous carachter dimension  (25*0.7)*/
+	color: dimgray;	
+}
+
+h1{
+	color: crimson;
+	text-align: center;
+}
+
+p{
+	line-height: 2.0em;
+	font-size: 120%;
+}
