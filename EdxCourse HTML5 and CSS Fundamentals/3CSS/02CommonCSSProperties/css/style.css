@@ -23,8 +23,22 @@ line-height
 line-height property drives the height of the space where text is drawn into. 
 A large line-height will give the text more spacing. A small line-height will smash the text lines together.
 The used value (an unitless number) is multiplied by the element's font size to obtein the real height value*/
-p { line-height:3; }
+#line3 { line-height:3; }
+#line0_5 { line-height:0.5; }
 
+
+/*------------------------------------------------------------------------------------------
+text-align valid values are: left center right justify */
+#text_align{ text-align: justify; }
+
+/*------------------------------------------------------------------------------------------
+text-decoration 
+Used to underline (and similar) the text, valid value are: 
+underline, overline, line-through, and none;  They can combined. */
+#underline{ text-decoration: underline; }
+#overline{ text-decoration: overline; }
+#line-through{ text-decoration: line-through; }
+#all{ text-decoration: underline line-through overline; }
 
 
 
