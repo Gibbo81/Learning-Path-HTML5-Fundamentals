@@ -40,6 +40,28 @@ underline, overline, line-through, and none;  They can combined. */
 #line-through{ text-decoration: line-through; }
 #all{ text-decoration: underline line-through overline; }
 
+/*------------------------------------------------------------------------------------------
+font-weight (bold)
+While common values are normal and bold, text can also be made bolder (or less bold) than its parent with the
+values bolder and lighter. Lastly, the font-weight can be set explicitly as a numeric value: 100, 200, 300, 
+400, 500, 600, 700, 800 and 900 (only this number are valid). 
+*/
+#fw_a{ font-weight: bold; }
+#fw_b{ font-weight: 400; }
+
+/*------------------------------------------------------------------------------------------
+FONT-STYLE (italic): Valid values for this property are normal and italic*/
+#fs1 { font-style: italic; }
+
+/*------------------------------------------------------------------------------------------
+font-family (italic): set the font of an item
+browsers only guarantee a few standard choices: serif, sans-serif, monospace, cursive, and fantasy.
+the font-family property accepts a list of possible font choices.  The browser will start with trying the 
+first font listed, and if not available (or not having a needed glyph) it will then proceed to the next font
+ in the list, and so on.  
+*/
+#ff { font-family: "fantasy", "Verdana", "Arial", sans-serif; }
+
 
 
 
