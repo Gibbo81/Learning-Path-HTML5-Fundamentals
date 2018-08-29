@@ -1,0 +1,35 @@
+/*Margin and Color*/
+
+/*------------------------------------------------------------------------------------------
+Margin
+margin can be a bit confusing, depending upon context, it will space an item away from its immediate neighbors 
+(in the HTML) or from the edges of its parent. Also, there is not only one margin property, but five:*/
+
+#margin_1 { margin: 10px; }  
+#margin_2 {
+ margin-left:   3px; 
+ margin-right:  3px;   
+ margin-top:    3px;   
+ margin-bottom: 3px; 
+}  
+
+/*------------------------------------------------------------------------------------------
+Color
+Interesting is transparent, which will make the text invisible. However, if you want to make an HTML element 
+invisible, then the display:none; or visibility:hidden; */
+#color1 { color: blue; }
+#color2 { color: transparent; }
+
+/*any color can be specified by mixing three components together: red, green, and blue. The amount of each 
+component falls within a range between 0 and 255. rgb() function can be used to specify a color.*/
+#color3 { color: rgb(142,34,218); }
+#color4 { color: rgba(142,34,218, 0.5); }
+/*rgba() function can be used for semi-transparent colors. The fourth value is opacity.*/
+/*Quicker than the lengthy rgb() function is simply providing an hexadecimal (hex) code, it starts with the 
+pound sign (#) and is followed by three pairs of hex number, ranging 00 to FF*/
+#color5 { color: #3B6B0A; }
+
+
+
+
+
