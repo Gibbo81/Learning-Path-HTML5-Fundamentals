@@ -1,18 +1,56 @@
-/*Margin and Color*/
+/*Units*/
 
-/*------------------------------------------------------------------------------------------
-Margin
-margin can be a bit confusing, depending upon context, it will space an item away from its immediate neighbors 
-(in the HTML) or from the edges of its parent. Also, there is not only one margin property, but five:*/
+/*
+Many CSS properties expect some sort of dimension value. Dimension values support a wide variety of units 
+the most common and useful ones are: px, em, rem, %, vh and vw.*/
 
+/* px
+it's short for 'pixel', which is a single dot on the screen. Text with  font-size:20px is 20 pixels tall 
+on-screen
+*/
 #margin_1 { margin: 10px; }  
-#margin_2 {
- margin-left:   3px; 
- margin-right:  3px;   
- margin-top:    3px;   
- margin-bottom: 3px; 
-}  
 
+/* em
+One 'em' maps to the height of one capital letter in the parent context, it's usually used for vertical 
+dimensions.     */
+
+#par_1 { font-size: 0.9em; }  /* smaller than its parents */
+#par_2 { font-size: 1.2em; }  /* bigger than the parent */
+#par_3 { font-size: 0.5em; }  /* half as big. */
+
+/* rem
+rem is much like 'em', except that it always derives its size relative to the root. */
+
+html, body { font-size: 12px; }  /*ROOT*/
+#rem { font-size: 2rem; }  /* smaller than its parents */
+
+/* %
+% is relative to the parent dimension. If the parent element doesn't have an explicit width or height set then 
+child percentages may be percentages of 0.*/
+.d{
+	width: 500px;
+	height: 250px;	
+}
+
+#per { 
+	margin-left:  5%;
+  	margin-right: 5%;
+  	margin-top: 5%;
+  	margin-bottom: 5%; 
+}  /* smaller than its parents */
+
+
+/* vh - vw
+vh stands for viewport height, and 'vw' for viewport width. They work much like the percentage % unit. But 
+instead of percentage of the parent, it is percentage of the screen (aka viewport). Obviously, vh is for 
+vertical dimensions, and vw for horizontal dimensions. */
+
+#vhvw { 
+	margin-left:  5vw;
+  	margin-right: 5vw;
+  	margin-top: 5vh;
+  	margin-bottom: 5vh; 
+}
 
 
 
