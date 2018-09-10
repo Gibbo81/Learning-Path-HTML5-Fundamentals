@@ -1,0 +1,40 @@
+
+/*Tag selector */
+li { list-style-type: circle; }
+
+/*id selector
+It's simply a hash sign (#) followed directly by the id. */
+#p18 { color: blue; }
+#p19 { color: green; }
+
+/*Class attribute
+Similar to id but can be shared by multiple attribute, multiple classes can be assigned to a tag by simply 
+separating them with spaces.*/
+.bird   { color: blue; }
+.insect { color: green; }
+.flying { text-decoration: underline; }
+
+/*-----------------------------------------------------------------------------------------------------
+Combining selectors*/
+
+/*comma separated selector
+If we want more elements to share the same css option we can put them in the same rule separated by , */
+blockquote,
+q,
+.speech {
+   color: red;
+   font-style: italic; 
+}
+
+/*Specialized selectors
+If two selectors of different types (like tag and class) appear next to each other with no spacing 
+separating them, then they form a specialized selector. To match, a candidate must match both rules.  
+If a tag selector is used, it must appear first.*/
+
+blockquote.talk { color: purple; }
+
+
+
+
+
+
