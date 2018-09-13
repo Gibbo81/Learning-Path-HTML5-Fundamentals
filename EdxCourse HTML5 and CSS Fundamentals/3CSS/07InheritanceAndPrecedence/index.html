@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Css Inheritance</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <p class="padding">
+      This paragraph has children <span>spans</span> and <span>q</span>, which, in turn, have their own   child  <span>spans</span>.
+      <q>With this structure, we can see how some CSS <span>rules</span> are
+      <span>applied across a <q>variety</q></span> of scopes.</q>
+    </p>
+
+    <p class="padding">
+      This paragraph has children <span class="inheritance">spans</span> and <span class="inheritance">q</span>, which, in turn, have their own   child  <span class="inheritance">spans</span>.
+      <q class="inheritance">With this structure, we can see how some CSS <span class="inheritance">rules</span> are
+      <span class="inheritance">applied across a <q class="inheritance">variety</q></span> of scopes.</q>
+    </p>
+
+    <p class="hortense">
+       il fitto calendario del palco spettacoli, con le voci dei cartoni animati, vera cifra distintiva delle due passate edizioni: i Gem Boy si esibiranno sabato alle 17 in uno spettacolo inedito insieme ad alcune delle più famose voci dei cartoni, come Pietro Ubaldi (Doraemon) e Monica Ward (Lisa Simpson). Domenica invece sarà il gior
+    </p>
+
+    <p class="forest"><span class="tree">arbol</span></p>
+  </body>
+</html>

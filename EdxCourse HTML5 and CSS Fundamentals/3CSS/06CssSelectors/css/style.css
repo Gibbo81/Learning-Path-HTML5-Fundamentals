@@ -32,9 +32,29 @@ separating them, then they form a specialized selector. To match, a candidate mu
 If a tag selector is used, it must appear first.*/
 
 blockquote.talk { color: purple; }
+.insect.flying { text-decoration: underline; font-weight:bold; }
 
+/*Descendant selectors
+If we need to select all the links inside a tag with id intro we use descendant selector*/
 
+#intro a { color: yellow; } /* any <a> tag that is a descendant of #intro.*/
+#guideline a { color: #00FF00; }
+#intro blockquote a { font-weight: bold; } 
 
+/*Direct descendant selectors >
+Sometimes you don't want to apply a style to any _possible_ child, but to only to the direct children.  
+This can be done with the > symbol.  Use it between selectors to limit the application to the direct children 
+of the parent.*/
 
+#direct > a { 
+  color : blue; 
+  text-decoration: overline;
+  font-size: 30px;
+}
 
-
+/*Everything selector (*)
+The asterisk (*) can be used to match any tag.*/
+#oneforall * {
+  text-decoration: underline;
+  color : red;
+}

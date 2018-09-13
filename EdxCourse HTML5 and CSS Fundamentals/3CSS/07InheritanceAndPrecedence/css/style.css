@@ -1,0 +1,74 @@
+
+/*Most CSS rules once applied to an element are also applied to all the children of that element, and to 
+their children, and so on. There are exceptions, notably the layout properties (margin, padding, position, 
+width, etc.) and the decorative properties (border, background, etc.) do not cascade. This cascading of a CSS 
+property from parent to child is also called "inheritance". */
+
+.padding {
+  /* inherited by children of p */
+  font-family: monospace;  
+  
+  /* not inherited */ 
+  padding: 40px;    
+}
+
+/*Inheritance can be explicitly leveraged. Many CSS properties accept the value of inherit, which means to 
+inherit the value from the parent. By smartly leveraging inherit, you can reduce repetition in your CSS rules
+and make your project easier to maintain. */
+.inheritance{
+	padding: inherit;
+}
+
+/*There is no reliable rule for which CSS properties are inheritable by default and which are not. However,
+ generally, the properties associated with positioning and layout are not inherited.  Likewise, the 
+ decorative properties (borders, background images, etc.) do not inherit.  Most properties that begin with
+ text- or font- inherit.*/
+
+/*--------------------------------------------------------------------------------------------------*/
+
+/*When rendering CSS, the browser has some guidelines it follows for resolving conflicting rules*/
+
+/*
+1 - A more specific rule takes precedence over a less specific rule. A rule that more tightly matches a 
+particular element than a general rule will be applied. */
+span { color: blue; }
+ul li span { color: red; } /*the second rule will "win"*/
+
+/*2 - #id selector is the most specific*/
+#someid{
+	font-family: monospace;  
+}
+
+/*
+3 - .class selector is more specific than a tag selector
+Rules employing a class selector (e.g. .someclass ) are considered more specific than rules without 
+(but not as specific as an #id selector, which trumps everything).*/
+
+/*
+4 - Rules that come later override those that come earlier
+This guideline is for two CSS rulesets with the same selector.  Where there are conflicts, the rules from the later one apply.  
+*/
+.hortense { color: red; text-decoration: underline; }
+.hortense { color: blue; }
+/*In the example above, an element with the .hortense class will be underlined and its color will be blue*/
+
+
+
+p.forest span       { color: green; }
+p        span.tree  { color: red;  }
+/*
+It'a apply rule 4 the latter win, the p is red. If i had a new rule after:
+p.forest span       { color: blue; }
+it would be blue*/
+
+
+/*!important
+
+Because multiple CSS selectors can resolve to the same element, and because the rules that govern precedence 
+are complex, you may from time to time encounter a situation where you need to apply a particular CSS property 
+nd you want it to take precedence over all others, no matter what. !important will do that. The exclamation 
+point is required, and the whole symbol ( !important ) goes after the value and before the semi-colon ( ; ).*/  
+
+p { color: orange !important; }
+/*This may seem like an attractive option, but using it is not recommended BAD PRACTICE*/
+
