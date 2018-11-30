@@ -17,7 +17,7 @@ separating them with spaces.*/
 /*-----------------------------------------------------------------------------------------------------
 Combining selectors*/
 
-/*comma separated selector
+/*comma separated selectors
 If we want more elements to share the same css option we can put them in the same rule separated by , */
 blockquote,
 q,
@@ -29,7 +29,7 @@ q,
 /*Specialized selectors
 If two selectors of different types (like tag and class) appear next to each other with no spacing 
 separating them, then they form a specialized selector. To match, a candidate must match both rules.  
-If a tag selector is used, it must appear first.*/
+If a tag selector is used it must appear first.*/
 
 blockquote.talk { color: purple; }
 .insect.flying { text-decoration: underline; font-weight:bold; }
@@ -41,7 +41,7 @@ If we need to select all the links inside a tag with id intro we use descendant 
 #guideline a { color: #00FF00; }
 #intro blockquote a { font-weight: bold; } 
 
-/*Direct descendant selectors >
+/*Direct descending selectors >
 Sometimes you don't want to apply a style to any _possible_ child, but to only to the direct children.  
 This can be done with the > symbol.  Use it between selectors to limit the application to the direct children 
 of the parent.*/

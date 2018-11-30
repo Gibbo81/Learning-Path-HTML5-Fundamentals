@@ -22,7 +22,7 @@ blockquote { font-size: larger; }
 line-height
 line-height property drives the height of the space where text is drawn into. 
 A large line-height will give the text more spacing. A small line-height will smash the text lines together.
-The used value (an unitless number) is multiplied by the element's font size to obtein the real height value*/
+The used value (an unit less number) is multiplied by the element's font size to obtain the real height value*/
 #line3 { line-height:3; }
 #line0_5 { line-height:0.5; }
 

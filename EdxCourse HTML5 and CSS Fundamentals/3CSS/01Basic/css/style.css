@@ -7,7 +7,7 @@ li {
 }
 /*
 In the above, the selector is li. When a selector appears unprefixed by any punctuation, then it is 
-assumed to match to an HTML tag. Thus, the p selector will apply the CSS rule to all <p> tags in the document. 
+assumed to match to an HTML tag. Thus, the li selector will apply the CSS rule to all <li> tags in the document. 
 */
 
 div { 
@@ -15,7 +15,7 @@ div {
 	color: red;
 }
 
-/*default rule always valid. Use bith body and html to wark with all browser*/
+/*default rule always valid. Use bith body and html to work with all browser*/
 body, html{
 	font-size: 25px;
 	font-family: sans-serif;

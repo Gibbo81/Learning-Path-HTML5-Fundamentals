@@ -20,7 +20,7 @@ and make your project easier to maintain. */
 }
 
 /*There is no reliable rule for which CSS properties are inheritable by default and which are not. However,
- generally, the properties associated with positioning and layout are not inherited.  Likewise, the 
+ generally, the properties associated with positioning and layout are not inherited; likewise, the 
  decorative properties (borders, background images, etc.) do not inherit.  Most properties that begin with
  text- or font- inherit.*/
 
@@ -66,7 +66,7 @@ it would be blue*/
 
 Because multiple CSS selectors can resolve to the same element, and because the rules that govern precedence 
 are complex, you may from time to time encounter a situation where you need to apply a particular CSS property 
-nd you want it to take precedence over all others, no matter what. !important will do that. The exclamation 
+and you want it to take precedence over all others, no matter what. !important will do that. The exclamation 
 point is required, and the whole symbol ( !important ) goes after the value and before the semi-colon ( ; ).*/  
 
 p { color: orange !important; }
