@@ -1,0 +1,8 @@
+
+.padding {
+  /* inherited by children of p */
+  font-family: monospace;  
+  
+  /* not inherited */ 
+  padding: 40px;    
+}

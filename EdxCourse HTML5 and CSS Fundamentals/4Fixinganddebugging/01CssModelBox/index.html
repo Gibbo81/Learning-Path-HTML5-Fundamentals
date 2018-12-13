@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Css box model</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <h1>CSS box model</h1>
+    <p style="font-size: 20px";>
+      The placement of elements on a Web page can be fairly complicated. One of the most basic features that influence where things go on a Web page is the CSS Box Model. The Box Model governs 3 important spacing features of CSS.  We learned about margins previously as the space between elements.  There are two other similar notions, padding and borders.Perhaps the best way to understand is with a picture.  All elements in an html document end up being treated as rectangles somewhere in the window. The content of each rectangle corresponds to the innermost rectangle in the image below.  Just outside the content is the padding.  This is kind of like an internal margin, meaning that it separates the contents from the border.  The border essentially traces the sides of the padding rectangle.
+    </p>
+    <img src="images/boxmodel.jpg" alt='css box model' height="600">
+
+    <p>All elements in an html document end up being treated as rectangles somewhere in the window</p>
+    <ul>
+      <li style="border: 2px solid blue; padding-left: 1rem;">padding-left: 1rem;</li>
+    </ul>
+    <ul>
+      <li style="border: 2px solid blue; list-style-position: inside; padding-left: 1rem;">list-style-position: inside; padding-left: 1rem;</li>
+    </ul>
+  </body>
+</html>
