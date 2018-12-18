@@ -1,4 +1,8 @@
 
+p {
+	font-size: 17px;
+}
+
 .padding {
   /* inherited by children of p */
   font-family: monospace;  

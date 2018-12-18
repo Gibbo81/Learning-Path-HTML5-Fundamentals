@@ -13,12 +13,27 @@
     </p>
     <img src="images/boxmodel.jpg" alt='css box model' height="600">
 
-    <p>All elements in an html document end up being treated as rectangles somewhere in the window</p>
-    <ul>
-      <li style="border: 2px solid blue; padding-left: 1rem;">padding-left: 1rem;</li>
-    </ul>
-    <ul>
-      <li style="border: 2px solid blue; list-style-position: inside; padding-left: 1rem;">list-style-position: inside; padding-left: 1rem;</li>
-    </ul>
+    <p>
+        All elements in an html document end up being treated as rectangles somewhere in the window
+      <ul>
+        <li style="border: 2px solid blue;">i'am in blue box</li>
+        <li style="border: 2px solid blue; padding-left: 2rem;">padding-left: 2rem;</li>
+        <li style="border: 2px solid blue; list-style-position: inside; padding-left: 2rem;">list-style-position: inside; padding-left: 2rem;</li>
+      </ul>
+    </p>
+    <p>
+      While all of these border properties have default values, there are three that you'll see most often when specifying a border: border-width (the size of your imaginary pen), border-style (dashed, dotted,  solid, etc.) and border-color (the color of your pen).  In fact these are so commonly specified that there is a shorthand syntax to set all three in one line:
+      <p style="border: 5px dotted red;">border: 5px dotted red;</p>
+    </p>
+
+    <p>
+        The margin specifies the position of the element relative to whatever is adjacent to it, either to the right or left, or top or bottom.  The margin is always transparent, and each side can be set individually.  The unique thing about the margin is that the values for any of the sides can be negative, even if that means that it overlaps with another element on the page.  This can be useful when you want to control where an element is placed on a page
+      </p>
+      <p> 
+          Inside the border is the padding.  This controls the amount of space between the elements content and the border box. If you have no padding, then the contents of the element would be right up against the border, which could be awkward if you have a visible border. All four sides can be independently set. The background of the padded area matches the background of element, so the effective visible size of the element includes the padding.
+      </p>
+      <p> 
+          Padding, margin and border can have a width of 0, which is equivalent to not having them, thus 'margin: 0;'  is the same as 'margin: none;'.  Each can be controlled individually with relative or absolute lengths.  While the padding and borders require non-negative widths, margins can be either positive or negative (even if that means that content overlaps with another element on the pag). Using these three settings in combination provides quite a bit of flexibility in terms of spacing and drawing of borders.  If you have padding and a visible border, you can control how close the border comes to the contents.  By setting the margin you can control how close the border comes to surrounding elements.
+      </p>
   </body>
 </html>
