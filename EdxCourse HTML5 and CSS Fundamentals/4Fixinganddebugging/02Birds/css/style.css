@@ -7,6 +7,19 @@ img {
 	padding: 5px;
 }
 
+#first {
+	background-color: blue;
+	width: 250px;
+	height: 100px;
 
+}
+
+#second {
+	border: 5px solid green;	
+	width: 50px;
+	height: 200px;
+	margin-top: -21px;
+	margin-left: 59px;
+}
 
 
