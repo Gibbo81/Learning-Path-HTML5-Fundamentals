@@ -17,5 +17,13 @@
       <h1>Section 1.2</h1>
     </section>  
   </article> 
+  <p>
+    Inside browser debug --> elements --> style "user agent stylesheet" there are always  two grayed-out section with the label, these are basically the defaults, the values that the browser will use if nothing else is specified.  Any rule you provide should override the corresponding rule in the user agent stylesheet.
+  </p>
+  <p>
+      Precedence between 'section h1' - 'article h1'
+      the computer sees "tag-type tag-type", which is more specific than just one "tag-type", but no more specific than any other "tag-type tag-type" combination.  Since "article h1" and "section h1" are of equal precedence, the tie is broken by whichever rule came last.  When we rearrange the rules, we change which of the two comes last, thus causing the change in the section headers.
+      We can make this explicit by changing the selector to "article section h1", so that now the smaller.
+  </p>
 </body>
 </html>
