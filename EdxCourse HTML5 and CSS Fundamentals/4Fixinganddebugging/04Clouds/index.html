@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
    <meta  charset="utf-8">
-    <title>Clouds</title>
+    <title>Clouds and shrinking text</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
   <body>  
-    <h1>Clouds</h1>
+    <h1>Clouds and shrinking text</h1>
 
          <img alt="Clouds" width="500" src="http://www.astrosurf.com/luxorion/Documents/nuages-cu-sc-ac-schoenbeck.jpg">
  
@@ -23,11 +23,45 @@
             <li id="cirrus">Cirrus clouds: <img alt="Cirrus clouds" src="http://www.weather.gov/images/jetstream/clouds/ci.jpg"></li>
             <li id="stratus">Stratus clouds: <img alt="Stratus clouds" src="http://www.weather.gov/images/jetstream/clouds/st.jpg"></li>
         </ol>
-
-
-        ---------------------------------------------------------------------------------
         <p>
            Any style setting for the img width will take precedence over the attribute setting (width="500"), so our img settings intended for the other images will change that one too
-        </p>        
+        </p>
+      ---------------------------------------------------------------------------------
+      ---------------------------------------------------------------------------------
+
+       <section>
+          <h1>Essay Outline</h1>
+          
+          <ol>
+              <li>Introduction
+                  <ol>
+                      <li>Introduce Subject
+                          <ul>
+                              <li>What is it?</li>
+                              <li>Why is it important</li>
+                          </ul>
+                      </li>
+                      <li>Propose Thesis</li>
+                      <li>Outline</li>
+                  </ol>
+              </li>
+                  
+          </ol>
+        </section>
+        
+        <p>
+          When working with relative measures (.5em) styles panel doesn't tell us a lot about the actually font-size in absolute terms; we can use the "Computed" tab. The "Computed" tab contains the values of all the CSS properties that apply to the current element.  There are a lot of them, and they're listed in alphabetical order. 
+        </p>
+        <img src="images/P22.png" />
+        <p>
+          This tells us that the font-size on the innermost list item is only 3px.  No wonder it's unreadable! 
+          When we click on the triangle we can expand the details on font-size, which makes a little more clear what's going on.  We see that the font-size on the body is 24px, but there are several repetitions of the li .5em.
+        </p>
+        <img src="images/P39.png" />   
+        <p>
+          If we look at the next outer list item, we see that the font-size is 6px, and the one outside of that is 12px.  This doubling makes it clear what's happening.  Each nested <li> element has a font-size 1/2 the size of its parent, because the em unit is relative measurement, depending on the current font-size.
+
+          Now that we know what's happening, we can fix it in a few different ways.  We could use an absolute unit like px or pt, but a better solution would be rem.  This would make the size relative to the html font-size (the default font-size for the page), not to it's surroundings.
+        </p>     
     </body>
 </html>
