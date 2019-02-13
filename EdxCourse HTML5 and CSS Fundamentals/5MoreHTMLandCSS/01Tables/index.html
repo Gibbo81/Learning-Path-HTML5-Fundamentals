@@ -18,11 +18,52 @@
         <li>Using CSS (one or two external stylesheets for your whole Web site) is easier to maintain consistency among pages</li>
       </ul>
     </p>
+
     <table border=1>
-      <caption>pippo</caption>
-
-
+      <caption><p>pippo</p></caption>
+      <tr>
+        <th colspan="2" scope="col">Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>MR.</td> 
+        <td>Alexa</td>
+        <td>23</td>
+      </tr> 
+      <tr>
+        <td>Ms.</td> 
+        <td>Nicole</td>
+        <td>45</td>
+      </tr> 
     </table>
+
+    <p>There are two types of cells in a table: header and standard. 'th' creates table header cells. The content of table header cells is bold and centered by default. 'td' creates standard cells</p>
+    <p>scope attribute (th) Specifies if a header cell is the header for a row, column, rowgroup or colgroup Possible values: row, col, rowgroup, colgroup, auto</p>
+
+    <table border=1>
+      <colgroup>
+        <col span="2" style="background-color:green">
+        <col span="1" id="col2" >
+      </colgroup>
+      <tr>
+        <th colspan="2" scope="col">Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>MR.</td> 
+        <td>Alexa</td>
+        <td>23</td>
+      </tr> 
+      <tr>
+        <td>Ms.</td> 
+        <td>Nicole</td>
+        <td>45</td>
+      </tr> 
+    </table>
+    <p>
+      colgroup tag allows you to group columns in a table. Grouping columns is useful if you want to specify properties for a group of columns like applying styles to the whole column instead of repeating it for each cell.
+      col tag specifies the column property for each column within a colgroup. The only element a colgroup can contain is col. Attribute span takes a positive integer value. It specifies the number of columns you want the col element to span (cover). 
+    </p>
 
   </body>
 </html>
