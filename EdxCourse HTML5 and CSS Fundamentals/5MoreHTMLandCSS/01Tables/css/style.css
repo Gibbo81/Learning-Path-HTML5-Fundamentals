@@ -11,3 +11,17 @@ body{
 #col3{
 	background-color:red;
 } 
+
+.Border1, .Border1 tr th, .Border1 tr td{
+	 border: 1px solid black; 
+}
+
+.Border2, .Border2 tr th, .Border2 tr td{
+	 border: thin dashed black;; 
+}
+
+.Border3, .Border3 tr th, .Border3 tr td{
+	 border: initial; 
+}
+
+
