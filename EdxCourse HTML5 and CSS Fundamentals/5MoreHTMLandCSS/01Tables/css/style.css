@@ -24,4 +24,11 @@ body{
 	 border: initial; 
 }
 
+.BorderCollapse, .BorderCollapse tr th, .BorderCollapse tr td{
+	 border: 1px solid black; 
+	 border-collapse: collapse;
+}
 
+#largeone {
+	width: 25%;
+}

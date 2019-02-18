@@ -154,5 +154,50 @@
         <td>23</td>
       </tr> 
     </table>
+
+    <p>
+      ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    </p>
+    <p>
+      We gave a border to the table, table-header and table-data above. This creates two borders creating a double line. In order to collapse them all into a single border, we use the border-collapse property
+    </p>
+
+    <table class="BorderCollapse">
+      <tr>
+        <th>Name</th>
+        <th>Name</th>
+      </tr>
+      <tr>
+        <td>Alexander</td>
+        <td>55</td>
+      </tr> 
+      <tr >
+        <td>Nicole</td>
+        <td>23</td>
+      </tr> 
+    </table>
+
+    <p>
+      ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    </p>
+    <p>
+      Browsers automatically set the width and height for the rows and columns for your table based on the content in your cells (width and height set to default value: auto). Cells with most content usually set the height and width of all cells adjacent to themselves. 
+      width/height of one cell will not only affect that cell but the whole column/row, if two cells in one column/row have different widths/heights specified, the larger value is set.
+    </p>
+    <table class="BorderCollapse">
+      <tr>
+        <th id="largeone">Name</th>
+        <th>Name</th>
+      </tr>
+      <tr>
+        <td>Alexander</td>
+        <td>55</td>
+      </tr> 
+      <tr >
+        <td>Nicole</td>
+        <td>23</td>
+      </tr> 
+    </table>
+
   </body>
 </html>
