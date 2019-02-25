@@ -1,0 +1,19 @@
+
+
+
+table, table tr th, table tr td{
+	 border: 1px solid black; 
+	 border-collapse: collapse;
+}
+
+.BorderZebra tr:nth-child(even){
+	background-color: grey;
+}
+
+.BorderZebra tr:nth-child(odd) { 
+	background-color: #ccff99; 
+}
+
+.BordernChild tr:nth-child(3n) { 
+	background-color: red; 
+}
