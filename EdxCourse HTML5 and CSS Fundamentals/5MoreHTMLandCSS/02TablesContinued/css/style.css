@@ -17,3 +17,25 @@ table, table tr th, table tr td{
 .BordernChild tr:nth-child(3n) { 
 	background-color: red; 
 }
+
+.HoverChild tr:hover { 
+	background-color: #4bff99; 
+}
+
+div.overflow-scroll { overflow: scroll; }
+
+.overflow-scroll{
+	height: 200px; 
+	width: 200px; 
+	border: 1px solid blue;	
+}
+
+ .overflow-scroll tr{ 
+ 	padding: 30px; 
+ 	border-bottom: 1px solid black; 
+ }
+
+ .overflow-scroll td{ 
+ 	padding: 30px; 
+ 	border-bottom: 1px solid black; 
+ }
