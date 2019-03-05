@@ -1,0 +1,18 @@
+
+table, th, td{
+	border: 1px solid black; 
+}
+
+table {
+	border-collapse: collapse;
+}
+
+#t th, #t td{
+	padding: 10px;
+}
+
+
+#t thead, #t tfoot{
+	background-color: antiquewhite;
+}
+
