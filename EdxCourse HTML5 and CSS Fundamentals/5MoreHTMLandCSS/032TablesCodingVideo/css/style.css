@@ -11,8 +11,14 @@ table {
 	padding: 10px;
 }
 
-
 #t thead, #t tfoot{
 	background-color: antiquewhite;
 }
 
+#t tbody{
+	background-color: floralwhite;
+}
+
+#t tr:nth-child(even){
+	background-color: blanchedalmond;	
+}
