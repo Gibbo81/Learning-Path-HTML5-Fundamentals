@@ -1,0 +1,38 @@
+
+
+
+table, th, td{
+	border: 1px solid black; 
+}
+
+table {
+	border-collapse: collapse;
+}
+
+#first th{
+	background-color: grey;
+}
+
+#first td{
+	background-color: 	#A9A9A9;
+}
+
+#second, #second th, #second  td{
+	border: 3px solid white; 
+}
+
+#second th{
+	background-color: #00FF00;
+}
+
+#second td{
+	background-color: #00FFFF;
+}
+
+#second tbody tr:nth-child(even) td{
+	background-color: #00CED1;
+}
+
+#second tr:hover td{
+	background-color: #0b7F3F;
+}
