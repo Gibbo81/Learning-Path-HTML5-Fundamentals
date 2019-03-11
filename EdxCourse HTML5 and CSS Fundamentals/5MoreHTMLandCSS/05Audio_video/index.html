@@ -10,6 +10,17 @@
     <audio src="Sound/The.good.the.bad.and.the.ashy.mp3" controls loop muted preload="none">
       Your browser does not support the audio file
     </audio>
+    <p>
+      Multiple audio track 
+      The source element, also new in HTML5, serves the same purpose as the src attribute in an audio element. It is used to specify source files for the audio and video elements. Using the source element, you can specify multiple source files. The source tag is self-closing, therefore, it does not require a closing tag. The advantage of providing multiple source files in different formats is that if the browser doesn't support the first format, it will try the second source file
+    </p>
+    <audio controls>
+      <source src="https://courses.edx.org/asset-v1:W3Cx+HTML5.0x+1T2016+type@asset+block@splash.wav" type="audio/wav">
+      <source src="https://courses.edx.org/asset-v1:W3Cx+HTML5.0x+1T2016+type@asset+block@splash.mp3" type="audio/mpeg">
+      Your browser does not support the audio file
+    </audio>
+
 
   </body>
 </html>
+
