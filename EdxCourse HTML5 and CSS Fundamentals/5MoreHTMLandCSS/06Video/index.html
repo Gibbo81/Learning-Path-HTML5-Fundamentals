@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Video element</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <video src="Video/small.mp4" controls>
+      Your browser doesn't support the HTML% video element
+    </video>
+    <p>
+      Poster: Specifies the URL of the frame you want to display as the video cover until the user starts or seeks the video. By default, the first frame is considered the poster frame.  The poster can also be an arbitrary image, not necessarily in any frame of the video.
+      Preload: Allows author to communicate to the browser which settings will work best - video should not be preloaded (none), only video metadata is fetched (metadata), video file can be downloaded (auto) values: none, metadata, auto
+    </p>
+
+    <video src="http://techslides.com/demos/sample-videos/small.mp4" controls loop muted preload="none"  poster="https://images-na.ssl-images-amazon.com/images/I/41oq-2oDKRL._SY300_QL70_.jpg" height="320" width="240">
+      Your browser does not support the HTML5 video element.
+    </video>
+    <p>
+      Just like audio file formats, not all video file formats are supported by all browsers. You should use common video file formats for browser compatibility ensuring the highest probability that your video file will play. The most common ones are MP4, WebM and Ogg. 
+      
+    </p>
+
+
+  </body>
+</html>
