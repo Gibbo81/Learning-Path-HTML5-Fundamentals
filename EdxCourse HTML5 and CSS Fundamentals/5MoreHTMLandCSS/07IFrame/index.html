@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IFrame</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <p>iframe allows you to put another Web page in your Web page.  Iframes are
+      generally used in Web pages to show external content/resources. The type
+      of content is not limited to other Web pages. You can add YouTube videos
+      or display a PDF file (some browsers will display the file inline while
+      some older browsers will try to download it instead)</p>
+      <iframe src="Resources/Abilitati.pdf" width="500" height="750" name="Plutus">
+        <p>Not supported</p>
+      </iframe>
+
+      <iframe src="https://www.gazzetta.it/" width="900" height="1300">
+        <p>Not supported</p>
+      </iframe>
+
+      <iframe src="https://www.youtube.com/embed/yAGEvR_1AEU" width="900" height="1300" allowfullscreen>
+        <p>Not supported original video : https://www.youtube.com/watch?v=yAGEvR_1AEU</p>
+      </iframe>
+
+      <p>There is one significant problem with iframes. Suppose you create your Web page, containing only an iframe with src="http://foo.com", with no borders, padding or margin. By all appearances, you would seem to be on the Web site foo.com. If you don't look at the URL, it might be difficult to tell. For reasons like this, some Web sites disallow their inclusion, so if you create an iframe with src="https://google.com", you'll get a blank frame and an error message in the console.  This isn't a bug, it's a feature.</p>
+      <p>there are a lot of possible attribute:
+        <ul>
+          <li>allowfullscreen:	This will allow the iframe to open "Full screen mode", often used with videos</li>
+          <li>name:	Specifies a name for the iframe.</li>
+          <li>sandbox:	This can apply a number of restrictions on the iframe, preventing the site in the iframe from using pop-ups, running scripts, automatically running videos and numerous other things.  This helps avoid some of the potential security issues that iframes may be prone to. no value (applies all restrictions)</li>
+        </ul>
+      </p>
+      <p>Good
+        <ul>
+          <li>Iframes load separately from the main page. However, they do block the main page's load command until its content finishes loading. You can avoid this by applying some Javascript. This allows them to load independently. Then, if the embedded page you are displaying loads slower, you can use your parent page to keep the reader occupied.</li>
+          <li>Sandboxing provides security.</li>
+          <li>Great for third party content like ads.</li>
+          <li>It is convenient to use if you need to have one part of your page static while the other is changed - i.e. navigation menus.</li>
+        </ul>
+      </p>
+      <p>Bad
+        <ul>
+          <li>Accessibility of iframes is poor</li>
+          <li>earch engines have trouble accessing and in turn indexing the content in your iframes. This doesn't help your search ranking.</li>
+          <li>You have no control over the content in an iframe if you display external content.</li>
+        </ul>        
+      </p>
+
+  </body>
+</html>
