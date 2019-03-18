@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ismap + usemap</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <p>Adding the ismap or usemap attributes to the &ltimg&gt tag means that the picture is an image with clickable areas. Imagine a picture of a world map where different countries on the map can be clicked and it navigates to another page like the country's wikipedia page. Simply put, we say such an image is mapped</p>
+
+    <img src="Images/CrossRoad.jpg" alt="CrossRoad" usemap="#navigatormap">
+    <map name="navigatormap">
+      <area shape="rect" coords="0,0,195,439" href="https://en.wikipedia.org/wiki/Millery" alt="Millery">
+      <area shape="rect" coords="196,0,390,439" href="https://en.wikipedia.org/wiki/Nomeny" alt="Nomeny">
+    </map>
+    <p>
+      <ul>
+        <li>&ltmap&gt defines a client-side image map, contains a set of area elements.</li>
+        <li>&ltarea&gt defines the areas that can be clicked and the pages it should navigate to. Typically takes the shape of the area, coordinates of the area, URL of the page it should redirect to and the alt attribute (short description). </li>
+        <li>shape attribute in the has four values: circle, rect, poly default (whole image)</li>
+      </ul>
+      
+
+    </p>
+
+    <p>&ltimg&gt bella cosa su come gestire i tag nel testo</p>
+
+  </body>
+</html>
