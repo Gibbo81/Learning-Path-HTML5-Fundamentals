@@ -1,6 +1,60 @@
-iframe {
-  border: 10px solid red;
-  padding: .5rem;
-  margin: 1rem;
-  box-shadow: 20px 20px 10px #888888;
+
+
+
+p {
+	background-color: #3E3F67
+}
+
+p a {
+	background-color: #6E7099
+}
+
+ul {
+	background-color: #FFC592
+}
+
+
+li {
+	background-color: #CC602D
+}
+
+#b1 {
+	background-image: url("../images/A.jpg");
+	width: 200px;
+	margin: 0px 0px 20px 0;
+}
+
+#b2 {
+	background-image: url("../images/B.jpg");
+	width: 200px;
+}
+
+#b3 {
+	background-image: url("../images/C.jpg");
+	width: 500px;
+	margin: 24px 0px 0px 0;
+}
+
+#b4 {
+	background-image: url("https://www.w3.org/2008/site/images/logo-w3c-mobile-lg");
+	background-position: center;
+	background-repeat: space;
+	width: 500px;
+	margin: 24px 0px 0px 0;
+}
+
+#b5 {
+	background-image: url("../images/001.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 800px;
+	margin: 24px 0px 0px 0;
+}
+
+#b6 {
+	background-image: url("../images/001.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 800px;
+	margin: 24px 0px 0px 0;
 }
