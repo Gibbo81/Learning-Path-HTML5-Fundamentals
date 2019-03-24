@@ -58,3 +58,12 @@ li {
 	width: 800px;
 	margin: 24px 0px 0px 0;
 }
+
+#b7 {
+	background-image: url("../images/001.jpg");
+	background-size: 250px auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 400px;
+	margin: 24px 0px 0px 0;
+}
