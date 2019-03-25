@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pseuso classes</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <p >
+      "Pseudo Classes" is a fancy term for simply being able to refine our CSS selection to something that isn't just another element. Pseudo Classes allow us to apply styles to the different states of an element based on the interactions with the browser. 
+    </p>
+    <p> 
+      :visited { .... }
+      The :visited pseudo class is usually put on a selector that resolves to an a tag. It enables you to define a style for the visited state of the link. <br>
+      <a href="http://www.tuttosport.com/">tuttosport</a> <br>
+      <a id="Carlino" href="https://www.ilrestodelcarlino.it/">Carlino</a>      
+    </p>
+    <p id="hover">
+      The :hover pseudo class lets you change the style for an element when the mouse is hovering above it. Note that the mouse is rarely hovering or clicking over/into "just one" item. At any given moment, the mouse is usually over several elements, because if it is over a child element, it will be over the parent, grandparent, and great grandparent.  Therefore, if you have two different style rules, such as li:hover and ul:hover, then they will both be activated,  when the mouse is over one of the list items.  
+    </p>
+    <p id="active">The :active pseudo class is applied when the mouse is depressed into its area.</p><br>
+    <p>:nth-child pseudo classes must be apply to the children li not to their parent ul</p>
+    <ul id="childs">
+      <li>uno uno uno uno</li>
+      <li>due due due due</li>
+      <li>tre tre tre tre</li>
+      <li>quattro quattro quattro quattro</li>
+    </ul><br>
+
+  </body>
+</html>

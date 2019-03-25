@@ -1,0 +1,22 @@
+
+#Carlino:visited {
+	color: green;
+}
+
+#hover:hover{
+	color: yellow;
+	border: 1px solid pink; 
+}
+
+#active:active{
+	color: blue;
+}
+
+li:nth-child(odd){
+	color: red;
+}
+
+li:nth-child(even){
+	color: pink;
+}
+
