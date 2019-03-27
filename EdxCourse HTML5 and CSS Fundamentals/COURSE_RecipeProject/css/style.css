@@ -1,0 +1,47 @@
+nav{
+	background:lightgreen;
+	width:20em;
+}
+
+img{
+	width: 400px; 
+	border: 5px solid black;	
+	padding: 10px;		
+}
+
+article{
+	margin-left: 20px;
+}
+
+h1{
+	background: #f8ff8f;
+	text-align: center;
+	margin: 0px;
+}
+
+body{
+	margin: 0px;
+}
+
+nav ul{
+	padding-left: 25px;
+}
+
+table {
+     margin-left: 2em;
+     border-collapse: collapse;
+}
+
+tr{
+     border-bottom: 1px solid grey;
+}
+
+td.ingredient{
+     text-align: left;
+     padding-right: 2em;
+}
+
+td.ammount{
+     text-align: right;
+     padding-left: 2em;
+}

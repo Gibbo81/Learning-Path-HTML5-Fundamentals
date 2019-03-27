@@ -3,36 +3,7 @@
    <head>
      <meta charset="UTF-8">
      <title>My Favorite Recipes</title>
-     <style type="text/css">
-     	nav{
-     		background:lightgreen;
-     		width:20em;
-     	}
-
-     	img{
- 			width: 400px; 
- 			border: 5px solid black;	
- 			padding: 10px;		
-     	}
-
-     	article{
-     		margin-left: 20px;
-     	}
-
-     	h1{
-     		background: #f8ff8f;
-     		text-align: center;
-     		margin: 0px;
-     	}
-
-     	body{
-     		margin: 0px;
-     	}
-
-     	nav ul{
-     		padding-left: 25px;
-     	}
-     </style>
+     <link rel="stylesheet" type="text/css" href="css/style.css">
    </head>
    <body>
      <h1>My Favorite Recipes</h1>
@@ -43,7 +14,6 @@
 	       <li><a href="#pizza">Pizza</a></li>
 	     </ul>
 	 </nav>	
-
 	 <article id="soup">
 	 	<h2>Soup</h2> 
  		<img src="https://courses.edx.org/asset-v1:W3Cx+HTML5.0x+1T2017+type@asset+block@soup.jpg"
@@ -65,17 +35,25 @@
 			<li>Enjoy !!!</li>
 		</ol>
 	 </article>
-
 	 <article id="salad"> 
 	 	<h2>Salad</h2> 
  		<img src="https://courses.edx.org/asset-v1:W3Cx+HTML5.0x+1T2017+type@asset+block@salad.jpg"
  			 alt="salad image">
 		<h3>List of ingredient</h3>
-		<ul>			
-			<li>Ingredient 1</li>
-			<li>Ingredient 2</li>
-			<li>Ingredient 3</li>			
-		</ul>
+		<table>
+			<tr>
+				<td class="ingredient">Ingred. 1</td>
+				<td class="ammount">200 grams</td>
+			</tr>
+			<tr>
+				<td class="ingredient">Ingred. two</td>
+				<td class="ammount">2000 grams</td>
+			</tr>
+			<tr>
+				<td class="ingredient">Ingred. 3</td>
+				<td class="ammount">20 grams</td>
+			</tr>
+		</table>
 		<p>Who can resist a fresh salad ! Here's one of my favorites.</p>
 		<ol>			
 			<li>step 1</li>
