@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Text baseline and the display property</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <p> 
+      To better understand how the browser makes its layout position we have to talk of the display property, it has different default values for different tags. Some tags start with display:block, and others are display:inline.
+    </p>
+    <img src="./images/baseline2.png">   
+    <p>
+      The text "baseline" is a key concept to understanding how the browser makes its layout decisions. baseline determines how and where the characters are positioned. The baseline is never drawn by the browser, it is not exposed directly to you as a developer.
+      As the browser is rendering your page, every time it encounters the next tag it has a simple question: "Do I give this element its own line?"   For example, every p tag gets a new line, but a tags do not. 
+      This is the key difference between the elements with a default value of block in css property diplay (as p) or inline (as a). 'Block' gives you a new line instead 'inline' use the current one.
+    </p>
+    <h3>quick recap</h3>
+    <table>
+      <tr>
+        <th>block</th>
+        <th>inline</th>
+      </tr>
+      <tr>
+        <td>p</td><td>a</td>
+      </tr>
+      <tr>
+        <td>h1</td><td>span</td>
+      </tr>
+      <tr>
+        <td>div</td><td>q</td>
+      </tr>
+      <tr>
+        <td>blockquote</td><td>i</td>
+      </tr>
+      <tr>
+        <td>ul</td><td>b</td>
+      </tr>
+      <tr>
+        <td>ol</td><td></td>
+      </tr>
+      <tr>
+        <td>li</td><td></td>
+      </tr>
+    </table>
+  </body>
+</html>

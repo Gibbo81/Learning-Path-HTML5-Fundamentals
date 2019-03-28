@@ -1,0 +1,58 @@
+
+body{
+	font-size: 20px;
+}
+
+
+#col2{
+	background-color:orange;
+} 
+
+#col3{
+	background-color:red;
+} 
+
+.Border1, .Border1 tr th, .Border1 tr td{
+	 border: 1px solid black; 
+}
+
+.Border2, .Border2 tr th, .Border2 tr td{
+	 border: thin dashed black;; 
+}
+
+.Border3, .Border3 tr th, .Border3 tr td{
+	 border: initial; 
+}
+
+.BorderCollapse{
+	margin-top: 10px;
+}
+
+.BorderCollapse, .BorderCollapse tr th, .BorderCollapse tr td{
+	 border: 1px solid black; 
+	 border-collapse: collapse;
+}
+
+#largeone {
+	width: 25%;
+}
+
+#heightone{
+	height: 70px;
+}
+
+.centertext, .centertext tr th, .centertext tr td{
+	 text-align: center;
+	 vertical-align: top;
+	 padding: 15px;
+	 height: 80px;
+}
+
+.horizontal, .horizontal tr th, .horizontal tr td{
+	 border-collapse: collapse;
+}
+
+
+.horizontal, .horizontal tr th, .horizontal tr td{
+	 border-bottom: 3px solid black;
+}
