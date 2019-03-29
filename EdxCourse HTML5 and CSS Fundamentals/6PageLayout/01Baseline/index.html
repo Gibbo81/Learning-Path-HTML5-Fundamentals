@@ -17,7 +17,7 @@
       This is the key difference between the elements with a default value of block in css property diplay (as p) or inline (as a). 'Block' gives you a new line instead 'inline' use the current one.
     </p>
     <h3>quick recap</h3>
-    <table>
+    <table id="block_inline">
       <tr>
         <th>block</th>
         <th>inline</th>
@@ -44,5 +44,33 @@
         <td>li</td><td></td>
       </tr>
     </table>
+    <p>
+      The block level:
+      * appears below and to the left of their block level neighbors (like a carriage return on a typewriter going to the next new line)
+      * will expand to fill the width of the parent container by default      
+      * respects all margin properties
+      * can have its width property set, which will make it narrower and cause its children to wrap, but not crop. (We'll cover this later)
+      * takes on the height of all its children (pending certain exceptions) as long as its own height is unset. (We will cover setting the height later)
+      * ignores the vertical-align property
+    </p>
+    <p>
+      Inline elements:
+      * cleave to the baseline where they are being placed
+      * simply appear to the right of their preceding inline neighbor. They do not drop to the next line unless they must "wrap".
+      * by default, the width is simply the width of the content of the element, plus any padding
+      * ignore top and bottom margin settings
+      * ignore width and height properties
+      * are subject to vertical-align property as well as CSS white-space settings
+      * support padding, but any padding-top or padding-bottom does not contribute to the calculation of the height of the text line it sits upon.
+    </p>
+
+    <h5>Example:</h5>
+    <p>
+      That’s not quite the way Martin Fowler described it. He said that the Craftsmanship movement started because a bunch of programmers said: “Oh, we need to create a whole new world for ourselves […] where we can go away, get away from all of these business experts and project managers and business analysts, and just talk about our technical stuff. I want you to think about just what a supremely bad idea it is to use a textual data access language. Such a language can pass through the user interface of a system and provide unauthorized access to all the data contained within.Now, of course, we all <span id="overlap">know</span> that we are supposed to scan all our inputs for potential SQL injection (SQLi) attacks. And yet, hundreds of thousands, if not millions of users have had their data stolen by just this mechanism. Why? Because it is unreasonable to expect that every single user input of every single system is going to have the protections required.The problem, of course, could have been eliminated at the source, decades ago. Back in 1998 rain.forest.puppy described, in Phrack, how to slip SQL statements in through a user interface and execute them. The instant that article was published every single programmer in the world should have ceased to use SQL on the spot!
+    </p>
+    <p> we have a span that has padding, margin-top, and background-color applied, but no extra room is being made for it above or below, so its background is overlapping the lines above and below. We prevent the overlap by setting the line-height of the span. However, this solution should not be considered optimal.  Better is to change the span to be display:inline-block, which is discussed below.</p>
+    <p>
+      That’s not quite the way Martin Fowler described it. He said that the Craftsmanship movement started because a bunch of programmers said: “Oh, we need to create a whole new world for ourselves […] where we can go away, get away from all of these business experts and project managers and business analysts, and just talk about our technical stuff. I want you to think about just what a supremely bad idea it is to use a textual data access language. Such a language can pass through the user interface of a system and provide unauthorized access to all the data contained within.Now, of course, we all <span id="overlap2">know</span> that we are supposed to scan all our inputs for potential SQL injection (SQLi) attacks. And yet, hundreds of thousands, if not millions of users have had their data stolen by just this mechanism. Why? Because it is unreasonable to expect that every single user input of every single system is going to have the protections required.The problem, of course, could have been eliminated at the source, decades ago. Back in 1998 rain.forest.puppy described, in Phrack, how to slip SQL statements in through a user interface and execute them. The instant that article was published every single programmer in the world should have ceased to use SQL on the spot!
+    </p>
   </body>
 </html>
