@@ -1,11 +1,19 @@
 
+.red{
+	color: red;
+}
+
+.green{
+	color: green;
+}
+
 th, td {
 	border: 1px solid black;
 }
 
 #block_inline {
 	border-collapse: collapse;
-	
+
 }
 
 #block_inline td {
@@ -21,6 +29,7 @@ th, td {
 }
 
 #overlap {
+	color: red;
 	margin-top: 50px; /*IGNORED*/
 	padding-bottom: 50px;
 	padding-top: 50px;
@@ -29,8 +38,17 @@ th, td {
 }
 
 #overlap2 {
- margin-top: 15px; /* still ignored */
+	color: red;
+ 	margin-top: 15px; /* still ignored */
   padding:15px;
-  background-color: lightblue; 
+  background-color: lightblue;
   line-height: 42px; /* fix */
 }
+
+#overlap3 {
+	color: red;
+ 	margin-top: 15px; /* no longer ignored */
+ 	padding:15px;
+ 	background-color: lightblue;
+ 	display:inline-block; /* good fix */
+ }
