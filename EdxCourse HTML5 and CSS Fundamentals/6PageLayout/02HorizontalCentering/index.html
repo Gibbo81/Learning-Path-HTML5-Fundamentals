@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Horizontal centering</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <h3>Horizontal centering</h3>
+    <h4>Inline elements</h4>
+    <p>
+      How do you center an inline element?  As we recall, inline elements are positioned along the baseline, in the natural flow of the text or content. So for any individual inline element, there is no CSS property you can apply directly to cause this element to center. You may apply some padding evenly or unevenly to position its content relative to its own box. But that's not centering the element itself.<br><br>
+      To center an inline element, we use the text-align property of its parent.   <br><br>
+      p { text-align: center; } /* the text and any inline children of this element will be centered */ <br><br>
+      If this isn't satisfactory, consider changing the element to be inline-block or block.
+    </p>
+    <h4>Block elements</h4>
+    <p>
+      block level elements take the width of their parent by default. If the element is the same width as its parent, it is already centered. So the first step is to limit the width of the element, second we set margin to auto: left and right margins will center the element.<br><br>
+      div { width: 200px; margin: auto; }<br><br>
+      There is a better way to achieve centering and its name is flexbox
+    </p>
+    <h3>position property</h3>
+    <p>
+      There are four properties which can be used to adjust or set the position of an element. Those properties are: left, top, right, and bottom. However using those properties by themselves will have no effect on any element: these properties only work when applied to positioned elements. And positioned elements are those that have had their position property changed from the default (static). <br>
+      Position property governs how an element is positioned on the page and how it responds to the position adjusting properties, it has four different values it can take: static, relative, absolute, and fixed
+    </p>
+    <h5>Static</h5>
+    <p>
+      position: static; /* the default for all elements*/ <br>
+      It means that all elements follow the "flowing text"model of layout and the only properties influencing their position are margins, padding, and the display property ( block, inline or inline-block). Static elements ignore the positioning properties we read about earlier (left, top, right, and bottom).
+    </p>
+    <h5>Fixed</h5>
+    <p>
+      
+    </p>
+  </body>
+</html>
