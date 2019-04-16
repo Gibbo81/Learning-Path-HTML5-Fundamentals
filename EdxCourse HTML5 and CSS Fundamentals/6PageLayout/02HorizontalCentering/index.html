@@ -26,14 +26,39 @@
       There are four properties which can be used to adjust or set the position of an element. Those properties are: left, top, right, and bottom. However using those properties by themselves will have no effect on any element: these properties only work when applied to positioned elements. And positioned elements are those that have had their position property changed from the default (static). <br>
       Position property governs how an element is positioned on the page and how it responds to the position adjusting properties, it has four different values it can take: static, relative, absolute, and fixed
     </p>
-    <h5>Static</h5>
+    <h5>Static {position: static; /* the default */}</h5>
     <p>
-      position: static; /* the default for all elements*/ <br>
       It means that all elements follow the "flowing text"model of layout and the only properties influencing their position are margins, padding, and the display property ( block, inline or inline-block). Static elements ignore the positioning properties we read about earlier (left, top, right, and bottom).
     </p>
-    <h5>Fixed</h5>
+    <h5>Fixed {position: fixed}</h5>
+    <p>
+      A fixed positioned element respects the positioning properties (left, top, right, and bottom).  A fixed positioned element is positioned against the window rectangle (aka the viewport).  This means that fixed position elements will not scroll with the rest of the page.  Fixed position elements can easily "stick" to the side or bottom or top of the browser<br>
+      <ul>
+        <li>
+          If an element is set to be position:fixed, but has no horizontal positioning property (that is, left or right), then it will be displayed in the flow exactly as it would have been.  Except, later, if left:0px;  is added (for example), then the element may jump to the left edge of the browser window. The same applies vertically. This is a bewildering behavior, as most users do not expect there to be a difference between left:0px and no left property at all. Therefore, for any fixed positioned element, the best practice is to ensure that one of the horizontal positioning properties (that is, left or right) and one of the vertical properties (top or bottom) are both set    
+        </li>
+        <li>
+          Fixed positioned block level elements do not get the width of their parent, Their initial width is simply the width of their content
+        </li>
+        <li>
+           when an element is fixed positioned, a given margin might be able to move the element but will not move any siblings, margins cannot be used to keep siblings "away".
+        </li>
+        <li>
+           fixed positioned items can instead set the opposite positioning properties (like left and right) and leave the matching dimensional property (width) unspecified, the element will grow or shrink based on the size of the browser window
+        </li>
+      </ul>
+      </p>
     <p>
       
     </p>
+
+
+
+
+
+
+
+
+    <div class="fixed">This div element has position: fixed;</div>
   </body>
 </html>
