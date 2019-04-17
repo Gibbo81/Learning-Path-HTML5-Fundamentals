@@ -47,9 +47,33 @@
            fixed positioned items can instead set the opposite positioning properties (like left and right) and leave the matching dimensional property (width) unspecified, the element will grow or shrink based on the size of the browser window
         </li>
       </ul>
-      </p>
+    </p>    
+    <h5>relative {position: relative}</h5>  
     <p>
-      
+      The relative value is exactly like static in that the "flowing text" model of layout is setting the initial position for the element (including margins and display). However, unlike static, elements with relative position respect the positioning  properties (left, top, right, and bottom), these properties will move the named edge of the element from its initial position: a value of top: 20px;  will move the top edge of the element 20 pixels further down the page
+      <ul>
+        <li>Items are moved independently of siblings.</li>
+        <li>Opposite positioning properties (like left and right) cannot be used simultaneously.</li>
+        <li>There are no automatic size adjustments.</li>
+      </ul>
+      The positioning properties (left, top, right, and bottom) adjust the placement of the element independently of its siblings.  What does this mean?   Let's imagine we have a list and we want to move one of the items a little further down the page. Should we use margin-top to move it? Or position:relative in conjunction with the top property?  The answer to this question depends on whether you want any of the other list items to move as well.  If you want the siblings to move down as well, then use margin-top.<br>
+      Margin-top
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li id="Margin">Three</li>
+        <li>Four</li>
+        <li>Five</li>
+      </ul>
+      Relative
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li id="Relative">Three</li>
+        <li>Four</li>
+        <li>Five</li>
+      </ul>
+
     </p>
 
 

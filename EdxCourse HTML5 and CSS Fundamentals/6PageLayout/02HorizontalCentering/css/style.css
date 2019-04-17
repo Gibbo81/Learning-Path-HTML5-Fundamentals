@@ -5,3 +5,14 @@ div.fixed {
   width: 300px;
   border: 3px solid #73AD21;
 }
+
+#Margin {
+  margin-top: 25px;
+  background-color: lightblue; 
+}
+
+#Relative {
+  position: relative; 
+  top: 25px;
+  background-color: lightblue; 
+}	
