@@ -16,3 +16,32 @@ div.fixed {
   top: 25px;
   background-color: lightblue; 
 }	
+
+p#autoadjustment {
+	margin-left : 40px;
+	border: 1px solid blue;
+}
+
+p#noautoadjustment {
+	position: relative;
+	left : 40px;
+	border: 1px solid blue;
+}
+
+#fixed{
+	width: 200px;
+}
+
+#margin{
+	border: 1px solid black;	
+}
+
+#abs{
+    position: absolute;
+    left: 950px;
+    top: 1420px;
+    background-color: lightblue;
+    padding: 10px;
+    display: block; 
+    width: 70px;
+}

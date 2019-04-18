@@ -49,15 +49,15 @@
       </ul>
     </p>    
     <h5>relative {position: relative}</h5>  
-    <p>
+    <div>
       The relative value is exactly like static in that the "flowing text" model of layout is setting the initial position for the element (including margins and display). However, unlike static, elements with relative position respect the positioning  properties (left, top, right, and bottom), these properties will move the named edge of the element from its initial position: a value of top: 20px;  will move the top edge of the element 20 pixels further down the page
       <ul>
         <li>Items are moved independently of siblings.</li>
         <li>Opposite positioning properties (like left and right) cannot be used simultaneously.</li>
         <li>There are no automatic size adjustments.</li>
       </ul>
-      The positioning properties (left, top, right, and bottom) adjust the placement of the element independently of its siblings.  What does this mean?   Let's imagine we have a list and we want to move one of the items a little further down the page. Should we use margin-top to move it? Or position:relative in conjunction with the top property?  The answer to this question depends on whether you want any of the other list items to move as well.  If you want the siblings to move down as well, then use margin-top.<br>
-      Margin-top
+      The positioning properties (left, top, right, and bottom) adjust the placement of the element independently of its siblings.  What does this mean? Let's imagine we have a list and we want to move one of the items a little further down the page. Should we use margin-top to move it? Or position:relative in conjunction with the top property? The answer to this question depends on whether you want any of the other list items to move as well. If you want the siblings to move down as well, then use margin-top.<br>
+      Margin-top:
       <ul>
         <li>One</li>
         <li>Two</li>
@@ -65,7 +65,7 @@
         <li>Four</li>
         <li>Five</li>
       </ul>
-      Relative
+      Relative:
       <ul>
         <li>One</li>
         <li>Two</li>
@@ -73,12 +73,29 @@
         <li>Four</li>
         <li>Five</li>
       </ul>
-
-    </p>
-
-
-
-
+      Block level elements take the width of their parent (when no width is specified) and when using left or right margins without having an explicit width, the browser will smartly size the element down for you to make it fit. This size adjustment does not happen when you use position:relative and the left or right positional properties. This is easily illustrated with an example. Below is a block level paragraph with a border applied to it.  When a margin-left is applied to it, the paragraph is made smaller and no part goes outside its parent.  But when it is position:relative and moved with the left property, it can leave the bounds of its parent, or go offscreen.
+      <div id="fixed">
+        <p id="autoadjustment">
+            Dorothea was altogether captivated by the wide embrace of this conception.
+        </p>
+        <p id="noautoadjustment">
+            Dorothea was altogether captivated by the wide embrace of this conception.
+        </p>
+      </div>
+    </div>
+    <h5>Absolute {position: absolute}</h5>  
+    <div>
+      An element that is positioned absolutely is taken out of the normal text "flow" that governs elements positioned statically or relatively, instead is positioned by the left, top, right, and/or bottom properties. The size or position of siblings have no effect on an absolutely positioned element that has some positioning properties set (left, top, etc.)
+      
+      <p id="margin">
+        She bethought herself now of the condemned criminal. <q id="abs">What news have you brought about the sheep-stealer, uncle?</q>
+      </p>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
 
 
 
