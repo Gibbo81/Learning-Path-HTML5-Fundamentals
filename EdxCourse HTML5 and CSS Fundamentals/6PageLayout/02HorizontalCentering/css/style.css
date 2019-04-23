@@ -45,3 +45,21 @@ p#noautoadjustment {
     display: block; 
     width: 70px;
 }
+
+#absolutetwo { 
+	position: relative;  
+    list-style-type : none;
+}
+ 
+.rel { 
+	position: relative; 
+	padding-left:10px;
+}
+ 
+ span {
+   position: absolute;
+   left: 0px;
+   top: 0px;
+ }
+
+
