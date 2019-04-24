@@ -62,4 +62,13 @@ p#noautoadjustment {
    top: 0px;
  }
 
+#empty {
+border: 1px solid red;
+}
+
+#empty li{
+	position: absolute;
+	background-color: lightblue;
+}
+
 
