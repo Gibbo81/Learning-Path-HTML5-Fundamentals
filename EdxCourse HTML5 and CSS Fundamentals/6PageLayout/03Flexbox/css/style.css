@@ -1,0 +1,74 @@
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+
+#Margin {
+  margin-top: 25px;
+  background-color: lightblue; 
+}
+
+#Relative {
+  position: relative; 
+  top: 25px;
+  background-color: lightblue; 
+}	
+
+p#autoadjustment {
+	margin-left : 40px;
+	border: 1px solid blue;
+}
+
+p#noautoadjustment {
+	position: relative;
+	left : 40px;
+	border: 1px solid blue;
+}
+
+#fixed{
+	width: 200px;
+}
+
+#margin{
+	border: 1px solid black;	
+}
+
+#abs{
+    position: absolute;
+    left: 950px;
+    top: 1420px;
+    background-color: lightblue;
+    padding: 10px;
+    display: block; 
+    width: 70px;
+}
+
+#absolutetwo { 
+	position: relative;  
+    list-style-type : none;
+}
+ 
+.rel { 
+	position: relative; 
+	padding-left:10px;
+}
+ 
+ span {
+   position: absolute;
+   left: 0px;
+   top: 0px;
+ }
+
+#empty {
+border: 1px solid red;
+}
+
+#empty li{
+	position: absolute;
+	background-color: lightblue;
+}
+
+
