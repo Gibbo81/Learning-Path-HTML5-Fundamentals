@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Flexbox1</title>
+    <title>Recap</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+    <h2>Sizing and Dimension. Default behavior</h2>
+    <p>
+      The default sizing behavior depends upon the display property for an element.  
+    </p>
+    <h3>Inline</h3>
+    <p>Inline elements take the size of their content plus any padding. Additionally, inline elements ignore any explicit sizing properties (width, height, etc.) unless they are also position:absolute or position:fixed.  This leads to a lot of confusion when newbies are working with inline elements. If you have an inline element whose size you want to indicate explicitly, you should probably change it to inline-block.</p>
+    <h3>inline-block</h3>
+    <p>Inline-block elements also take the size of their content, plus padding. However, they respect any explicit sizing properties.  This is handy.</p>
+    <h3>block</h3>
+    <p>By default when no sizing properties are used, block level elements take the width of their parent and the height of their content. Block level elements respect any explicit sizing properties.</p>
+    <h3>images - aspect ratio preserving</h3>
+    <p>Images have an interesting behavior in that if only one dimension is set, the other is automatically calculated so that the original aspect ratio of the image is preserved.  This is true for both decorative CSS images and img tags.</p>
 
+    <p>Look again at the descriptions for inline-block and block level elements above, you will notice that inline-block elements are sized (height and width) to their content.  And block level elements take the width of their parent and the height of their content. So these elements are fundamentally variably sized, and this variability is one of the most powerful and useful aspects of these elements. The <em>min-width</em> and <em>min-height</em> properties allow us to set a minimum boundary for that variability, but otherwise the variable sizing of the element is unimpeded. So if we have min-width:300px; that means the element will be 300 pixels or possibly wider.</p>
+    <p>Unless you have good cause, try to avoid using explicit dimension properties like width and height.  If you must control the dimensions, consider using the min- or max- variants. </p>
+
+    <h2>OverFlow, overflow-x and overflow-y properties</h2>
+    <p>
+      
+    </p>
   </body>
 </html>
