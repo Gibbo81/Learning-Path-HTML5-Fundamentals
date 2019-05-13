@@ -1,0 +1,23 @@
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+
+p#noautoadjustment {
+	position: relative;
+	left : 40px;
+	border: 1px solid blue;
+}
+
+#fixed{
+	width: 200px;
+}
+ 
+.rel { 
+	position: relative; 
+	padding-left:10px;
+}
+ 
