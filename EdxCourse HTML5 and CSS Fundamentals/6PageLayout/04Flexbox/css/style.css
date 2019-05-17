@@ -4,3 +4,21 @@
   flex-flow: row wrap;
   background-color: blue;
 }
+
+#one {
+    flex: 1 1 87px;
+    background-color: red;
+    margin: 10px 10px 10px 10px;
+}
+
+#two {
+    flex: 1 1 87px;
+    background-color: green;
+    margin: 20px 20px 20px 20px;
+}
+
+#three {
+    flex: 1 1 87px;
+    background-color: red;
+    margin: 10px 10px 10px 10px;
+}

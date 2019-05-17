@@ -8,13 +8,20 @@
   </head>
   <body>
     <div>
-      To designate an element as a flex container, we set the display property to be flex or inline-flex. A flex element will itself be a block level element, and an inline-flex element will itself be an inline element. However, in both cases the element is now a flex container and will be handling the layout of its children.<br>
+      To designate an element as a flex container, we set the <strong>display</strong> property to be flex or inline-flex. A flex element will itself be a block level element, and an inline-flex element will itself be an inline element. However, in both cases the element is now a flex container and will  handle the layout of its children.<br>
       Flexbox containers can lay out their children both horizontally, as in a row, and vertically, as in a column, and both at the same time. But the flexbox container does need a starting rule to follow. Do you want it to primarily line things up horizontally like a row? Or vertically like a column? And will you be wanting that row or column to wrap? Use flex-flow property
       <ul>
-        <li>flex-flow property is an abbreviation of two other flexbox container properties: flex-direction and flex-wrap. flex-flow: <flex-direction> <flex-wrap></li>
+        <li><strong>flex-flow</strong> property is an abbreviation of two other flexbox container properties: flex-direction and flex-wrap. flex-flow: flex-direction flex-wrap</li>
         <li>Values for the flex-direction are: row, row-reverse, column, and column-reverse.</li>
         <li>Values for the flex-wrap part are: wrap, wrap-reverse, and nowrap.</li>
-        <li>flex-wrap sets whether flex items are forced onto one line or can wrap onto multiple line</li>
+        <li>flex-wrap sets whether flex items are forced onto one line (nowrap) or can wrap onto multiple line</li>
+      </ul>
+      Childrens of a flex container are automatically converted into flex items, with the exception of elements that are position-fixed or position-absolut. Empty flex items are automatically removed from the flex container. To configure a child we can use the 3 css properties: <strong>flex-grow, flex-shrink, and flex-basis</strong> or the abbreviate form <strong>flex</strong>. 
+      <ul>
+        <li>The flex-grow property is a positive number. It  specifies how much the item will grow relative to the rest of the flexible items inside the same container</li>
+        <li>The flex-shrink is the opposite of flex-grow: if the flex container needs to take away some space from the children, then those with the highest flex-shrink values contribute more of the needed space</li>
+        <li>flex-basis can be used instead of the sizing properties on a flex item. If the flex-direction of the parent flex container is row or row-reverse, then the flex-basis will govern the width of the flex item. If the flex-direction is column or column-reverse, it governs the height. The flex-basis provides the starting dimension for the flex-item, it may be grown or shrunk from that. If you do not want it to change at all, then set the flex-grow and flex-shrink to 0, and the box-sizing to border-box. BAD PRACTICE</li>
+        <li>To set the value use use: 'flex: flex-grow flex-shrink flex-basis'</li>
       </ul>
     </div>
 
@@ -23,7 +30,15 @@
 
 
     <div id="Flex1">
-      Sei stata un esempio, ma è brutto dire ‘sei stata’, perché tu sei ancora con noi, ogni volta che parliamo di te, ogni volta che ti ricordiamo e questo accade praticamente ogni giorno. Il tuo testimone lo ha raccolto Paolo, ma anche tua cognata Luigina, che non fa mancare niente ai tuoi figli, soprattutto l’amore e la vicinanza. Sono trascorsi cinque mesi da quella tremenda sera, il tempo sembra essere volato, ma nessuna di noi si è ancora abituata alla tua assenza. La mattina, davanti a scuola, è come se dovessi arrivare da un momento all’altro
+      <p id="one">
+        Sei stata un esempio, ma è brutto dire ‘sei stata’, perché tu sei ancora con noi, ogni volta che parliamo di te, ogni volta che ti ricordiamo e questo accade praticamente ogni giorno. Il tuo testimone lo ha raccolto Paolo, ma anche tua cognata Luigina, che non fa mancare niente ai tuoi figli, soprattutto l’amore e la vicinanza. Sono trascorsi cinque mesi da quella tremenda sera, il tempo sembra essere volato, ma nessuna di noi si è ancora abituata alla tua assenza. La mattina, davanti a scuola, è come se dovessi arrivare da un momento all’altro
+      </p>
+      <p id="two">
+        Sei stata un esempio, ma è brutto dire ‘sei stata’, perché tu sei ancora con noi, ogni volta che parliamo di te, ogni volta che ti ricordiamo e questo accade praticamente ogni giorno. Il tuo testimone lo ha raccolto Paolo, ma anche tua cognata Luigina, che non fa mancare niente ai tuoi figli, soprattutto l’amore e la vicinanza. Sono trascorsi cinque mesi da quella tremenda sera, il tempo sembra essere volato, ma nessuna di noi si è ancora abituata alla tua assenza. La mattina, davanti a scuola, è come se dovessi arrivare da un momento all’altro
+      </p>
+      <p id="three">
+        Sei stata un esempio, ma è brutto dire ‘sei stata’, perché tu sei ancora con noi, ogni volta che parliamo di te, ogni volta che ti ricordiamo e questo accade praticamente ogni giorno. Il tuo testimone lo ha raccolto Paolo, ma anche tua cognata Luigina, che non fa mancare niente ai tuoi figli, soprattutto l’amore e la vicinanza. Sono trascorsi cinque mesi da quella tremenda sera, il tempo sembra essere volato, ma nessuna di noi si è ancora abituata alla tua assenza. La mattina, davanti a scuola, è come se dovessi arrivare da un momento all’altro
+      </p>
     </div>
   </body>
 </html>
