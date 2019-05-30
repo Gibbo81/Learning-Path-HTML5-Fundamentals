@@ -3,22 +3,39 @@
   display: flex; 
   flex-flow: row wrap;
   background-color: blue;
+  margin-bottom: 20px;
 }
 
 #one {
-    flex: 1 1 87px;
+    flex: 1 1 187px;
     background-color: red;
     margin: 10px 10px 10px 10px;
 }
 
 #two {
-    flex: 1 1 87px;
+    flex: 1 1 187px;
     background-color: green;
     margin: 20px 20px 20px 20px;
 }
 
 #three {
-    flex: 1 1 87px;
+    flex: 1 1 187px;
     background-color: red;
     margin: 10px 10px 10px 10px;
+}
+
+#four {
+    flex: 1 1 187px;
+    background-color: yellow;
+    margin: 10px 10px 10px 10px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box>* {
+    flex: 1 1 160px;
+    border: 1px solid red; 
 }
