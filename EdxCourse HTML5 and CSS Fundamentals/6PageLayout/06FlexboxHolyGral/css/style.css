@@ -8,7 +8,7 @@ div p {
     flex: 1;
 }
 
-.fc{
+.fc > *{
   display: flex;
   flex-flow: row wrap;
 }
