@@ -3,6 +3,7 @@ body{ margin:0px; }
 .fc {
 	display: flex;
 	flex-flow: row wrap;
+	min-height: 100vh;
 }
 
 .fc > *{
@@ -19,8 +20,8 @@ To do that, we simply need to make them full width.
 -set the flex-basis  
 Since this is the layout for the entire page, we'll use the vw units to set the width to be 100 percent of the viewport width
 */
-
 .fc header, .fc footer{
 	flex: 0 1 100vW;
 }
+
 
