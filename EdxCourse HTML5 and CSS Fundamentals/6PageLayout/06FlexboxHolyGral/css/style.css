@@ -3,25 +3,33 @@ body{ margin:0px; }
 .fc {
 	display: flex;
 	flex-flow: row wrap;
-	min-height: 100vh;
+	/* ensure flex-container is always at least as tall as the viewport,
+   minus the height of the header and footer combined. */
+	min-height: calc(100vh - 200px);
 }
 
 .fc > *{
   margin: 10px;
-  padding: 20px; 
+  padding: 20px;
   background-color: lightgray;
   border-radius: 10px;
   flex: 1;
+	min-width: 200px;  /*To force a minimal width made for a more responsivce system*/
 }
 
 /*
-We want to get the header and the footer into the correct position. 
+We want to get the header and the footer into the correct position.
 To do that, we simply need to make them full width.
--set the flex-basis  
+-set the flex-basis
 Since this is the layout for the entire page, we'll use the vw units to set the width to be 100 percent of the viewport width
 */
-.fc header, .fc footer{
-	flex: 0 1 100vW;
+header, footer{
+	/*flex: 0 1 100vW;*/
+	width: 100vW;
+	height: 100px;
+	margin: 10px;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+	box-sizing: border-box; /*Include padding and border in the element's total width and height:/*
 }
-
-
