@@ -1,0 +1,121 @@
+body{ margin:0px; }
+
+#flexstart {
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);   /*To avoid scrollbar*/
+	background-color: yellow;
+	margin: 10px 0px 10px 10px;
+}
+
+#center {
+	justify-content: center;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	background-color: green;
+	margin: 10px 0px 10px 10px;
+}
+
+#flexend{
+	justify-content: flex-end;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	background-color: blue;
+	margin: 10px 0px 10px 10px;
+}
+
+#spacebetween{
+	justify-content: space-between;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	background-color: purple;
+	margin: 10px 0px 10px 10px;
+}
+
+#spacearound{
+	justify-content: space-around ;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	background-color: pink;
+	margin: 10px 0px 10px 10px;
+}
+
+#stretch{
+	/*align-items: stretch; DEFAULT*/
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	height: 200px;
+	background-color: pink;
+	margin: 10px 0px 10px 10px;
+}
+
+#alignflexstart{
+	align-items: flex-start;
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	height: 200px;
+	background-color: green;
+	margin: 10px 0px 10px 10px;
+}
+
+#aligncenter{
+	align-items: center;
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	height: 200px;
+	background-color: blue;
+	margin: 10px 0px 10px 10px;
+}
+
+#aligend{
+	align-items: flex-end;
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	height: 200px;
+	background-color: purple;
+	margin: 10px 0px 10px 10px;
+}
+
+#alignbaseline{
+	align-items: baseline;
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	height: 200px;
+	background-color: pink;
+	margin: 10px 0px 10px 10px;
+}
+
+#flexstart > *, #center > *, #flexend > *, #spacebetween > *, #spacearound > *, #stretch > *, #alignflexstart > *, #aligncenter >*, #aligend > *, #alignbaseline > *{
+  background-color: lightgray;
+  border-radius: 10px;
+  flex: 1;
+	max-width: 140px;
+	border: 1px solid black;
+}
+
+.one {
+	height: 70px;
+}
+
+.two {
+	height: 100px;
+}
+
+.tree {
+	height: 130px;
+}

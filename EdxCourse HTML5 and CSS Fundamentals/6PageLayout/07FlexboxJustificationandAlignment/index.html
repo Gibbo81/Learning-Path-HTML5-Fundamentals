@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FlexBox Justification and Alignment</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div>
+      When all the flex items in a flexbox container are fully resizable, then there will not be any extra space to put between the items.  However, when the flex items are fixed size, or cannot grow anymore, then the flexbox container will put the extra space between or outside the items. <br>
+      The justify-content property is applied to the flex container.  It governs how any extra space along the main layout axis is distributed between the flexbox items.possible values are: flex-start, flex-end, center, space-between, and space-around.<br>  The flex-start, flex-end, and center values do not distribute any space between the flex items. Instead, these values determine where the flex items should be positioned within the flex container, and any extra space is outside them.<br> The space-between and space-around values both put space evenly between the flex items, but space-between places the flex items flush against the main start and main ends of the flexbox container.<br> Remember that this is only spacing in the direction of the main axis. justify-content does not affect any spacing or placement in the direction of the cross axis.
+    </div>
+
+    <div id="flexstart">
+      <aside>first column. </aside>
+      <main>the main content.</main>
+      <section>third column</section>
+    </div>
+
+  <div id="center">
+    <aside>first column. </aside>
+    <main>the main content.</main>
+    <section>third column</section>
+  </div>
+
+  <div id="flexend">
+    <aside>first column. </aside>
+    <main>the main content.</main>
+    <section>third column</section>
+  </div>
+
+  <div id="spacebetween">
+    <aside>first column. </aside>
+    <main>the main content.</main>
+    <section>third column</section>
+  </div>
+
+  <div id="spacearound">
+    <aside>first column. </aside>
+    <main>the main content.</main>
+    <section>third column</section>
+  </div>
+
+  <div>
+    The align-items determines how items are aligned in the cross axis direction. This is applied to the flexbox container.  The possible values are stretch, flex-start, flex-end, center, and baseline. <br> align-items defaults to stretch, if it is not set.
+    <br>baseline: items are aligned such as their baselines align
+  </div>
+
+  <div id="stretch">
+    <aside>first column. </aside>
+    <main>the main content.</main>
+    <section>third column</section>
+  </div>
+
+  <div id="alignflexstart">
+    <aside class="one">first column. </aside>
+    <main class="two">the main content.</main>
+    <section class="tree">third column</section>
+  </div>
+
+  <div id="aligncenter">
+    <aside class="one">first column. </aside>
+    <main class="two">the main content.</main>
+    <section class="tree">third column</section>
+  </div>
+
+  <div id="aligend">
+    <aside class="one">first column. </aside>
+    <main class="two">the main content.</main>
+    <section class="tree">third column</section>
+  </div>
+
+  <div id="alignbaseline">
+    <aside class="one">first column. </aside>
+    <main class="two">the main content.</main>
+    <section class="tree">third column</section>
+  </div>
+
+  </body>
+</html>
