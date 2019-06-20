@@ -119,3 +119,23 @@ body{ margin:0px; }
 .tree {
 	height: 130px;
 }
+
+#aligncontent_base{
+	align-items: flex-starte;
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	height: 400px;
+	background-color: pink;
+	margin: 10px 0px 10px 10px;
+}
+
+#aligncontent_base > *{
+  background-color: lightgray;
+  border-radius: 10px;
+  flex: 1;
+  max-width: 390px;
+  min-width: 300px;
+  border: 1px solid black;
+}
