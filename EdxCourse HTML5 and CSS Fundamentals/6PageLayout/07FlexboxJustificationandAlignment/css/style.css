@@ -121,7 +121,8 @@ body{ margin:0px; }
 }
 
 #aligncontent_base{
-	align-items: flex-starte;
+	align-content: "stretch"; /* default*/
+
 	justify-content: flex-start;
 	display: flex;
 	flex-flow: row wrap;
@@ -131,11 +132,72 @@ body{ margin:0px; }
 	margin: 10px 0px 10px 10px;
 }
 
-#aligncontent_base > *{
+
+#aligncontent_flexstart{
+	align-content: flex-start;
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	height: 400px;
+	background-color: green;
+	margin: 10px 0px 10px 10px;
+}
+
+#aligncontent_center{
+	align-content: center;
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	height: 400px;
+	background-color: blue;
+	margin: 10px 0px 10px 10px;
+}
+
+#aligncontent_flexend{
+	align-content: flex-end;
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	height: 400px;
+	background-color: purple;
+	margin: 10px 0px 10px 10px;
+}
+
+#aligncontent_spacebetween{
+	align-content: space-between;
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	height: 400px;
+	background-color: red;
+	margin: 10px 0px 10px 10px;	
+}
+
+#aligncontent_spacearound{
+	align-content: space-around;
+	justify-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	width: calc(100vw - 30px);
+	height: 400px;
+	background-color: yellow;
+	margin: 10px 0px 10px 10px;		
+}
+
+#aligncontent_base > *, #aligncontent_flexstart > *, #aligncontent_center > *, #aligncontent_flexend > *, #aligncontent_spacebetween > *, #aligncontent_spacearound > *{
   background-color: lightgray;
   border-radius: 10px;
   flex: 1;
   max-width: 390px;
   min-width: 300px;
+  min-height: 50px;
   border: 1px solid black;
+}
+
+.top{
+	max-height: 90px;
 }
