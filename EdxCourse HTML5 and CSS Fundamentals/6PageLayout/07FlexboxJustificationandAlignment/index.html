@@ -159,5 +159,33 @@
     <section  class="top">third column</section>
   </div>
 
+  <div>
+    align-self property makes possible to override the align-items (that determines how items are aligned in the cross axis direction) value for specific flex items. valid values:    
+  </div>
+  <ul>
+    <li>flex-start: cross-start margin edge of the item is placed on the cross-start line</li>
+    <li>flex-end: cross-end margin edge of the item is placed on the cross-end line</li>
+    <li>center: item is centered in the cross-axis</li>
+    <li>baseline: items are aligned such as their baseline are aligned</li>
+    <li>tretch (default): stretch to fill the container (still respect min-width/max-width)</li>
+  </ul>
+  <ul id="flex-container">
+    <li class="flex-item flex-start">1</li>
+    <li class="flex-item flex-end">2</li>
+    <li class="flex-item center">3</li>
+    <li class="flex-item baseline">4</li>
+    <li class="flex-item stretch">5</li>
+  </ul>
+
+    <div>
+      order property allows you to determine the order in which the item appears in the flexbox.  This allows you to present the information in the flexbox layout independent of its order in the HTML itsel    
+    </div>
+
+    <div class="fc">
+      <p class="Orderone">One</p>
+      <p class="Ordertwo">Two</p>
+      <p class="Orderthree">Three</p>
+      <p class="Orderfour">Four</p>
+    </div>
   </body>
 </html>
