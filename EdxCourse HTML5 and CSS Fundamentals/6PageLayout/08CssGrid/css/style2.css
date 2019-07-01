@@ -1,0 +1,33 @@
+
+#container{
+	display: grid;
+	
+	grid-template-rows: 150px auto 150px; /* Come nell'esempio sopra */
+    /*grid-template-rows: 250px 800px 400px; /* Tre righe con dimensioni fisse */
+    /*grid-template-rows: repeat(3, 275px); /* Tre righe con le stesse dimensioni */    
+    grid-template-columns: 25% 75%; /* Come nell'esempio sopra */
+    /*grid-template-columns: 100px 100px 100px 100px; /* Quattro colonne con le stesse dimensioni */
+    /*grid-template-columns: repeat(4, 100px); /* Quattro colonne con le stesse dimensioni */
+
+    grid-template-areas: /*Our grid is 3X2 and this is the mapping into areas. See that header and footer thake two Areas each */
+    "header header"
+    "sidebar content"
+    "footer footer";
+    /*la funzione grid-template-areas svolge due compiti: per prima cosa ci permette di dare un nome alle aree 
+    che vogliamo gestire e come secondo aspetto permette di disporle all’interno della struttura che abbiamo 
+    creato. Stiamo dicendo al browser come popolare le aree create con i comandi grid-template*/
+}
+
+#headername{
+	grid-area: header;
+}
+#sidebarname{
+	grid-area: sidebar;
+}
+#footername{
+	grid-area: footer;
+}
+
+.articloi{
+	grid-area: content; 
+}
