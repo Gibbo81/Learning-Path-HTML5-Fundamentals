@@ -1,0 +1,110 @@
+
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 3fr 6fr 1fr 5fr 10fr 2fr; /*The fr unit is a fraction of the whole width, so the first column takes up three of those, the second is wider and takes up six.*/
+  grid-template-rows: 100px auto 15px auto auto;  /*Where auto is used, the row will grow and shrink depending on the content.*/
+}
+
+.img1{
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/wooden.jpg);
+  background-size: cover;
+  grid-column: 1 / 3; /*Our first image starts on column line 1, and ends on 3. Equivalent: grid-column: 1 / span 2;*/
+  grid-row: 2 / 5;
+}
+
+.img2{
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/speaker.jpg);
+  background-size: cover;
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 3;
+  /*grid-column: 2 / 4;
+  grid-row: 3 / 6;*/
+}
+
+.img3{
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/waves.jpg);
+  background-size: cover;
+  grid-column: 5 / 7;
+  grid-row: 4 / 6;
+}
+
+.strapline {
+  grid-column: 3 / span 3;
+  grid-row: 2 / span 1;
+}
+
+.cta-wrapper {
+  grid-column: 4 / span 2;
+  grid-row: 4 / span 2;
+}
+
+body {
+  color: #292929;
+  font: 1em/1.7 'Open sans', sans-serif;
+}
+
+blockquote {
+  font: italic 1.1em/2 'Playfair Display', serif;
+  margin: 0 0 2em 0;
+}
+
+.cta h1 {
+  font: bold 6em/1 'Playfair Display', serif;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+
+.button {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background: #292929;
+  padding: .8em 1.5em;
+}
+
+.button:hover {
+  background: black;
+}
+
+.strapline {
+  margin-top: 100px;
+  position: relative;
+}
+
+.strapline::before {
+  content: '';
+  display: block;
+  background: url(wavy.svg) repeat-x;
+  background-size: cover;
+  width: 20%;
+  height: .5em;
+  position: absolute;
+  top: -3em;
+  left: 40%;
+}
+
+.cta h1::before {
+  content: '';
+  display: block;
+  height: 1em;
+  width: 1em;
+  background: url(badge.svg) no-repeat center center;
+  background-size: 80%;
+  position: absolute;
+  left: -120px;
+  top: 0;
+}
+
+
+/*
+
+If the browser window is 600px or smaller, the background color will be lightblue:
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+
+*/
