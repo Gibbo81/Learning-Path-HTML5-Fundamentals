@@ -1,0 +1,92 @@
+.gridgeneric{
+  grid-gap: 20px;
+  display: grid;
+}
+
+.grid-1 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 100px 100px auto;
+  grid-template-areas:    "header header header"  /*the header span 3 Columns*/
+                          "main main sidebar"
+                          "main main sidebar"
+                          "footer footer footer";
+}
+
+/* items */
+.grid-1 div, .grid-2 div, .item-C div{
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  }
+
+/* specific item styles */
+.item-1 {
+  background: #b03532;
+  grid-column: 1 / 3;  /*Starts in 1 and and in 3 (included)*/
+  grid-row: 1 / Span 2; /*With span we aren’t tied to specifying where the area ends, instead defining how many tracks the item should spread across*/
+}
+.item-2 {
+  background: #33a8a5;
+}
+.item-3 {
+  background: #30997a;
+  grid-column: 3;
+  grid-row: 2 / span 2;
+}
+.item-4 {
+  background: #6a478f;
+}
+.item-5 {
+  background: #da6f2b;
+}
+.item-6 {
+  background: #3d8bb1;
+  grid-column: 1 / span 2;
+  grid-row: 4 / span 2;
+}
+.item-7 {
+  background: #e03f3f;
+}
+.item-8 {
+  background: #59a627;
+}
+.item-9 {
+  background: #4464a1;
+}
+
+.item-D {
+  background: #b03532;
+  grid-area: header; /*We can discharge grid-column and grid-row rules in favor of grid-area:*/
+}
+.item-C {
+  background: #33a8a5;
+  grid-area: main;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+}
+.item-B {
+  background: #30997a;
+  grid-area: sidebar;
+}
+.item-A {
+  background: #6a478f;
+  grid-area: footer;
+}
+
+.item-C1{
+  grid-column: 1 / Span 2;
+  background: #4464a1;
+}
+
+.item-C2{
+  background: #e24f3f;
+}
+
+.item-C3{
+  background: #e55fb7;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Grid Layout: Fluid Columns and Better Gutters</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style3C.css">
+  </head>
+  <body>
+    <a id="top" href="https://webdesign.tutsplus.com/tutorials/css-grid-layout-using-grid-areas--cms-27264">CSS Grid Layout: Using Grid Areas</a>
+    <div>
+       So far our grid items have each been contained within a single grid cell, but we can achieve more useful layouts by breaking beyond those boundaries
+    </div>
+    <section class="grid-1 gridgeneric">
+      <div class="item-1">1</div>
+      <div class="item-2">2</div>
+      <div class="item-3">3</div>
+      <div class="item-4">4</div>
+      <div class="item-5">5</div>
+      <div class="item-6">6</div>
+      <div class="item-7">7</div>
+      <div class="item-8">8</div>
+      <div class="item-9">9</div>
+    </section>
+    <div>
+      The unchanged  items fill the available space automatically. This highlights perfectly how a grid layout doesn’t have to reflect the source order of the elements.
+    </div>
+    <div>
+      Grid Template Areas allow us to name areas on the grid. With those areas named, we can reference them (instead of line numbers) to position our items
+    </div>
+    <section class="grid-2 gridgeneric">
+      <div class="item-A">A</div>
+      <div class="item-B">B</div>
+      <div class="item-C gridgeneric">
+          <div class="item-C1">C1</div>
+          <div class="item-C2">C2</div>
+          <div class="item-C3">C3</div>
+      </div>
+      <div class="item-D">D</div>
+    </section>
+    <div>
+      A given web page will contain all kinds of nested components, so let’s see how that works with Grid. <br>
+      When we declare a grid container display: grid; only its direct descendants become grid items. Content we add to those child elements will be completely unaffected by Grid unless we specifically say otherwise.
+      <br>So, to recap:
+      <ol>
+        <li>grid-column offers us a shorthand way of defining where an item starts and ends.</li>
+        <li>We can also use the span keyword to make our rules more flexible</li>
+        <li>grid-template-areas give us the power to name our grid areas.</li>
+        <li>We can also nest grids by declaring grid items as display: grid; and following the same process.</li>
+      </ol>
+    </div>
+  </body>
+</html>
