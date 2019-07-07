@@ -7,6 +7,53 @@
     <link rel="stylesheet" type="text/css" href="css/style3B.css">
   </head>
   <body>
+    <a id="top" href="https://webdesign.tutsplus.com/tutorials/css-grid-layout-units-of-measurement-and-basic-keywords--cms-27259">CSS Grid Layout: Fluid Columns and Better Gutters</a>
+
+    <section class="grid-1 gridgeneric">
+      <div class="item-1">1</div>
+      <div class="item-2">2</div>
+      <div class="item-3">3</div>
+      <div class="item-4">4</div>
+      <div class="item-5">5</div>
+      <div class="item-6">6</div>
+      <div class="item-7">7</div>
+      <div class="item-8">8</div>
+      <div class="item-9">9</div>
+    </section>
+
+    <div>
+      To better manage width we can use fr: fraction unit. A single fr unit describes “one piece of however many pieces we’re splitting this into”
+      <br> LET'S TRY: grid-template-columns: 300px 1fr 3fr 20%;
+    </div>
+
+    <section class="grid-2 gridgeneric">
+      <div class="item-A">A</div>
+      <div class="item-B">B</div>
+      <div class="item-C">C</div>
+      <div class="item-D">D</div>
+      <div class="item-E">E</div>
+      <div class="item-F">F</div>
+      <div class="item-G">G</div>
+      <div class="item-H">H</div>
+      <div class="item-I">I</div>
+    </section>
+    <ul>
+      <li>the first is fixed at 300px wide</li>
+      <li>the last is a flexible 20% of the grid container element wide</li>
+      <li>then the fr units are calculated, also taking gutters into account, leaving the second column with one piece of the remaining space</li>
+      <li>and the third with three pieces.</li>
+    </ul>
+    <div>
+      So, to recap:
+      <ol>
+        <li>Grid will accept flexible units in combination with fixed units of measurements.</li>
+        <li>The repeat() function will save us time and keep our stylesheets maintainable.</li>
+        <li>The fr, or fraction unit is a very powerful way of describing grid templates.</li>
+      </ol>
+
+
+
+    </div>
 
   </body>
 </html>
