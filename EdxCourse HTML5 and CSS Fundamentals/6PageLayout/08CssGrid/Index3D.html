@@ -9,24 +9,8 @@
   <body>
     <a id="top" href="https://webdesign.tutsplus.com/tutorials/css-grid-layout-going-responsive--cms-27270">CSS Grid Layout: Going Responsive With auto-fill and minmax()</a>
     <div>
-       So far our grid items have each been contained within a single grid cell, but we can achieve more useful layouts by breaking beyond those boundaries
-    </div>
-    <section class="grid-1 gridgeneric">
-      <div class="item-1">1</div>
-      <div class="item-2">2</div>
-      <div class="item-3">3</div>
-      <div class="item-4">4</div>
-      <div class="item-5">5</div>
-      <div class="item-6">6</div>
-      <div class="item-7">7</div>
-      <div class="item-8">8</div>
-      <div class="item-9">9</div>
-    </section>
-    <div>
-      The unchanged  items fill the available space automatically. This highlights perfectly how a grid layout doesn’t have to reflect the source order of the elements.
-    </div>
-    <div>
-      Grid Template Areas allow us to name areas on the grid. With those areas named, we can reference them (instead of line numbers) to position our items
+      We can control when these grids come into effect using media queries, meaning we can completely redefine our layout at different viewport widths.
+      We can change the grid disposition if the moniter is shorter than 500px
     </div>
     <section class="grid-2 gridgeneric">
       <div class="item-A">A</div>
@@ -38,16 +22,29 @@
       </div>
       <div class="item-D">D</div>
     </section>
+    <img src=".\Images\500Diff.jpg">
     <div>
-      A given web page will contain all kinds of nested components, so let’s see how that works with Grid. <br>
-      When we declare a grid container display: grid; only its direct descendants become grid items. Content we add to those child elements will be completely unaffected by Grid unless we specifically say otherwise.
-      <br>So, to recap:
-      <ol>
-        <li>grid-column offers us a shorthand way of defining where an item starts and ends.</li>
-        <li>We can also use the span keyword to make our rules more flexible</li>
-        <li>grid-template-areas give us the power to name our grid areas.</li>
-        <li>We can also nest grids by declaring grid items as display: grid; and following the same process.</li>
-      </ol>
+     Our approach up until now has been to dictate how many tracks there are and watch the items fit accordingly <br>
+     With the auto-fill keyword we can dictate how wide our tracks are and let Grid figure out how many will fit in the available space.<br>
+     We use grid-template-columns: repeat(auto-fill, 9em); which says “make the columns 9em wide each, and fit as many as you can into the grid container <br>
+     If we use minmax(9em, 1fr) for columns width Grid would place as many 9em tracks as possible, but then expand them to a maximum of 1fr until the container is filled <br>
+     grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
     </div>
+    <section class="grid-1">
+      <div class="item-1">1</div>
+      <div class="item-2">2</div>
+      <div class="item-3">3</div>
+      <div class="item-4">4</div>
+      <div class="item-5">5</div>
+      <div class="item-6">6</div>
+      <div class="item-7">7</div>
+      <div class="item-8">8</div>
+      <div class="item-9">9</div>
+    </section>
+    <ol>
+      <li>Media queries can help us completely rearrange Grid layouts by redefining grid-template-areas (and other things) for different scenarios.</li>
+      <li>The auto-fill keyword is useful for filling up grid containers.</li>
+      <li>The minmax() function complements auto-fill nicely, making sure containers are properly filled, but doesn’t give us “responsiveness” in the true sense of the word.</li>
+    </ol>
   </body>
 </html>
