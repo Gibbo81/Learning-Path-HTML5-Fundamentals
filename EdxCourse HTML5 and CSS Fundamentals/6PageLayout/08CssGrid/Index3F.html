@@ -30,5 +30,40 @@
       <div class="item-17">17</div>
       <div class="item-18">18</div>
     </section>
+    <div class="">
+      item-9 no longer fits into the column at the end so it’s pushed down to the next row. As it can’t fit in anything beyond .item-7 it stays put. .item-10, you might imagine, would tuck itself in underneath .item-6 again, but, if you remember, it searches for a vacant column, then failing that it moves down a row and shunts across to the left again. This is an important concept to grasp.
+      <br>item-18, upon failing to find space next to .item-17, has moved down a row. We only actually defined five rows, but Grid has assumed we’ll want another row tacking on. This is owing to grid-auto-flow, which belongs to the grid element, and whose default value is row. We can change this value to column if we want
+      <br>We can add another keyword to our grid-auto-flow property: dense. Its default counterpart is spars.
+      <br>"dense" packing algorithm attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items.
+      <br>If it is omitted, a "sparse" algorithm is used, where the placement algorithm only ever moves "forward" in the grid when placing items, never backtracking to fill holes. This ensures that all of the auto-placed items appear "in order", even if this leaves holes that could have been filled by later items.
+    </div>
+    <section class="grid-2">
+      <div class="item-1">1</div>
+      <div class="item-2">2</div>
+      <div class="item-3">3</div>
+      <div class="item-4">4</div>
+      <div class="item-5">5</div>
+      <div class="item-6">6</div>
+      <div class="item-7">7</div>
+      <div class="item-8">8</div>
+      <div class="item-9">9</div>
+      <div class="item-10">10</div>
+      <div class="item-11">11</div>
+      <div class="item-12">12</div>
+      <div class="item-13">13</div>
+      <div class="item-14">14</div>
+      <div class="item-15">15</div>
+      <div class="item-16">16</div>
+      <div class="item-17">17</div>
+      <div class="item-18">18</div>
+    </section>
+    <h3>RECAP</h3>
+    <ol>
+      <li>If we haven’t specifically defined an item’s location, Grid’s auto-placement algorithm will place it in the next available (and large enough) slot.</li>
+      <li>Where there’s no available slot in the current row, it will begin searching the following row, even if that leaves gaps.</li>
+      <li>We can switch this search order by altering grid-auto-flow from row to column.</li>
+      <li>grid-auto-flow accepts a keyword to describe the “packing” approach. By default this value is sparse, but we can alter this to dense which attempts to fill in all available gaps.</li>
+    </ol>
+
   </body>
 </html>
