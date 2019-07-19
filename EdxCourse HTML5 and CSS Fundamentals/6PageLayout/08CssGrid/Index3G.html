@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Understanding the CSS Grid “Auto-Placement Algorithm”</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style3G.css">
+  </head>
+  <body>
+    <a id="top" href="https://webdesign.tutsplus.com/tutorials/quick-tip-name-your-css-grid-lines-just-in-case--cms-27844">Quick Tip: Name Your CSS Grid Lines, Just in Case</a>
+    <div>
+      Grid module allows us to explicitly name our lines when we declare our grid columns and rows. <br>
+       we can wrap our column and row values with line names (whatever the heck we want), using square brackets: grid-template-columns: [start] 100px [centre-start] auto [last-column-start] 100px [finish];
+    </div>
+
+    <section class="grid-1">
+      <div class="item-1">1</div>
+    </section>
+    <h4>Some Pointers</h4>
+    <ol>
+      <li>These names can be tailored to your own descriptive needs, so think logically about what will help you recognize and remember areas of the grid.</li>
+      <li>The original line numbers remain in operation, so you can still use them.</li>
+      <li>You can declare multiple names for one line, for example: [main-end footer-start row-5] etc.</li>
+      <li>Even if you name your grid lines, you’re not obliged to use them, so it’s a good “just in case” habit to get into.</li>
+    </ol>
+    <div>
+      There are also circumstances where lines are given names implicitly.<br>
+      Naming a grid area header automatically assigns names to its four boundary lines too. The row lines around it become header-start and header-end, and likewise the two column lines also become header-start and header-end. The same applies to the other areas
+      <br>Note: Looking at things in reverse, explicitly adding named lines in the same format (header-start and header-end) will create a named grid area of header.
+      <br>We can use these line names just like we have previously, to position items. And again, they exist in addition to any names you define yourself, and the original line index numbers.
+    </div>
+    <section class="grid-2">
+      <div class="item-2">2</div>
+      <div class="item-3">3</div>
+      <div class="item-4">4</div>
+      <div class="item-5">5</div>
+    </section>
+  </body>
+</html>
