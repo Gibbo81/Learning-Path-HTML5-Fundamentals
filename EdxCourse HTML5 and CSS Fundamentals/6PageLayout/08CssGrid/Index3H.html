@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Understanding the CSS Grid “Auto-Placement Algorithm”</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/style3H.css">
+  </head>
+  <body>
+    <a id="top" href="https://webdesign.tutsplus.com/tutorials/how-to-use-implicit-track-sizing-on-your-css-grid--cms-31429">How to Use Implicit Track Sizing on Your CSS Grid</a>
+    <div>
+      what if we don’t know (or don’t want to commit to) how many tracks we want?
+    </div>
+
+    <section class="grid-1">
+      <div class="item-1">1</div>
+      <div class="item-2">2</div>
+      <div class="item-3">3</div>
+      <div class="item-4">4</div>
+      <div class="item-5">5</div>
+      <div class="item-6">6</div>
+      <div class="item-7">7</div>
+      <div class="item-8">8</div>
+      <div class="item-9">9</div>
+    </section>
+    <div>
+       We get the best of both worlds. Here we’re saying that we want the first column to be 1fr (that it takes up one fraction of whatever space is left–auto would have the same effect here) and that any other columns after that should be 100px.
+    </div>
+
+    <section class="grid-1">
+      <div class="item-1">1</div>
+      <div class="item-2">2</div>
+      <div class="item-3B">3</div>
+      <div class="item-4">4</div>
+      <div class="item-5">5</div>
+      <div class="item-6">6</div>
+      <div class="item-7">7</div>
+      <div class="item-8">8</div>
+      <div class="item-9">9</div>
+    </section>
+    <div>
+      It almost goes without saying that grid-auto-rows will do the same for rows as grid-auto-columns does for columns. Here’s an example, where all rows but the first two are fixed at a height of 200px.
+    </div>
+    <section class="grid-2">
+      <div class="item-1">1</div>
+      <div class="item-2">2</div>
+      <div class="item-10">10</div>
+      <div class="item-4">4</div>
+      <div class="item-5">5</div>
+      <div class="item-6">6</div>
+      <div class="item-7">7</div>
+      <div class="item-8">8</div>
+      <div class="item-9">9</div>
+    </section>
+    <div>
+      Many of Grid’s properties have default values which will look after you in case you don’t define anything different, but on some occasions we need to at least imply what we want. With implicit track sizing we can imply what size any extra rows or columns should be, if they’re ever needed.
+    </div>
+  </body>
+</html>

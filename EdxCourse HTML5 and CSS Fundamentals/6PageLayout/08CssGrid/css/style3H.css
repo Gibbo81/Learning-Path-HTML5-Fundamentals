@@ -1,0 +1,76 @@
+body {
+  padding-top: 20px;
+  background: #f5f7f8;
+}
+
+.grid-1 {
+  display: grid;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  grid-template-columns: 1fr; /*First column manually set*/
+  grid-auto-columns: 100px; /*we want all columns besides the first to be 100px wide, we could implicitly state that*/
+  grid-gap: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-rows: 200px;
+
+  grid-gap: 20px;
+
+
+}
+
+/* items */
+
+.grid-1 div, .grid-2 div {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  }
+
+/* specific item styles */
+
+.item-1 {
+  background: #b03532;
+}
+.item-2 {
+  background: #33a8a5;
+}
+.item-3 {
+  background: #30997a;  /*Place in a not existing grid position*/
+  grid-column: 3;     /*That gives us extra columns outside our defined grid because CSS Grid will use the available space and its auto-placement algorithm to figure out where everything else goes.*/
+}
+.item-3B {
+  background: #30997a;  /*Place in a not existing grid position*/
+  grid-column: 5;     /*That gives us extra columns outside our defined grid because CSS Grid will use the available space and its auto-placement algorithm to figure out where everything else goes.*/
+  grid-row: 1;  /*This is necessary to reuse previous spaces*/
+}
+.item-4 {
+  background: #6a478f;
+}
+.item-5 {
+  background: #da6f2b;
+}
+.item-6 {
+  background: #3d8bb1;
+}
+.item-7 {
+  background: #e03f3f;
+}
+.item-8 {
+  background: #59a627;
+}
+.item-9 {
+  background: #4464a1;
+}
+.item-10 {
+  background: #b05472;
+}
