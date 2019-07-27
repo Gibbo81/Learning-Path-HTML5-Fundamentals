@@ -1,0 +1,48 @@
+body {
+  padding-top: 20px;
+  background: #f5f7f8;
+}
+
+.grid-1 {
+  display: grid;
+  grid: 100px auto 300px / repeat(2, 1fr) 100px;
+}
+
+/* items */
+.grid-1 div {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  }
+  /* specific item styles */
+
+  .item-2 {         /*relative position*/
+    background: #33a8a5;
+  }
+
+  .item-5 {   /*absolute position*/
+    background: #da6f2b;
+  }
+
+  .item-7 { /*Absolute position inside the Grid*/
+    background: #e03f3f;
+  }
+
+  .item-1 {
+    background: #b03532;
+  }
+  .item-3 {
+    background: #30997a;
+  }
+  .item-4 {
+    background: #6a478f;
+  }
+  .item-6 {
+    background: #3d8bb1;
+  }
+  .item-8 {
+    background: #59a627;
+  }
+  .item-9 {
+    background: #4464a1;
+  }
