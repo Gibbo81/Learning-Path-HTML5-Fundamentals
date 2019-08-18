@@ -26,6 +26,7 @@ Since this is the layout for the entire page, we'll use the vw units to set the 
 header, footer{
 	/*flex: 0 1 100vW;*/
 	width: 100vW;
+	margin: 0px;
 	height: 100px;
 	margin: 10px;
   padding: 20px;

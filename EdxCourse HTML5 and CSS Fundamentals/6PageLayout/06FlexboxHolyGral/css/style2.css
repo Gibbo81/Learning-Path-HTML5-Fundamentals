@@ -1,18 +1,18 @@
 body{ margin:0px; }
 
-.fc > * {
-		margin:10px;
-		padding:20px;
-		background-color:lightgray;
-		border-radius: 10px;
-		box-sizing: border-box;
-}
-
 .fc {
 		display: flex;
 		flex-flow: column wrap;
 		height: 100vh;	/*Use all the screen*/
 		width: 100vw;
+		box-sizing: border-box;
+}
+
+.fc > * {
+		margin:10px;
+		padding:20px;
+		background-color:lightgray;
+		border-radius: 10px;
 		box-sizing: border-box;
 }
 
@@ -24,9 +24,8 @@ aside, main, section {
 
 .fc header,
 .fc footer {
-		margin:0px;
+		margin: 0px;
 		flex: 1 1;
 		min-height: 100vh;	/*it must teke all the height all the flew flow will go on the next line*/
 		max-width: 100px;
-
 }
