@@ -31,7 +31,7 @@
       <div class="item-18">18</div>
     </section>
     <div class="">
-      item-9 no longer fits into the column at the end so it’s pushed down to the next row. As it can’t fit in anything beyond .item-7 it stays put. .item-10, you might imagine, would tuck itself in underneath .item-6 again, but, if you remember, it searches for a vacant column, then failing that it moves down a row and shunts across to the left again. This is an important concept to grasp.
+      item-9 no longer fits into the column at the end so it’s pushed down to the next row. As it can’t fit in anything beyond .item-7 it stays put. .item-10, you might imagine, would stuck itself in underneath .item-6 again, but, if you remember, it searches for a vacant column, then failing that it moves down a row and shunts across to the left again. This is an important concept to grasp.
       <br>item-18, upon failing to find space next to .item-17, has moved down a row. We only actually defined five rows, but Grid has assumed we’ll want another row tacking on. This is owing to grid-auto-flow, which belongs to the grid element, and whose default value is row. We can change this value to column if we want
       <br>We can add another keyword to our grid-auto-flow property: dense. Its default counterpart is spars.
       <br>"dense" packing algorithm attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items.
