@@ -4,6 +4,9 @@
   class as an object (for example, HelloWorld; see section 2.2)
    data—Data in the form of attributes and properties (we’ll cover properties
   later); for example, null or {name: 'Azat'}
-   child—Child element or inner HTML/text content; for example, Hello world!      */
+   child—Child elements or inner HTML/text content; for example, Hello world!      */
 var appo = React.createElement('h1', null, 'HelloWorld!!!!');
-ReactDOM.render(appo, document.getElementById('content'));
+ReactDOM.render(
+  React.createElement('div', null, appo, appo), /*One div with two h1 (appo) inside*/
+  document.getElementById('content')
+);
