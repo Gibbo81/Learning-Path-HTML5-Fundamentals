@@ -1,0 +1,22 @@
+to accesso to:
+http://localhost:8080/index.html
+
+
+Start the service:
+1) go to the folder
+C:\Users\g>cd C:\GitRepo\Learning-Path-HTML5-Fundamentals\React\ReactQuickly\Cha
+pter1\1.6HelloWord
+
+2) start the server
+C:\GitRepo\Learning-Path-HTML5-Fundamentals\React\ReactQuickly\Chapter1\1.6Hello
+Word>http-server
+Starting up http-server, serving ./
+Available on:
+  http://192.168.61.128:8080
+  http://127.0.0.1:8080
+Hit CTRL-C to stop the server
+[2019-09-06T09:30:16.360Z] "GET /" "Mozilla/5.0 (Windows NT 6.3; Win64; x64) App
+leWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"
+(node:5040) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is
+deprecated
+
