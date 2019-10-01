@@ -3,20 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 class But extends React.Component{
-  handleSave(event){
+  handleSave(event){          //event is a SyntheticEvent to access the original event use event.nativeEvent
     console.log(this, event);
+    console.log(event.nativeEvent)
+    console.log('event.currentTarget:' + event.currentTarget)
+    console.log('event.target:' +event.target)
+    console.log('isPropagationStopped:' + event.isPropagationStopped());
+    event.stopPropagation();
+    console.log('isPropagationStopped:' + event.isPropagationStopped());
   }
   render(){
 
     return(
       <div>
-        <button
-          onClick={this.handleSave.bind(this)}>button</button>
+        <button onClick={this.handleSave.bind(this)}>button</button>
         <button onClick={e => this.handleSave(e)}>ButtonLambda</button>
         <div
           onClick={e => console.log("click DIV")}
           style={{border: '1px solid blue'}}
-          onMouseOver={e => console.log("OveR")}
+          onMouseOver={e => console.log("OveR")}    //e is a SyntheticEvent pag: 120
           onMouseMoveCapture={e => console.log("OveR Capture")}>maouse over</div>
       </div>
     )
