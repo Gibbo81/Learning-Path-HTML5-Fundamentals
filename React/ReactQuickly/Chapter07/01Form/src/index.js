@@ -40,7 +40,8 @@ class InputExample extends React.Component{
     this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
     this.handleTextareaChange = this.handleTextareaChange.bind(this);
     this.handleSelectChange = this.handleSelectChange.bind(this);
-    this.handleMultiSelectChange = this.handleMultiSelectChange.bind(this);    
+    this.handleMultiSelectChange = this.handleMultiSelectChange.bind(this);
+    this.handleSendData = this.handleSendData.bind(this);
   };
   handleChange(event){
     this.setState(
@@ -78,10 +79,18 @@ class InputExample extends React.Component{
       obj.push(event.target.value)
     }
     this.setState({selectMulti : obj})
-  }
+  };
+  handleSendData(event){
+    debugger;
+    fetch(this.props.link, {
+      method:'POST',
+      body : JSON.stringify(this.state)
+    }).then((r)=> {return r.json()})
+    .then((b) => {console.log('Submitted: ', b)})
+  };
   render(){
     return (
-      <form>
+      <form onSubmit={this.handleSendData}>
         <input type='radio'
           name='radiogroup'
           value= 'mele'
@@ -131,7 +140,8 @@ class InputExample extends React.Component{
           <option value='breakfast'> breakfast</option>
           <option value='lunch'> lunch</option>
           <option value='dinner'> dinner</option>
-        </select>
+        </select><br/>
+        <input type='button' value='send' onClick={this.handleSendData}></input>
       </form>
 
     );
@@ -143,7 +153,7 @@ ReactDOM.render(
   <div>
     <FormSpecial/><br/>
     ----------------------------------------------------------------------------<br/>
-    <InputExample/>
+    <InputExample link="http://webapplog.com" />
   </div>,
   document.getElementById('content')
 );
