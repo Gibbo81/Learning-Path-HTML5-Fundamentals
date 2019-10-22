@@ -11,7 +11,7 @@ class ControlledInput extends React.Component{
     this.handleChangeAccount = this.handleChangeAccount.bind(this);
   }
   handleChangeAccount(event){
-    console.log('Typed: ', event.target.value)    
+    console.log('Typed: ', event.target.value)
     var result = event.target.value.replace(/\D/g,'');
     this.setState({
       accountNumber : result
