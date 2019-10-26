@@ -25,11 +25,11 @@ const LoadWebsite = (Plutus) => {
       console.log(ReactDOM.findDOMNode(this))
     }
     render() {
-      console.log(this.state)
-      return <Plutus {...this.state} {...this.props} />
+      console.log(this.state) /*Render wrapped content*/
+      return <Plutus {...this.state} {...this.props} />; {/*spread operator Both LoadWebsite state and props are passed as props to the wrapped object*/}
     }
   }
-  _LoadWebsite.displayName = 'EhnancedComponent'
+  _LoadWebsite.displayName = 'EhnancedComponent'; /*displayName is necessary to set React element names when they need to be different from the component class name,*/
 
   return _LoadWebsite
 }
@@ -45,7 +45,7 @@ class Content extends React.Component{
         <EnhancedButton />
         <br />
         <br />
-        <EnhancedLink />
+        <EnhancedLink extra="___extra props texts"/>
         <br />
         <br />
         <EnhancedLogo />
