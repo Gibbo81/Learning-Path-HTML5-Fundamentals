@@ -10,10 +10,7 @@ export default class Menu extends React.Component {
         {
           menus.map((v, i) => { return (
             <div key={i}>
-              <Linkp label={v}>
-                {v}
-              </Linkp>
-              <br/>
+              <Linkp label={v}/>
             </div>)
           })
         }

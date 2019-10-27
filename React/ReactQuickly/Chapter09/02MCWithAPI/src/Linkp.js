@@ -6,7 +6,7 @@ export default class Linkp extends React.Component {
     return (
     <div>
       <a href={url}>
-        {this.props.label + this.props.extra}
+        {this.props.label}
       </a>
       <br/>
     </div>)
