@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Introduction to drawing/animating</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+
+    <!--
+Bootstrap's grid system is built with flexbox and allows up to 12 columns across the page.
+If you do not want to use all 12 columns individually, you can group the columns together to create wider columns
+The grid system is responsive, and the columns will re-arrange automatically depending on the screen size.
+Make sure that the sum adds up to 12 or fewer
+
+The Bootstrap 4 grid system has five classes of responsiveness:
+.col- (extra small devices - screen width less than 576px)
+.col-sm- (small devices - screen width equal to or greater than 576px)
+.col-md- (medium devices - screen width equal to or greater than 768px)
+.col-lg- (large devices - screen width equal to or greater than 992px)
+.col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+Each class scales up, so if you wish to set the same widths for sm and md, you only need to specify sm.
+
+A column must be creted using: <div class="col-*-*">...</div>
+The first star (*) represents the responsiveness: sm, md, lg or xl.
+The second star represents a number, which should add up to 12 (or less) for each row. This number symblizes the space taken by a column, as multiple of the basic element that is 1/12 of the width of the containing element
+
+To create 4 column for medium device that span 3 - 1 - 2 - 6 :
+    -->
+    <div class="row">
+      <div class="col-md-3">.col-sm-3</div>
+      <div class="col-md-1">.col-sm-1</div>
+      <div class="col-md-2">.col-sm-2</div>
+      <div class="col-md-6">.col-sm-6</div>
+    </div>
+
+    <br/>
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+    <br/>
+
+<!--
+It's possible to use different classes of responsiveness inside the same container
+-->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          One
+        </div>
+        <div class="col-sm">
+          Two
+        </div>
+        <div class="col-sm">
+          Three
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          One md
+        </div>
+        <div class="col-md">
+          Two md
+        </div>
+        <div class="col-md">
+          Three md
+        </div>
+      </div>
+    </div>
+
+    <br/>
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+    <br/>
+    <!--
+If we need equal colomuns we can use a shortcut: <div class="col">...</div>
+
+    -->
+    <div class="row">
+      <div class="col">.col</div>
+      <div class="col">.col</div>
+      <div class="col">.col</div>
+    </div>
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
