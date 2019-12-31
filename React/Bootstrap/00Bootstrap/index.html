@@ -3,7 +3,12 @@
   <head>
     <title>Introduction to drawing/animating</title>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
   </head>
   <body>
@@ -14,27 +19,39 @@ If you do not want to use all 12 columns individually, you can group the columns
 The grid system is responsive, and the columns will re-arrange automatically depending on the screen size.
 Make sure that the sum adds up to 12 or fewer
 
-The Bootstrap 4 grid system has five classes of responsiveness:
-.col- (extra small devices - screen width less than 576px)
-.col-sm- (small devices - screen width equal to or greater than 576px)
-.col-md- (medium devices - screen width equal to or greater than 768px)
-.col-lg- (large devices - screen width equal to or greater than 992px)
-.col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+Each grid must be inside a container, there are two different choises:
+container class provides a responsive fixed width container. width changes depending on screen size:
+                Extra small<576px	Small≥576px	Medium≥768px	Large≥992px	Extra large≥1200px
+    max-width:	100%				      540px			  720px			    960px		    1140px
+container-fluid class provides a full width container, spanning the entire width of the viewport
+
+A grid is composed by rows that contain columns
+To add a row: <div class="row">...</div>
+
+The Bootstrap 4 columns system has five classes of responsiveness:
+col- (extra small devices - screen width less than 576px)
+col-sm- (small devices - screen width equal to or greater than 576px)
+col-md- (medium devices - screen width equal to or greater than 768px)
+col-lg- (large devices - screen width equal to or greater than 992px)
+col-xl- (xlarge devices - screen width equal to or greater than 1200px)
 Each class scales up, so if you wish to set the same widths for sm and md, you only need to specify sm.
+If the screen is too little the columns are put in vertical and not in horizontal
 
 A column must be creted using: <div class="col-*-*">...</div>
 The first star (*) represents the responsiveness: sm, md, lg or xl.
-The second star represents a number, which should add up to 12 (or less) for each row. This number symblizes the space taken by a column, as multiple of the basic element that is 1/12 of the width of the containing element
+The second star represents a number, which should add up to 12 (or less) for each row.
+This number symblizes the space taken by a column, as multiple of the basic element that is 1/12 of the width of the containing element
 
-To create 4 column for medium device that span 3 - 1 - 2 - 6 :
+To create 4 columns for medium device that span respectively 3 - 1 - 2 - 6 :
     -->
-    <div class="row">
-      <div class="col-md-3">.col-sm-3</div>
-      <div class="col-md-1">.col-sm-1</div>
-      <div class="col-md-2">.col-sm-2</div>
-      <div class="col-md-6">.col-sm-6</div>
+    <div class="container border">
+      <div class="row">
+        <div class="col-md-3">.col-sm-3</div>
+        <div class="col-md-1">.col-sm-1</div>
+        <div class="col-md-2">.col-sm-2</div>
+        <div class="col-md-6">.col-sm-6</div>
+      </div>
     </div>
-
     <br/>
 --------------------------------------------------------------------------------------------------------------------------------------------------------
     <br/>
@@ -42,8 +59,7 @@ To create 4 column for medium device that span 3 - 1 - 2 - 6 :
 <!--
 It's possible to use different classes of responsiveness inside the same container
 -->
-
-    <div class="container">
+    <div class="container bg-dark text-white">
       <div class="row">
         <div class="col-sm">
           One
@@ -73,21 +89,24 @@ It's possible to use different classes of responsiveness inside the same contain
     <br/>
     <!--
 If we need equal colomuns we can use a shortcut: <div class="col">...</div>
-
+By default, containers have 15px left and right padding, with no top or bottom padding.
+We can use spacing utilities, such as extra padding and margins to make them look even better.
+For example: pt-3 adds a top padding of 16px, pb-4 adds a bottom padding of 24px
     -->
-    <div class="row">
-      <div class="col">.col</div>
-      <div class="col">.col</div>
-      <div class="col">.col</div>
+    <div class="container-fluid pt-3 pb-4 bg-primary text-white">
+      <div class="row">
+        <div class="col">.col</div>
+        <div class="col">.col</div>
+        <div class="col">.col</div>
+      </div>
     </div>
 
+    <br/>
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+    <br/>
+    With non fluid container uou can use the .container-sm|md|lg|xl classes to create responsive containers.
+    The max-width of the container will change on different screen sizes/viewports:
+    <img src="img/dynamicContainer.jpg" alt="A simple image">
 
-
-
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
