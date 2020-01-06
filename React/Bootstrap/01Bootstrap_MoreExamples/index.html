@@ -167,8 +167,73 @@ In the example below, we only specify the .col-xl-6 class (without .col-lg-*, .c
       </div>
     </div>
   </div>
+  <br/>
+  --------------------------------------------------------------------------------------------------------------------------------------------------------
+  <br/>
+  It's possible to explicity set the width of only some columns, the remaining will automatically resize around it
+    <div class="container border">
+      <div class="row">
+        <div class="col bg-success">
+          col
+        </div>
+        <div class="col-9 bg-warning">
+          col-9
+        </div>
+        <div class="col bg-success">
+          col
+        </div>
+      </div>
+    </div>
     <br/>
---------------------------------------------------------------------------------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------------------------------------------------------------------------------
     <br/>
+    You can control the maximum number of horizontal columns in a row using row-cols-* (* maximum parallel columns)
+    It only work with the basic class col otherwise we can have some big problems
+
+    <div class="container-fluid">
+      <div class="row row-cols-1">
+        <div class="col bg-success">1 of 2</div>
+        <div class="col bg-warning">2 of 2</div>
+      </div>
+      <br>
+      <div class="row row-cols-2">
+        <div class="col bg-success">1 of 4</div>
+        <div class="col bg-warning">2 of 4</div>
+        <div class="col bg-success">3 of 4</div>
+        <div class="col bg-warning">4 of 4</div>
+      </div>
+      <br>
+      <div class="row row-cols-3">
+        <div class="col bg-success">1 of 6</div>
+        <div class="col bg-warning">2 of 6</div>
+        <div class="col bg-success">3 of 6</div>
+        <div class="col bg-warning">4 of 6</div>
+        <div class="col bg-success">5 of 6</div>
+        <div class="col bg-warning">6 of 6</div>
+      </div>
+    </div>
+    <br>
+    <p class="display-4">Messing around with col-*</p>
+    <div class="container-fluid">
+      <div class="row row-cols-3">
+        <div class="col-2 bg-success"> col-2 1 of 6</div>
+        <div class="col-3 bg-warning">col-3 2 of 6</div>
+        <div class="col bg-success">3 of 6</div>
+        <div class="col bg-warning">4 of 6</div>
+        <div class="col-2 bg-success">col-2 5 of 6</div>
+        <div class="col bg-warning">6 of 6</div>
+      </div>
+
+    <br>
+    --------------------------------------------------------------------------------------------------------------------------------------------------------
+    <br/>
+    If one of the column is taller than the other (due to text or CSS height), the rest will follow:
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col bg-success">Lorem ipsum dolor sit amet, cibo sensibus interesset no sit. Et dolor possim volutpat qui. No malis tollit iriure eam, et vel tale zril blandit, rebum vidisse nostrum qui eu. No nostrud dolorem legendos mea, ea eum mucius oporteat platonem.Eam an case scribentur, ei clita causae cum, alia debet eu vel.</div>
+        <div class="col bg-warning">.col</div>
+        <div class="col bg-success">.col</div>
+      </div>
+    </div>
   </body>
 </html>
