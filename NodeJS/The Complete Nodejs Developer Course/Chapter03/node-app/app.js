@@ -10,3 +10,13 @@ fs.writeFileSync('appo.txt','wrote by node.js');
 //////////////////////////////////////////////////////////////////////////////
 fs.appendFileSync('appo.txt','\n--- --- --- --- --- --- --- --- --- --- --- --- ');
 fs.appendFileSync('appo.txt','\nWe append all the day long');
+
+//import custom file
+const firstName = require('./util.js')
+console.log(firstName)
+
+const sum = require('./utilfunction.js')
+console.log('sum: ' + sum(10, 15))
+
+const notes = require('./notes.js')
+console.log(notes())
