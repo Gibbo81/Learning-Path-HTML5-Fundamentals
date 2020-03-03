@@ -1,4 +1,6 @@
-//command line for lunching the script: node app.js add --title="pippo e le storie" --body="è una lunga storia"
+//command line for lunching the script: 
+//add a note:  node app.js add --title="ztl zone" --body="1 2 3 ztl"
+//remove a note:  node app.js remove --title="ztl zone" 
 
 const notes = require('./notes.js')
 const chalk = require('chalk')
@@ -36,15 +38,21 @@ yargs.command({
         }
     },
     handler : function(argv){
-        console.log('Title: ' + argv.title)
-        console.log('Body: ' + argv.body)
+        notes.addNote(argv.title, argv.body)
     }
 })
 yargs.command({
     command : 'remove',
     describe : 'Remove a note',
-    handler : function(){
-        console.log('Removing a note')
+    builder : {
+        title :{
+            describe: 'note to delete',
+            demandOption : true, 
+            type : 'string'
+        }
+    },
+    handler : function(argv){
+        notes.removeNote(argv.title)
     }
 })
 yargs.command({
