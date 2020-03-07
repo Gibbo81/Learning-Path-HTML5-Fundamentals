@@ -1,9 +1,11 @@
 //command line for lunching the script: 
 //add a note:  node app.js add --title="ztl zone" --body="1 2 3 ztl"
 //remove a note:  node app.js remove --title="ztl zone" 
+//read a note:  node app.js read --title="ztl zone" 
+
+//debugg:    node inspect app.js read --title="ztl zone"
 
 const notes = require('./notes.js')
-const chalk = require('chalk')
 const yargs = require('yargs')
 
 /*ommand parameter
@@ -59,14 +61,21 @@ yargs.command({
     command : 'list',
     describe : 'Listing all the notes',
     handler(){
-        console.log('Listing notes')
+        notes.listNotes()
     }
 })
 yargs.command({
     command : 'read',
     describe : 'Reading a note',
-    handler(){
-        console.log('Read a note')
+    builder : {
+        title :{
+            describe: 'note to read',
+            demandOption : true, 
+            type : 'string'
+        }
+    },
+    handler(argv){
+        notes.readNotes(argv.title)
     }
 })
 

@@ -1,7 +1,11 @@
 const chalk = require('chalk')
 const fs = require('fs')
 
-const getNotes = () => 'Your Notes...' 
+const listNotes = () =>  {
+    const allNotes = loadNotes()
+    console.log(chalk.bgGreen('Your Notes'))
+    allNotes.forEach(note =>  console.log(chalk.bgBlue(note.title)))     
+}
 
 const removeNote = (title) => {
     const notes = loadNotes()
@@ -17,8 +21,9 @@ const removeNote = (title) => {
 
 const addNote = (title, body) => {
     const notes = loadNotes()
-    const duplicateNotes = notes.filter(x => x.title === title) //return a subset of the starting array, all the value that return true 
-    if (duplicateNotes.length === 0){
+    //const duplicateNotes = notes.filter(x => x.title === title) //return a subset of the starting array, all the value that return true 
+    const duplicateote = notes.find(x => x.title === title)
+    if (!duplicateote){ //same as checking for undefined
         notes.push({
             body : body,
             title : title
@@ -28,7 +33,6 @@ const addNote = (title, body) => {
     } 
     else{
         console.log("Note's title already taken")
-        console.log('duplicate: ' + JSON.stringify(duplicateNotes))
     }   
 }
 
@@ -47,8 +51,27 @@ const loadNotes = () => {
     }
 }
 
+const readNotes = (title) => {
+    debugger
+    // to enable debugger we need to start the program with inspect option
+    // node inspect app.js read --title="ztl zone"
+    //the use open chrome to page: chrome://inspect
+    //Add folder to workspace to load all your files
+    //one we have complete a test run we can repeat it sunig command restart
+    //to exit use ctrl+c twice to reset terminal
+    const allNotes = loadNotes()
+    const note = allNotes.find(x => x.title===title)
+    if (note){
+        console.log(chalk.inverse('title = ' + note.title))
+        console.log('body = ' + note.body)
+    }
+    else
+        console.log(chalk.red.inverse("Not not found!!!!"))
+}
+
 module.exports = {
-    getNotes : getNotes,
     addNote : addNote,
-    removeNote : removeNote
+    removeNote : removeNote,
+    listNotes : listNotes,
+    readNotes : readNotes
 }
