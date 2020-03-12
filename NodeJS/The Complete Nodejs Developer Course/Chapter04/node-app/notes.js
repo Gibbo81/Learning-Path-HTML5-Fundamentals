@@ -53,11 +53,12 @@ const loadNotes = () => {
 
 const readNotes = (title) => {
     debugger
-    // to enable debugger we need to start the program with inspect option
+    // to enable debug we need to start the program with inspect option
     // node inspect app.js read --title="ztl zone"
     //the use open chrome to page: chrome://inspect
+    //Choose your remote target to debug
     //Add folder to workspace to load all your files
-    //one we have complete a test run we can repeat it sunig command restart
+    //once completed a test run we can repeat it usnig command restart
     //to exit use ctrl+c twice to reset terminal
     const allNotes = loadNotes()
     const note = allNotes.find(x => x.title===title)

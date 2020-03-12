@@ -3,7 +3,9 @@
 //remove a note:  node app.js remove --title="ztl zone" 
 //read a note:  node app.js read --title="ztl zone" 
 
-//debugg:    node inspect app.js read --title="ztl zone"
+//debugg:       node inspect app.js read --title="ztl zone"
+//debugg node:  node --inspect-brk app.js read --title="ztl zone"
+
 
 const notes = require('./notes.js')
 const yargs = require('yargs')

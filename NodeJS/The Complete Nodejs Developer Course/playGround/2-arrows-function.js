@@ -17,7 +17,7 @@ const event = {
             console.log(guest + ' is attending ' + this.name)
         })
     }
-//arrow functions are great candidates for all place eccept method because their this retains the value of enclosing context this
+//arrow functions are great candidates for all place except method because their this retains the value of enclosing context this
 //Instead as method function we need this set to object the method s called on
 }
 event.printGuestList()
