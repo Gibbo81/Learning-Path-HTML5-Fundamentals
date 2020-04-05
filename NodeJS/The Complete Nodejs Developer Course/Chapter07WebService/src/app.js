@@ -13,7 +13,6 @@ app.use(express.static(path.join(__dirname, '../public'))) //configure our expre
 //public is the only directory exposed to the server
 //this will override the default configuration ==> res.send('<h1>Weater</h1>')
 
-
 //what to do if someone visit our homepage : app.com
 //1° parameter relative route
 //2° parameter callback used to responde
@@ -22,16 +21,17 @@ app.get('', (req, res) => {  //
     res.send('<h1>Weater</h1>')
 }) 
 
-/*
-//NOT USED ONLY for example purpose
+
 //different route app.com/help
-app.get('/help', (req, res) => {
+app.get('/helpObject', (req, res) => {
+    console.log(req)
     res.send([{
         name : 'giuliano',
         age : 38
     }])
 })
 
+/*
 //NOT USED ONLY for example purpose
 // app.com/about
 app.get('/about', (req, res) => {

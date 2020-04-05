@@ -17,7 +17,7 @@ const mapboInvalidToken ='https://api.mapbox.com/geocoding/v5/mapbox.places/Bolo
 request({ 
         url: mapbox,
         json: true    //automatically parse the response body from json to object
-    }, (error, response) => {   //only one of the two is popolated, error is only used for connection problem
+    }, (error, response) => {   //only one of the two is populated, error is only used for connection problem
         if(error)
             console.log('Unable to connect to map api')
         else if (response.statusCode !== 200)
