@@ -1,3 +1,30 @@
+
+function weather(){
+  var queryURL = "http://localhost:3000/weather?address=bologna"
+  fetch('http://localhost:3000/weather?address=bologna')
+  .then(response => Promise.all([response.ok, response.json()]))
+  .then(([responseOk, body]) => {
+      debugger;
+    if (responseOk) {
+      return body
+    } else {
+      throw body
+    }
+  })
+  .then(body => {
+      debugger;
+      console.log(body)
+      window.alert(body.forecast)
+  })
+  .catch((er) => {
+      debugger;
+      window.alert("Errore contattare l'assistenza");
+  })
+  .finally(function () { return 1 });  
+}
+
+
+//OLD
 function search(){
 	var queryURL = "https://jsonplaceholder.typicode.com/users";
 
@@ -45,6 +72,3 @@ function displayUsersAsTable(users){
      // adds the table to the div
      usersDiv.appendChild(table);
 }
-
-
-

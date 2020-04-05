@@ -2,6 +2,7 @@
 
 const express = require('express')   //this npm only exposes a single function not an object
 const path = require('path')        //core module no npm
+var cors = require('cors');
 const geocode =  require('./utils/geocode.js')
 const forecast = require('./utils/forecast.js')
 
@@ -10,6 +11,7 @@ console.log(__dirname)          //directory where the script that the applicatio
 console.log(path.join(__dirname, '../public'))  //we need the ABSOLUTE location for file index.html
 
 const app = express()  //to obtain our application 
+app.use(cors());
 
 //For learning purpose
 app.get('/products', (req, res) => {
@@ -17,11 +19,11 @@ app.get('/products', (req, res) => {
     if(!req.query.search){  //manage mandatory fields
         return res.status(400).send({   //with return the rest of he code is not executed
             error : 'search information is mandatory'
-        })
-    }
+        }) 
+    } 
     res.send({
      products : []
-    })
+    }) 
 })
 
 // weather.com/weather
