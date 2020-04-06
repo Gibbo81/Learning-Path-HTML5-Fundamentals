@@ -6,9 +6,18 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/index.js"></script>
   </head>
-  <body>
-  	<p>Working with remote data suit XhR2</p>
-  	<button onclick="weather()">Get a remote list of user</button>
-  	<div id="users"> </div>
+  <body onload="loaded()">
+  	<p>Call weather API</p>
+  	<!--<button onclick="weather()">Get a remote list of user</button>
+    <div id="users"> </div>
+    -->
+    
+    <form id='only'>
+      <input id='in'>
+      <button>Search</button>
+    </form>
+
+    <p id='p1'></p>
+    <p id='p2'></p>
   </body>
 </html>

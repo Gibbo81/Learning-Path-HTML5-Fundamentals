@@ -1,7 +1,21 @@
 
-function weather(){
-  var queryURL = "http://localhost:3000/weather?address=bologna"
-  fetch('http://localhost:3000/weather?address=bologna')
+function loaded(){
+  const form = document.getElementById('only')
+  form.addEventListener('submit', (e) =>{
+    e.preventDefault()
+    const value = document.getElementById('in').value
+    console.log(value)
+    weather(value)
+  })
+}
+
+function weather(location){
+  const messageOne = document.querySelector('#p1')
+  const messagetwo = document.querySelector('#p2')
+  messageOne.textContent='loading'
+  messagetwo.textContent=''
+  var queryURL = "http://localhost:3000/weather?address=" + location
+  fetch(queryURL)
   .then(response => Promise.all([response.ok, response.json()]))
   .then(([responseOk, body]) => {
       debugger;
@@ -14,61 +28,12 @@ function weather(){
   .then(body => {
       debugger;
       console.log(body)
-      window.alert(body.forecast)
+      messageOne.textContent=body.forecast
+      messagetwo.textContent=body.location      
   })
   .catch((er) => {
       debugger;
-      window.alert("Errore contattare l'assistenza");
+      messageOne.textContent=JSON.stringify(er)
   })
   .finally(function () { return 1 });  
-}
-
-
-//OLD
-function search(){
-	var queryURL = "https://jsonplaceholder.typicode.com/users";
-
-  //Only the first parameter, the URL, is required
-  var request = new Request(queryURL,{
-    method: 'GET',
-    redirect:'follow',
-    headheadersers : new Headers({
-      'Content-Type': 'application/json'
-    })
-  });
-
-  fetch(request)
-    .then(function(response){
-      //the resulting callback data has a json method for 
-      //converting the raw data to a JavaScript object
-      return response.json();  
-    })
-    .then(function(users){
-      displayUsersAsTable(users)      
-    })
-    .catch(function (error) {
-        console.log('Error during fetch: ' + error.message);
-    });
-}
-
-function displayUsersAsTable(users){
-    var usersDiv = document.querySelector("#users");
-    usersDiv.innerHTML = "";
-  
-    // creates and populate the table with users
-    var table = document.createElement("table");
-          
-    // iterate on the array of users
-    users.forEach(function(currentUser) {
-        // creates a row
-        var row = table.insertRow();
-        // insert cells in the row
-        var nameCell = row.insertCell();
-        nameCell.innerHTML = currentUser.name;
-        var cityCell = row.insertCell();
-        cityCell.innerHTML = currentUser.address.city;
-     });
-  
-     // adds the table to the div
-     usersDiv.appendChild(table);
 }
