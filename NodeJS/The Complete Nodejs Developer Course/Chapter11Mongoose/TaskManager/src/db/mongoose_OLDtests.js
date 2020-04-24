@@ -61,24 +61,24 @@ const Task = mongoose.model('Task', {
     }
 })
 
-// const validUser = new User({
-//     password : '123perty35', 
-//     name : 'Marco', 
-//     email : 'h323ildfr@gmail.com'
-// })
-// const invalidUser = new User({ 
-//     password : '123paSsword35', 
-//     name : 'Giuliano', 
-//     age : 22,
-//     email : 'hildfr@gmail.com'
-// }) 
-// validUser.save()       //retrun a promise
-//   .then((result) => {
-//       console.log(result)       //print { _id: 5e9e9825345d6311f80009cb, name: 'Giuliano', age: 38, __v: 0 }
-//   })                            // __v is managed by mongoose and it's the version 
-//   .catch((error) =>{
-//       console.log('Error: ',    error)
-//   })
+const validUser = new User({
+    password : '123perty35', 
+    name : 'Marco', 
+    email : 'h323ildfr@gmail.com'
+})
+const invalidUser = new User({ 
+    password : '123paSsword35', 
+    name : 'Giuliano', 
+    age : 22,
+    email : 'hildfr@gmail.com'
+}) 
+validUser.save()       //retrun a promise
+  .then((result) => {
+      console.log(result)       //print { _id: 5e9e9825345d6311f80009cb, name: 'Giuliano', age: 38, __v: 0 }
+  })                            // __v is managed by mongoose and it's the version 
+  .catch((error) =>{
+      console.log('Error: ',    error)
+  })
 
 const task01 = new Task({description : 'An incredible table'})
 const invalidTask01 = new Task({ completed : true})
