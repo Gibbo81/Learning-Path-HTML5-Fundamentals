@@ -9,16 +9,3 @@ mongoose.connect(connection, {
     useUnifiedTopology: true,
     useCreateIndex: true
 })
-
-const Task = mongoose.model('Task', {
-    description : {
-        type : String,
-        trim: true,
-        required: true
-    },
-    completed :{
-        type : Boolean,
-        default : false
-    }
-})
-
