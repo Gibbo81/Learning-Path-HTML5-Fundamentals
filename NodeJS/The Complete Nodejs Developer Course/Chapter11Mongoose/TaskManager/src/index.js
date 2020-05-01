@@ -22,6 +22,16 @@ app.get('/users' , (req, res) =>{
         }) 
 })
 
+app.get('/tasks' , (req, res) =>{
+    User.find({}) 
+        .then((response) => {
+            res.send(response)
+        })
+        .catch((error) =>{
+            res.status(500).send()
+        }) 
+})
+
 app.get('/users/:id' , (req, res) =>{       // :id is the same of c# {id}. They go in req.params
     console.log(req.params);
     User.findById(req.params.id)            //fetch all user with {}
@@ -29,6 +39,18 @@ app.get('/users/:id' , (req, res) =>{       // :id is the same of c# {id}. They 
             if (!user)                      //it doesn't give back an error if the user is not found
                 return res.status(404).send()
             res.send(user)
+        })
+        .catch((error) =>{
+            res.status(500).send()
+        }) 
+})
+
+app.get('/tasks/:id' , (req, res) =>{       
+    User.findById(req.params.id)            
+        .then((task) => {            
+            if (!task)                      
+                return res.status(404).send()
+            res.send(task)
         })
         .catch((error) =>{
             res.status(500).send()
