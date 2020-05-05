@@ -31,4 +31,5 @@ var f = async function(){
     return await add (t,3)       
 }
 
-f().then(tot => console.log('new: ', tot));
+f().then(tot => console.log('new: ', tot))
+   .catch(e => console.log(e))
