@@ -12,69 +12,73 @@ app.use(express.json()) //parse incoming data as json automatically
 const port = process.env.PORT || 3000 //heroku web configurarion
 
 
-app.get('/users' , (req, res) =>{
-    User.find({}) //fetch all user with {}
-        .then((response) => {
-            res.send(response)
-        })
-        .catch((error) =>{
-            res.status(500).send()
-        }) 
+app.get('/users' , async (req, res) =>{ //change the return type to promise, but express doesn't use this return type and instead use req and res to take the result
+    try{
+        var user = await User.find({})
+        res.send(user)
+    }    
+    catch(error) {
+        res.status(500).send()
+    }
 })
 
-app.get('/tasks' , (req, res) =>{
-    User.find({}) 
-        .then((response) => {
-            res.send(response)
-        })
-        .catch((error) =>{
-            res.status(500).send()
-        }) 
+app.get('/tasks' , async (req, res) =>{
+    try{
+        var tasks = await Task.find({})     
+        res.send(tasks)
+    }
+    catch(e){
+        res.status(500).send()
+    }
 })
 
-app.get('/users/:id' , (req, res) =>{       // :id is the same of c# {id}. They go in req.params
-    console.log(req.params);
-    User.findById(req.params.id)            //fetch all user with {}
-        .then((user) => {            
-            if (!user)                      //it doesn't give back an error if the user is not found
-                return res.status(404).send()
-            res.send(user)
-        })
-        .catch((error) =>{
-            res.status(500).send()
-        }) 
+app.get('/users/:id' ,async (req, res) =>{       // :id is the same of c# {id}. They go in req.params
+    try{
+        console.log(req.params);
+        var user = await User.findById(req.params.id)
+        if (!user)                
+            return res.status(404).send()
+        res.send(user)
+    }   
+    catch(e){
+        res.status(500).send()
+    } 
 })
 
-app.get('/tasks/:id' , (req, res) =>{       
-    User.findById(req.params.id)            
-        .then((task) => {            
-            if (!task)                      
-                return res.status(404).send()
-            res.send(task)
-        })
-        .catch((error) =>{
-            res.status(500).send()
-        }) 
+app.get('/tasks/:id' , async (req, res) =>{       
+    try{
+        var user = await Task.findById(req.params.id)            
+        if (!user)                      
+            return res.status(404).send()
+        res.send(user)
+    }
+    catch(e){
+        res.status(500).send()
+    }
 })
 
-app.post('/users' , (req, res) => {
-    console.log('new user: ', req.body)
-    const u = new User(req.body)
-    u.save().then(() => {
+app.post('/users' , async (req, res) => {
+    try{
+        console.log('new user: ', req.body)
+        const u = new User(req.body)
+        await u.save()
         res.status(201).send(u)
-    }).catch((e)=>{
+    }
+    catch(e){
         res.status(400).send(e) 
-    })
+    }
 })
 
-app.post('/tasks' , (req, res) => {
-    console.log('new task: ', req.body)
-    const u = new Task(req.body)
-    u.save().then(() => {
+app.post('/tasks' , async (req, res) => {
+    try{
+        console.log('new task: ', req.body)
+        const u = new Task(req.body)
+        await u.save()
         res.status(201).send(u)
-    }).catch((e)=>{
-        res.status(400).send(e) 
-    })
+    }
+    catch(e){
+        res.status(400).send(e)
+    }
 })
 
 //start application
