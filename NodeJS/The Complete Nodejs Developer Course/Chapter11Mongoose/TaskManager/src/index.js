@@ -47,6 +47,16 @@ app.post('/users' , async (req, res) => {
     }
 })
 
+app.delete('/users/:id' , async (req, res) =>{ 
+    try{
+        await User.findByIdAndDelete(req.params.id)
+        res.status(204).send()
+    }    
+    catch(error) {
+        res.status(500).send()
+    }
+})
+
 app.patch('/users/:id', async (req, res) => {
     //check if request body is valid
     const updates = Object.keys(req.body)
@@ -125,6 +135,16 @@ app.patch('/tasks/:id', async (req, res) => {
     }
     catch(e){        
         res.status(400).send(e)
+    }
+})
+
+app.delete('/tasks/:id' , async (req, res) =>{ 
+    try{
+        await Task.findByIdAndDelete(req.params.id)
+        res.status(204).send()
+    }    
+    catch(error) {
+        res.status(500).send()
     }
 })
 
