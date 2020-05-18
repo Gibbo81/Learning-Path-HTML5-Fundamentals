@@ -13,7 +13,7 @@ MongoClient.connect(connection, { useNewUrlParser: true, useUnifiedTopology: tru
         return console.log('Unable to connect to the DB')
     
     console.log('Connected to Mongo DB')
-    //after creating connection the programm will continue to run untill we stop it (ctr + c)
+    //after creating connection the program will continue to run until we stop it (ctr + c)
 
     const db = client.db(dbName)
     db.collection('users').insertOne({
@@ -22,7 +22,7 @@ MongoClient.connect(connection, { useNewUrlParser: true, useUnifiedTopology: tru
     }, (error, result) => {
         if (error)
             return console.log('Error inserting an user')
-        console.log(result.ops);
+        console.log(result.ops)
     })
 
     db.collection('users').insertMany([
@@ -31,7 +31,7 @@ MongoClient.connect(connection, { useNewUrlParser: true, useUnifiedTopology: tru
         ], (error, result) => {
         if (error)
             return console.log('Error inserting many users')
-        console.log(result.ops);
+        console.log(result.ops)
     })
 })
 

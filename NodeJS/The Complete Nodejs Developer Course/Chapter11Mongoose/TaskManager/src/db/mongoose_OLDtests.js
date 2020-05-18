@@ -72,7 +72,7 @@ const invalidUser = new User({
     age : 22,
     email : 'hildfr@gmail.com'
 }) 
-validUser.save()       //retrun a promise
+validUser.save()       //return a promise
   .then((result) => {
       console.log(result)       //print { _id: 5e9e9825345d6311f80009cb, name: 'Giuliano', age: 38, __v: 0 }
   })                            // __v is managed by mongoose and it's the version 

@@ -2,7 +2,7 @@
 
 
 const greeter = (name= 'user') => {
-    console.log('Hello ' + name);
+    console.log('Hello ' + name)
 }
 
 
