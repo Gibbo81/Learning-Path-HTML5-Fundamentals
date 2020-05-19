@@ -19,3 +19,18 @@ app.listen(port, () => {
     console.log('server is up')
 })
 
+
+
+const bcrypt = require('bcryptjs')
+
+const myFunction = async () => {
+    const pass = 'Green6789!'
+    const hashPassword = await bcrypt.hash(pass, 8) //8 is the number of rounds used to create the hash
+    console.log(pass)
+    console.log(hashPassword)
+    //bcrypt has a method to check if a text field matches wit an hash code:
+    const isMatch = await bcrypt.compare('Green6789!', hashPassword)
+    console.log(isMatch)
+}
+
+myFunction()

@@ -61,12 +61,17 @@ router.patch('/users/:id', async (req, res) => {
         return res.status(400).send( {error : 'Invalid Update!!!!'})
 
     try {
+        /*this bypass mongoose so we remove it :-(
         const user = await User.findByIdAndUpdate(req.params.id, 
                                             req.body, 
                                             {
                                                 new : true,         //return the updated user
                                                 runValidators:true  //run the validator on the req.body data
-                                            })
+                                            })*/
+        const user = await User.findById(req.params.id)
+        updates.forEach((update) => user[update] = req.body[update])
+        await user.save()
+        
         if (!user) //no user to update
             return res.status(404).send()
         res.send(user)                                            
