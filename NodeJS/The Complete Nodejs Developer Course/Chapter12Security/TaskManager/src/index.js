@@ -20,17 +20,30 @@ app.listen(port, () => {
 })
 
 
-
+//new
 const bcrypt = require('bcryptjs')
-
-const myFunction = async () => {
+//new
+const myFunctionTestbcrypt  = async () => {
     const pass = 'Green6789!'
     const hashPassword = await bcrypt.hash(pass, 8) //8 is the number of rounds used to create the hash
-    console.log(pass)
     console.log(hashPassword)
     //bcrypt has a method to check if a text field matches wit an hash code:
     const isMatch = await bcrypt.compare('Green6789!', hashPassword)
     console.log(isMatch)
 }
+myFunctionTestbcrypt()
 
-myFunction()
+//new
+const jwt = require('jsonwebtoken')
+const myFunctionTestjwt  = async () => {
+    //sign takes 3 parameters: an object with the information to store in the token, 
+    //a secret used to sign the token and
+    //an object with customize option (es: token duration time)
+    const token = jwt.sign({_id: 'abc1223', age:12}, 'thisismynewtoken', {expiresIn : '7 days'})
+    console.log('token: ', token)
+    const data = jwt.verify(token, 'thisismynewtoken') //if correct returns a json with token data otherwise throws an exception
+    console.log('data: ', data)
+}
+myFunctionTestjwt()
+//online web token reader : https://jwt.io/
+ 

@@ -1,13 +1,15 @@
 const express = require('express')
 const User = require('../models/user')
 
+
+//new Jsonwebtoken
 const router = new express.Router()
 
 router.get('/test', (req,res) => {
     res.send("this is another test router, different files")
 })
 
-router.get('/users' , async (req, res) =>{ //change the return type to promise, but express doesn't use this return type and instead use req and res to take the result
+router.get('/users' , async (req, res) =>{
     try{
         var user = await User.find({})
         res.send(user)
@@ -33,12 +35,25 @@ router.get('/users/:id' ,async (req, res) =>{       // :id is the same of c# {id
 router.post('/users' , async (req, res) => {
     try{
         console.log('new user: ', req.body)
-        const u = new User(req.body)
+        const u = new User(req.body)        
         await u.save()
-        res.status(201).send(u)
+        const token = await u.generateToken()
+        res.status(201).send({u, token})
     }
     catch(e){
         res.status(400).send(e) 
+    }
+})
+
+//NEW
+router.post('/users/login',async (req, res) =>{
+    try{
+        const user = await User.findByCredential(req.body.email, req.body.password)
+        const token = await user.generateToken()
+        res.send({user, token})
+    }
+    catch(e){
+        res.status(400).send()
     }
 })
 
