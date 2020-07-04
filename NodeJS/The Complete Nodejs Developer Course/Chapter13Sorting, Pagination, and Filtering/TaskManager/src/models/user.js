@@ -42,6 +42,8 @@ const userSchema = new mongoose.Schema({
             required : true
         }
     }]
+},{
+  timestamps: true  //this adds two new columns to the db createdAt - updatedAt  
 })
 
 //virtual property (foreign key - in the receiving end of it). I don't like it at all. is not in mongodb way

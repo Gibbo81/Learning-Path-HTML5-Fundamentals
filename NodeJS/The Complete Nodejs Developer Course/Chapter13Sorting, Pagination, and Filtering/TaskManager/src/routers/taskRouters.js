@@ -4,9 +4,13 @@ const authMiddlaware = require('../middleware/auth')
 
 const router = new express.Router()
 
+//get: /tasks?completed=true 
 router.get('/tasks', authMiddlaware, async (req, res) =>{
     try{
-        var tasks = await Task.find({owner : req.user._id})     
+        var filter = {owner : req.user._id}
+        if (req.query.completed)
+            filter.completed = req.query.completed
+        var tasks = await Task.find(filter)
         res.send(tasks)
     }
     catch(e){

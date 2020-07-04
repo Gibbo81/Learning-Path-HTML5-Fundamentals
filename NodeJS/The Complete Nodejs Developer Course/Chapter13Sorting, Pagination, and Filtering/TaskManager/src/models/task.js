@@ -1,6 +1,6 @@
 const mongoose = require('mongoose') 
 
-const Task = mongoose.model('Task', {
+const userSchema = new mongoose.Schema({
     description : {
         type : String,
         trim: true,
@@ -15,6 +15,10 @@ const Task = mongoose.model('Task', {
         required:true,
         ref: 'User'
     }
+},{
+  timestamps: true  //this adds two new columns to the db createdAt - updatedAt  
 })
+
+const Task = mongoose.model('Task', userSchema)
 
 module.exports = Task
