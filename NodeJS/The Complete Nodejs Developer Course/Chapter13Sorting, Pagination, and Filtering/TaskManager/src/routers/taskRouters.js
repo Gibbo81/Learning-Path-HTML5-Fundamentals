@@ -4,13 +4,18 @@ const authMiddlaware = require('../middleware/auth')
 
 const router = new express.Router()
 
-//get: /tasks?completed=true 
+//get: /tasks?limit=10&skip=1&completed=true 
 router.get('/tasks', authMiddlaware, async (req, res) =>{
     try{
         var filter = {owner : req.user._id}
         if (req.query.completed)
-            filter.completed = req.query.completed
-        var tasks = await Task.find(filter)
+            filter.completed = req.query.completed            
+        var pagination = {}
+        if (req.query.skip)
+            pagination.skip = parseInt(req.query.skip)
+        if (req.query.limit)
+            pagination.limit = parseInt(req.query.limit)            
+        var tasks = await Task.find(filter, null, pagination)
         res.send(tasks)
     }
     catch(e){
