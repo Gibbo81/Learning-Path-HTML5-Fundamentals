@@ -8,6 +8,8 @@ const multer = require('multer')
 const express = require('express')
 const app = express()
 fs = require('fs');
+
+const readFileAsync = promisify(fs.readFile)
 const writeFileAsync = promisify(fs.writeFile)
 
 app.use(express.json()) //parse incoming data as json automatically
@@ -57,12 +59,22 @@ app.post('/uploadInsideAPI', uploadInsideAPI.single('upload') , async (req, res)
     res.status(400).send({ error : error.message})
 })
 
+//give back an image
+app.get('/cat', async (req, res) =>{
+    try{
+        const buffer = await readFileAsync('./files/cat.jpg')
+        res.set('Content-Type', 'image/jpg')
+        res.send(buffer)
+    }
+    catch (e){
+        res.status(500).send({ error : e.message})
+    }
+})
+
 // se volessi multiple handler semplivemente li aggiunerei tutti alla chiamata
 //app.post('/upload', middleware1, middleware12,  upload.single('upload') , (req, res) => {
-
 
 //start application
 app.listen(port, () => { 
     console.log('server is up')
 })
-
