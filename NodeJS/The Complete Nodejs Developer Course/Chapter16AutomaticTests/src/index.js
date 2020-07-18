@@ -1,7 +1,6 @@
-/*to start => npm run dev
-jest test framework, it's installed only locally 
-npm i jest --save-dev
-add a nue script in package.json --> "test":"jest"
+/*
+jest test framework, it's installed only locally : npm i jest --save-dev
+add a new script in package.json --> "test":"jest"
 To run the test simple 'npm test' inside the terminal
 */
 
