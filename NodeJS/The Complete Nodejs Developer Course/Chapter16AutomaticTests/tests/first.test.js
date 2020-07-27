@@ -57,7 +57,7 @@ test('should add two numbers', (done) => {
 
 //BETTER NEW WAY: using async await. we simple need to mark the test as async
 test('should add two numbers async/await', async () => {
-    var sum =await math.addAsync(2,3)
+    var sum = await math.addAsync(2,3)
     expect(sum).toBe(5)    
 })
 
