@@ -16,7 +16,7 @@ app.get('/try', async (req, res) =>{
 app.post('/try', async (req, res) =>{
     try{  
         if (!req.body.name || !req.body.age)
-            res.status(400)
+            return res.status(400).send()
         res.status(201).send({age :req.body.age})
     }
     catch (e){
