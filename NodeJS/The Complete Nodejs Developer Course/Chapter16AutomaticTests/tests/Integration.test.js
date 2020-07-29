@@ -29,24 +29,35 @@ afterAll(() => {
 })
 
 test('Get Try', async () => {
-    await request(app).get('/try')
-                      .send()   //here we can add the body
-                      .expect(200)
+    const response = await request(app).get('/try')
+      .send()   //here we can add the body
+      .expect(200)
+    expect(response.body.name).toBe('pippo')
+    //to check a full object without checking all the fields one a time
+    expect(response.body).toMatchObject({
+      name : 'pippo',
+      //age:66  //I do not need yto test all the object's fields. A subset will make the test green if the field are correct
+    })
 })
 
 test('Post Try', async () => {
     await request(app).post('/try')
-                      .send({
-                        name :'Pippus',
-                        age : 224
-                      })  
-                      .expect(201)
+      .send({
+        name :'Pippus',
+        age : 224
+
+      }).expect(201)      
 })
 
+
+
 test('Post whith missing name is bad request', async () => {
-  await request(app).post('/try')
+  const response = await request(app).post('/try')
                     .send({
                       age : 224
                     })  
                     .expect(400)
+  expect(response.body.reason).toBe('missing part')
+  expect(response.statusCode).toBe(400) 
+  expect(response.statusCode).not.toBe(200)  //test different from
 })
