@@ -1,0 +1,12 @@
+ jester gives us an automated feature to mock an import package.
+The package will automatically loock fgor a __mocks__ folder inside tests directory
+
+to mock const userRoutes = require('./routers/userRouters')
+
+create a folder routers with inside userRouters.js
+When mocking a modulo we need to provide al the thing that module needs to work:
+all the methods used after the import with the require command
+
+
+
+when we set up the module it's automatically called by jester
