@@ -4,6 +4,11 @@ To run the test simple 'npm test' inside the terminal
 INTEGRATION TESTS
 We do not need the application up and running (app.listen is not necessary)
 We need its express configuration and a new package 'supertest'
+
+
+Tests in differents test suits (files) run contemporary, this can creeate some unpleasant iterations.
+To avoid this inside the package.json add --runInBand ==> "test": "jest --runInBand" , in this way jester 
+runs the tests one at the time
 */
 
 //run before each test
