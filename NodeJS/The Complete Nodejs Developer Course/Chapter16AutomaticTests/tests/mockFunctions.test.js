@@ -2,6 +2,7 @@
 
 const math = require ('../src/math')
 
+
 test('test forEach function with mock', () => {
     let mockCallback = jest.fn(x => 10 + x)
     //create a mock function
@@ -10,6 +11,8 @@ test('test forEach function with mock', () => {
 
     // The mock function is called twice
     expect(mockCallback.mock.calls.length).toBe(2)
+    //to check the mock has beeen called
+    expect(mockCallback).toHaveBeenCalled();
     // The first argument of the first call to the function was 0
     expect(mockCallback.mock.calls[0][0]).toBe(0)
     // The first argument of the second call to the function was 1
@@ -34,4 +37,19 @@ test('mock configuration', () => {
     expect(mockFunction.mock.calls[1][0]).toBe(20)
 })
 
+const axios = require('axios')
+const e = require ('../src/user')
+jest.mock('axios'); //with this command i say i want to mock axios library while running this test
 
+//Mocking Modules
+test('Mock a full Module', async () => {
+    const users = [{name: 'Bob'}];
+    const resp = {data: users};
+    axios.get.mockResolvedValue(resp);  //when calling get() return respe Mock configuration       
+    //function used inside users
+    
+    let result = await e.get()  
+
+    console.log(result);
+    expect(result).toEqual(users)
+});
