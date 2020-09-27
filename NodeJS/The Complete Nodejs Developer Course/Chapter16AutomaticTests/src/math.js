@@ -15,9 +15,16 @@ const addAsync = (a,b) => {
     })    
 }
 
+const forEach = (items, callback) => {
+    for( let index =0; index<items.length; index++ ){
+        callback(items[index])
+    } 
+}
+
 module.exports = {
     calculateTip,    //simplified version ===   calculateTip:calculateTip
     fahrenheitToCelsius,
     celsiusToFahrenheit,
-    addAsync
+    addAsync,
+    forEach,
 }
