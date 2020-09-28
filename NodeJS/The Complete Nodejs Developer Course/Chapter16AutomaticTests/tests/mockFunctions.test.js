@@ -26,7 +26,7 @@ test('test forEach function with mock', () => {
 //Mock functions can also be used to inject test values into your code during a test:
 test('mock configuration', () => {
     let mockFunction = jest.fn()
-    mockFunction.mockReturnValueOnce(true).mockReturnValueOnce(false)
+    mockFunction.mockReturnValueOnce(true).mockReturnValueOnce(false) //first time returns true second false
 
     const result = [11,20].filter(nume => mockFunction(nume))
 
@@ -37,12 +37,13 @@ test('mock configuration', () => {
     expect(mockFunction.mock.calls[1][0]).toBe(20)
 })
 
+//Mocking Modules
 const axios = require('axios')
 const e = require ('../src/user')
 jest.mock('axios'); //with this command i say i want to mock axios library while running this test
 
-//Mocking Modules
-test('Mock a full Module', async () => {
+//In this case we are mocking a single method of axios
+test("Mock a module's function", async () => {
     const users = [{name: 'Bob'}];
     const resp = {data: users};
     axios.get.mockResolvedValue(resp);  //when calling get() return respe Mock configuration       
@@ -53,3 +54,28 @@ test('Mock a full Module', async () => {
     console.log(result);
     expect(result).toEqual(users)
 });
+
+//There are cases where it's useful to go beyond the ability to specify return values and full-on replace the implementation of a mock function
+jest.mock('../src/toMock');
+const m = require('../src/toMock')
+
+test('Mock a full module', () =>{
+    m.molt.mockImplementation((x ,y) => 10) //simple mock implementation with standard result
+    m.sum                                    //different results for each call
+     .mockImplementationOnce((x,y) => x+y+ 10)
+     .mockImplementationOnce((x,y) => x+y-10)
+
+
+    let moltResult  = m.molt(1,4);
+    let sumResult1 = m.sum(50, 40)
+    let sumResult2 = m.sum(45, 45)
+
+    expect(moltResult).toBe(10)
+    expect(sumResult1).toBe(100)
+    expect(sumResult2).toBe(80)
+    expect(m.molt).toHaveBeenCalled(); //mock fuction has been called at least once
+    expect(m.molt).toHaveBeenCalledWith(1, 4);
+    expect(m.sum).toHaveBeenLastCalledWith(45, 45);
+    expect(m.sum.mock.calls.length).toBe(2); //it's only syntactic sugar, we can always use standard mock checks
+
+})
