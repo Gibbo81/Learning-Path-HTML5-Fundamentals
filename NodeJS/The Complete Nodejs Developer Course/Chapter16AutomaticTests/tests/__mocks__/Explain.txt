@@ -1,4 +1,4 @@
- jester gives us an automated feature to mock an import package.
+jest gives us an automated feature to mock an import package.
 The package automatically looks for a __mocks__ folder inside tests directory
 
 to mock const userRoutes = require('./routers/userRouters')
